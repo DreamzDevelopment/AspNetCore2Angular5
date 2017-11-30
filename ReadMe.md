@@ -92,3 +92,9 @@ integrate Angular Core 5.0+ app with AspNet Core Server Prerendering.
     - dotnet AspNetCore2Angular5.dll
 
     To publish to hosting server, you choose your preferred method and host and follow their instructions
+    
+# Thanks
+    
+    Damien Bod, Asadsahi, MarkPieszak and many more open source community superstars
+    
+    [ ]
