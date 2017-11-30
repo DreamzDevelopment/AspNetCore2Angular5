@@ -1,0 +1,125 @@
+/**
+ * .btn-save, .btn-create etc.
+ */
+    .btn-bracketed {
+        &:before {
+            display: inline-block;
+            content: "[";
+            padding-right: 0.2em;
+        }
+
+        &:after {
+            display: inline-block;
+            content: "]";
+            padding-left: 0.2em;
+        }
+    }
+
+    .btn-link i {
+        cursor: pointer;
+    }
+    .btn-save-file {
+        display: normal;
+    }
+
+    .btn-save {
+        color: purple;
+        border: 1px solid purple;
+        &:hover {
+            color: greenyellow;
+            background-color: purple;
+            border: 1px solid lime;
+        }
+    }
+    .btn-create {
+        background-color: forestgreen;
+        border: 1px solid darkgoldenrod;
+        color: white;
+        &:hover {
+            background-color: rebeccapurple;
+            border: 1px solid gold;
+            color: gold;
+        }
+    }
+    .btn-edit {
+        background-color: cornflowerblue;
+        color: white;
+        &:hover {
+            background-color: darkblue;
+            color: gold;
+        }
+    }
+    .btn-delete {
+        color: orangered;
+        border: 1px solid orangered;
+        &:hover {
+            background-color: orangered;
+            color: lightyellow;
+        }
+    }
+    .btn-cancel {
+        color: blueviolet;
+        border: 1px solid blueviolet;
+        &:hover {
+            color: purple;
+            border: 1px solid #339433;
+        }
+    }
+    .btn-circle {
+        border-radius: 50%;
+    }
+    .btn-transparent {
+        background-color: transparent;
+    }
+/**
+ * END -> .btn-save, .btn-create etc.
+ */
+
+/*****************************************************************************
+** btn, a, block, .btn-detail, .btn-cart etc.
+****************************************************************************/
+
+    .btn-full-block {
+        display: block;
+        border: none;
+        height: 100%;
+        width: 100%;
+    }
+
+    .btn-cart {
+        background-color: rgba(110,23,240, 0.5);
+        color: darkgoldenrod;
+        font-size: 18px;
+        transition-duration: 500ms;
+        &:hover {
+            background-color: rgba(110,23,240, 1);
+            color: gold;
+        }
+    }
+    .btn-detail {
+        background-color: rgba(110,23,240, 0.1);
+        color: darkgoldenrod;
+        font-size: 18px;
+        transition-duration: 500ms;
+        &:hover {
+            background-color: rgba(110,23,240, 0.6);
+            color: gold;
+        }
+    }
+/*****************************************************************************
+** END -> btn, a, block, .btn-detail, .btn-cart etc.
+****************************************************************************/
+
+    .btn-save,
+    .btn-save:hover,
+    .btn-create,
+    .btn-create:hover,
+    .btn-edit ,
+    .btn-edit:hover,
+    .btn-cancel,
+    .btn-cancel:hover,
+    .btn-delete,
+    .btn-delete:hover
+    {
+    @include mixin-transition(all, 500ms, linear, 100ms);
+    }

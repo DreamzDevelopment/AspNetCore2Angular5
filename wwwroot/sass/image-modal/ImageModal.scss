@@ -1,0 +1,115 @@
+@import '../Shared.scss';
+@import '../_mixins.scss';
+
+/**.............................................................................................................................
+* Image Modal, 
+...............................................................................................................................*/
+
+    /* The Modal (background) */
+    .notification-modal,
+    .modal {
+        display: block; /* none,  Hidden by default */
+        /*position: fixed;  Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        /*left: 0;
+        top: 60px;*/
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(50, 60, 80, 0.8); /* Black w/ opacity */
+        a.btn-close {
+            width: 25px !important;
+            height: 25px !important;
+            opacity: 0 !important;
+            &:hover {
+                opacity: 1 !important;
+            }
+        }    
+        &:hover {
+            a.btn-close{
+                opacity: 0.5 !important;
+            }
+        }
+    }
+    .modal {
+        &.zoom-in {
+            z-index: 1097 !important;
+        }
+        &.window {
+            &.zoom-in {
+                top: 0 ;
+                left: 0 ;
+                width: 100vw ;
+                height: 100vh ;
+                border-radius: 0;
+            }
+        }
+        /*MyAnimation return to base button, and MyMessage.ErrorMessage .modal window*/
+        .return-to-base,
+        .modal.zoom-in {
+            position: fixed !important;
+            z-index: 1100 !important;
+        }
+    }
+    /* Modal Content (image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        height: 80%;
+        max-width: 700px;
+    }
+    /* Caption of Modal Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 2% 0;
+        height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content, #caption {
+        @include mixin-animation(zoom);
+        -webkit-animation-duration: 0.6s;
+        animation-duration: 0.6s;
+    }
+
+    /* The Close Button */
+    .notification-modal a.btn-close,
+    .modal a.btn-close,
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        float: right;
+        color: #010156;
+        font-size: 35px;
+        font-weight: bold;
+        transition: 0.3s;
+        z-index: 4;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 360px){
+        .modal-content {
+            width: 100%;
+        }
+    }
+
+/*....................................................................................................
+*** End Image Modal
+...................................................................................................*/

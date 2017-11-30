@@ -1,0 +1,54 @@
+/**
+* Contact Us -> top section of NavBar
+*/
+    .contact-us-wrap {
+        width: 50vw;
+        right: 0;
+        position: absolute; 
+        float: right !important;
+        
+        z-index: 1150;
+        padding-right: 17%;
+        &:hover {
+            /*background-image: -moz-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: -o-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: -webkit-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: linear-gradient(to left, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));*/
+            width: 100vw;        
+            background: #010156;
+        }
+    }
+
+    .contact-us {
+        top: 0;
+        margin-right: 15px;
+        display: inline-block !important;
+        background-color: transparent;
+        font-weight: bold;
+        color: lightskyblue;
+        i {
+            margin-right: 5px;
+            margin-left: 0;
+            &.fa {
+                margin-right: 5px;
+                margin-left: 0;
+                color: red;
+            }
+            &:not(.fa) {
+                display: none;
+            }
+        }
+        &:hover {
+            i {
+                display: inline-block !important;
+                color: red;
+                &.fa {
+                    color: lightskyblue;
+                    font-size: 110%;
+                }
+            }
+        }
+    }
+/**
+* END -> Contact Us -> top section of NavBar
+*/

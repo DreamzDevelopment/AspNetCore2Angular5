@@ -1,0 +1,15 @@
+@mixin mixin-calm-darya () {
+    background: #5f2c82;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+@mixin mixin-shroom-haze () {
+    background: #5C258D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+@mixin mixin-lawrencium () {
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

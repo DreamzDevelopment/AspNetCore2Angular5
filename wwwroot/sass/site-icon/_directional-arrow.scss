@@ -1,0 +1,58 @@
+/**............................................................................................................
+** Multi-directional arrow, used in home.component/filter section
+.............................................................................................................*/
+    .arrow-container {
+        float: right;
+        color: yellow;
+        display: block;
+        position: relative;
+        width: 35px; 
+        height: 35px;
+        padding: 0;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(123,103,133, 1)), to(rgba(123,103,133,0)));
+        background-image: -webkit-linear-gradient(top, rgba(123,103,133, 1), rgba(123,103,133,0));
+        background-image: -moz-linear-gradient(top, rgba(123,103,133, 1), rgba(123,103,133,0));
+        background-image: linear-gradient(to bottom, rgba(123,103,133, 1), rgba(123,103,133,0));
+        border: none;
+        &:hover {
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(123,103,153, 1)), to(rgba(123,103,153,0)));
+            background-image: -webkit-linear-gradient(top, rgba(123,103,153, 1), rgba(123,103,153,0));
+            background-image: -moz-linear-gradient(top, rgba(123,103,153, 1), rgba(123,103,153,0));
+            background-image: linear-gradient(to bottom, rgba(123,103,153, 1), rgba(123,103,153,0));
+            border: 1px solid greenyellow;
+        }
+    }
+
+    .sf-arrow {
+        display: block;
+        cursor: pointer;
+        margin: 22%;
+        padding: 0;
+        position: absolute;
+        height: 56%;
+        width: 56%;
+        background: url(/images/icons/sf-icon-arrow.svg) no-repeat 0 0;
+        background-size: 100%;		
+        &.right-arrow { 
+            transform: rotate(0);
+        } 
+        &.down-arrow{
+            transform: rotate(90deg);
+        }
+        &.left-arrow{
+            transform: rotate(180deg);
+        }	
+        &.up-arrow{
+            transform: rotate(270deg);
+        }
+    }
+    .sf-arrow,
+    .sf-arrow.right-arrow,
+    .sf-arrow.down-arrow,
+    .sf-arrow.left-arrow,
+    .sf-arrow.up-arrow {
+        @include mixin-transition(transform, 0.5s, ease-in-out, 0s);
+    }
+/**............................................................................................................
+** End Multi-directional arrow, used in home.component/filter section
+.............................................................................................................*/

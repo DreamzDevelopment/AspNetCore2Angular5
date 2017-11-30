@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = @Localizer["Store"];
+    Layout = "~/Views/Shared/_LayoutStore.cshtml";
+}
+
+<div class="my-row">
+    <!-- <div class="vertical-menu-base" >
+    </div> -->
+    <div class="my-row content-section">
+        <div class="my-row content-section-1">
+            <!--  not working -->
+            <app-store asp-prerender-module="Store/dist/main-server"><img class="img-responsive" style="width: 20vw; margin-left: 40vw;margin-right: -40vw;" src="/images/icons/loading.gif" ></app-store>
+        </div>
+        
+    </div>
+</div>
+
+<div id="footerMenu" class="col-md-12 footer-menu">
+    @await Html.PartialAsync("_FooterMenu")
+</div>
+
+@section Scripts {
+    <environment include="Development">
+        <!-- angular app -->
+        <script src="~/dist/store/vendor.js" asp-append-version="true"></script>
+        <script src="~/dist/store/main-client.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+         <!-- angular app -->
+        <script src="~/dist/store/vendor.js" asp-append-version="true"></script>
+        <script src="~/dist/store/main-client.js" asp-append-version="true"></script>
+    </environment>
+    <script type="text/javascript">
+            
+    </script>
+}

@@ -1,0 +1,80 @@
+/**
+ * Layout -> Footer section 
+ */
+    .footer,
+    footer {
+        padding: 0 !important;
+        padding-top: 3px;
+        margin: auto;
+        min-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: whitesmoke;
+        background-color: rgba(50, 60, 80, 0);
+        a.btn-close {
+            /*position: absolute; float: left;*/
+            visibility: hidden;
+            opacity: 0;
+            margin: -25px auto auto 0px; 
+            width: 25px !important; 
+            height: 25px !important; 
+            cursor: pointer;
+            z-index: 1069 !important;
+        } 
+        p{ 
+            display: none; 
+            margin: 0 !important; 
+        }
+        &.show-footer {
+            p {
+                display: block;
+            }
+        }
+        &.navbar-fixed-bottom { 
+            width: 280px !important; 
+        }
+        &:focus, &.show-footer {
+            max-height: 65px;
+            min-height: 55px;
+            width: 100%;
+            background-color: rgba(50, 60, 80, 1);
+        }
+        &:hover {
+            a.btn-close {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        #selectLanguage select {
+            z-index: 1038;
+            color: springgreen;
+            background: #000;
+        }
+    }
+    /*Internet Explorer 10-11 */
+    _:-ms-input-placeholder, :root .footer:not(.show-footer) { min-height: 30px !important; max-height: 30px !important; }
+
+    .sf-config-steps .show-footer {
+        z-index: 1071 !important;
+    }
+    .footer-menu {
+        padding: 10px 10px 20px 25px;
+        margin: auto;
+        bottom: 0;
+        min-height: 300px;
+        clear: both;
+        color: white;
+        background-color: rgba(10, 100, 105 , 0.8);
+        &:hover {
+            background-color: rgba(10, 100, 105 , 1);
+        }
+    }
+    .footer,
+    footer,
+    .footer:focus, 
+    .footer.show-footer {
+        @include mixin-transition(all, 600ms, linear, 100ms);
+    }
+/**
+* END -> Layout -> Footer section 
+*/

@@ -1,0 +1,7 @@
+@mixin mixin-animation($name, $duration: null, $timing-func: null, $repeat: null) {
+    -webkit-animation-name: $name $duration $timing-func $repeat;
+    -moz-animation-name: $name $duration $timing-func $repeat;
+    -o-animation-name: $name $duration $timing-func $repeat;
+    -ms-animation-name: $name $duration $timing-func $repeat;
+    animation-name: $name $duration $timing-func $repeat;
+}

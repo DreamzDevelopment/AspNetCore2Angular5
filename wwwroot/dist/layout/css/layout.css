@@ -1,0 +1,3327 @@
+/**............................................................................................................
+** snippet from Animate.css - zoomIn effect, used in product-detail.component/detail section,
+.............................................................................................................*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+  .animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s; }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn; }
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  100% {
+    opacity: 0; } }
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  100% {
+    opacity: 0; } }
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut; }
+
+#accordion .panel-title i.fa, #accordion .panel-title i.glyphicon {
+  -webkit-transition: transform 0.5s ease-in-out 0s;
+  -moz-transition: transform 0.5s ease-in-out 0s;
+  -o-transition: transform 0.5s ease-in-out 0s;
+  -ms-transition: transform 0.5s ease-in-out 0s;
+  transition: transform 0.5s ease-in-out 0s; }
+
+.rotate-icon {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+
+.panel {
+  border: 0px;
+  border-bottom: 1px solid #30bb64; }
+
+.panel-group .panel + .panel {
+  margin-top: 0px; }
+
+.panel-group .panel {
+  border-radius: 0px; }
+  .panel-group .panel:last-child {
+    border-bottom: 5px solid #2ba659; }
+
+.panel-heading {
+  border-radius: 0px;
+  color: white;
+  padding: 25px 15px;
+  text-decoration: none; }
+
+.panel-custom .panel-heading,
+.panel-custom > .panel-heading {
+  background-color: #380c70; }
+
+.panel-collapse.collapse.in {
+  border-bottom: 0; }
+
+/**............................................................................................................
+** End snippet from Animate.css - zoomIn effect, used in product-detail.component/detail section,
+.............................................................................................................*/
+
+/**
+* custom class, extension of bootstrap classes
+*/
+.my-focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 10px rgba(102, 175, 233, 0.7);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 10px rgba(102, 175, 233, 0.7); }
+
+/**
+* end custom class, extension of bootstrap classes
+*/
+
+/**
+* END -> .fa-shake, CrossFade In & Out
+*/
+@-webkit-keyframes CrossFadeInOut {
+  0% {
+    opacity: 1; }
+  17% {
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  92% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes CrossFadeInOut {
+  0% {
+    opacity: 1; }
+  17% {
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  92% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes CrossFadeInOut2 {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  80% {
+    opacity: 0.3; }
+  100% {
+    opacity: 0; } }
+
+@keyframes CrossFadeInOut2 {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  80% {
+    opacity: 0.3; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes CrossFadeInOut3 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0.8; }
+  33.33% {
+    opacity: 1; }
+  86.67% {
+    opacity: 0.13; }
+  100% {
+    opacity: 0; } }
+
+@keyframes CrossFadeInOut3 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0.8; }
+  33.33% {
+    opacity: 1; }
+  86.67% {
+    opacity: 0.13; }
+  100% {
+    opacity: 0; } }
+
+/**
+* END -> .fa-shake, CrossFade In & Out
+*/
+/** .........................................................................................................
+    Demo 1 - One image to another, on hover
+    Plan
+
+    Put one image on top of the other
+*    Change the opacity of the top image on hover
+.................. ...........................................................................................*/
+.cross-fade {
+  position: relative;
+  margin: 0 auto; }
+  .cross-fade.box {
+    height: 281px;
+    width: 450px; }
+  .cross-fade.opaque .img,
+  .cross-fade.opaque img {
+    -webkit-transition: opacity 1s ease-in-out 0s;
+    -moz-transition: opacity 1s ease-in-out 0s;
+    -o-transition: opacity 1s ease-in-out 0s;
+    -ms-transition: opacity 1s ease-in-out 0s;
+    transition: opacity 1s ease-in-out 0s; }
+    .cross-fade.opaque .img.top:hover,
+    .cross-fade.opaque img.top:hover {
+      opacity: 0; }
+  .cross-fade .img,
+  .cross-fade img {
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    left: 0; }
+
+.shadow {
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  -moz-box-shadow: 5px 5px 5px #aaa;
+  box-shadow: 5px 5px 5px #aaa;
+  margin-bottom: 10px; }
+
+.cross-fade-4 .img,
+.cross-fade-4 img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 1s ease-in-out 0s;
+  -moz-transition: all 1s ease-in-out 0s;
+  -o-transition: all 1s ease-in-out 0s;
+  -ms-transition: all 1s ease-in-out 0s;
+  transition: all 1s ease-in-out 0s; }
+  .cross-fade-4 .img.top,
+  .cross-fade-4 img.top {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0; }
+
+.hover, .img, img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none; }
+
+.hover {
+  cursor: pointer; }
+
+/* img {
+        max-width: 100%;
+        width: auto\9;
+        height: auto;
+        vertical-align: middle;
+        border: 0;
+        -ms-interpolation-mode: bicubic;
+    } */
+/**.................. ...........................................................................................
+*    One image to another, on hover
+.................. ...........................................................................................*/
+/* One image to another with a timer (CSS animations)
+Plan
+
+You could implement this by using Javascript to toggle classes with a delay - that would allow older browsers to
+still have the images change. As we are looking forward though, we'll use CSS keyframes.
+
+Start with two images absolutely positioned on top of each other.
+Use CSS keyframes to define two states, one with top image transparent, one with it opaque.
+Set the animations number of iterations to infinite.
+Thanks to Pafson's comment, this is finally working as expected! He proposes the following algorithm to determine the percentages and timings:
+
+For "n" images You must define:
+a=presentation time for one image
+b=duration for cross fading
+Total animation-duration is of course t=(a+b)*n
+
+animation-delay = t/n or = a+b
+
+Percentage for keyframes:
+    0%
+    a/t*100%
+    (a+b)/t*100% = 1/n*100%
+    100%-(b/t*100%)
+    100%
+
+.................. ...........................................................................................*/
+.cf-in-out .img,
+.cf-in-out img {
+  animation-name: CrossFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 11s;
+  /* animation-direction: alternate; */ }
+  .cf-in-out .img:nth-of-type(1),
+  .cf-in-out img:nth-of-type(1) {
+    animation-delay: 6.1s; }
+  .cf-in-out .img:nth-of-type(2),
+  .cf-in-out img:nth-of-type(2) {
+    animation-delay: 0.1s; }
+
+.cf-in-out-3 .img,
+.cf-in-out-3 img {
+  animation-name: CrossFadeInOut3;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 15s; }
+  .cf-in-out-3 .img:nth-of-type(1),
+  .cf-in-out-3 img:nth-of-type(1) {
+    animation-delay: 10s; }
+  .cf-in-out-3 .img:nth-of-type(2),
+  .cf-in-out-3 img:nth-of-type(2) {
+    animation-delay: 5s; }
+  .cf-in-out-3 .img:nth-of-type(3),
+  .cf-in-out-3 img:nth-of-type(3) {
+    animation-delay: 0s; }
+
+.cf-in-out-2 .img,
+.cf-in-out-2 img {
+  animation-name: CrossFadeInOut2;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  position: absolute;
+  /* animation-direction: alternate; */ }
+  .cf-in-out-2 .img:nth-of-type(1),
+  .cf-in-out-2 img:nth-of-type(1) {
+    animation-delay: 5s; }
+  .cf-in-out-2 .img:nth-of-type(2),
+  .cf-in-out-2 img:nth-of-type(2) {
+    animation-delay: 0s; }
+
+/**.................. ...........................................................................................
+*    One image to another with a timer (CSS animations)
+.................. ...........................................................................................*/
+/**
+ * Gradient animation generated in https://www.gradient-animator.com
+ */
+.gradient-animation {
+  background: linear-gradient(359deg, #3f58bd, #8c428c);
+  background-size: 400% 400%;
+  -webkit-animation-name: gradient-animation 4s ease infinite;
+  -moz-animation-name: gradient-animation 4s ease infinite;
+  -o-animation-name: gradient-animation 4s ease infinite;
+  -ms-animation-name: gradient-animation 4s ease infinite;
+  animation-name: gradient-animation 4s ease infinite; }
+
+@-webkit-keyframes gradient-animation {
+  0% {
+    background-position: 51% 0%; }
+  50% {
+    background-position: 50% 100%; }
+  100% {
+    background-position: 51% 0%; } }
+
+@-moz-keyframes gradient-animation {
+  0% {
+    background-position: 51% 0%; }
+  50% {
+    background-position: 50% 100%; }
+  100% {
+    background-position: 51% 0%; } }
+
+@-o-keyframes gradient-animation {
+  0% {
+    background-position: 51% 0%; }
+  50% {
+    background-position: 50% 100%; }
+  100% {
+    background-position: 51% 0%; } }
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 51% 0%; }
+  50% {
+    background-position: 50% 100%; }
+  100% {
+    background-position: 51% 0%; } }
+
+.gradient-animation-light {
+  background: linear-gradient(359deg, #4212a3, #c69c6a);
+  background-size: 400% 400%;
+  -webkit-animation-name: gradient-animation 4s ease infinite;
+  -moz-animation-name: gradient-animation 4s ease infinite;
+  -o-animation-name: gradient-animation 4s ease infinite;
+  -ms-animation-name: gradient-animation 4s ease infinite;
+  animation-name: gradient-animation 4s ease infinite; }
+
+@-webkit-keyframes gradient-animation-light {
+  0% {
+    background-position: 51% 0%; }
+  50% {
+    background-position: 50% 100%; }
+  100% {
+    background-position: 51% 0%; } }
+
+@-moz-keyframes gradient-animation-light {
+  0% {
+    background-position: 51% 0%; }
+  50% {
+    background-position: 50% 100%; }
+  100% {
+    background-position: 51% 0%; } }
+
+@-o-keyframes gradient-animation-light {
+  0% {
+    background-position: 51% 0%; }
+  50% {
+    background-position: 50% 100%; }
+  100% {
+    background-position: 51% 0%; } }
+
+@keyframes gradient-animation-light {
+  0% {
+    background-position: 51% 0%; }
+  50% {
+    background-position: 50% 100%; }
+  100% {
+    background-position: 51% 0%; } }
+
+/**
+* END -> Gradient animation generated in https://www.gradient-animator.com
+*/
+/**
+ * .fa-shake
+ */
+.fa-shake {
+  -webkit-animation: fa-shake 0.5s infinite steps(4);
+  animation: fa-shake 0.5s infinite steps(4); }
+
+@-webkit-keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg); }
+  50% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg); }
+  100% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg); } }
+
+@keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg); }
+  50% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg); }
+  100% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg); } }
+
+/**
+ * END -> .fa-shake
+ */
+/*........................................................................
+* slide Up and Down
+............................................................................*/
+.slideDown,
+.slideUp {
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s; }
+
+.slideUp {
+  -webkit-animation-name: slideUp;
+  -moz-animation-name: slideUp;
+  -o-animation-name: slideUp;
+  -ms-animation-name: slideUp;
+  animation-name: slideUp;
+  opacity: 1;
+  margin-top: 0; }
+
+.slideDown {
+  -webkit-animation-name: slideDown;
+  -moz-animation-name: slideDown;
+  -o-animation-name: slideDown;
+  -ms-animation-name: slideDown;
+  animation-name: slideDown;
+  opacity: 0;
+  margin-top: 100vh; }
+
+/*........................................................................
+* END -> slide Up and Down
+............................................................................*/
+/*........................................................................
+* slide Left and Right
+............................................................................*/
+.slideLeft,
+.slideRight {
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  opacity: 1; }
+
+.slideRight {
+  -webkit-animation-name: slideRight;
+  -moz-animation-name: slideRight;
+  -o-animation-name: slideRight;
+  -ms-animation-name: slideRight;
+  animation-name: slideRight;
+  margin-right: 100%; }
+
+.slideLeft {
+  -webkit-animation-name: slideLeft;
+  -moz-animation-name: slideLeft;
+  -o-animation-name: slideLeft;
+  -ms-animation-name: slideLeft;
+  animation-name: slideLeft;
+  margin-left: 0; }
+
+/*........................................................................
+* END -> slide Left and Right
+............................................................................*/
+/*---------------------------
+animation slideUp
+-----------------------------*/
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    margin-top: 100%;
+    transform: translateY(70%);
+    -webkit-transform: translateY(70%); }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%); } }
+
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 0;
+    margin-top: 100%;
+    transform: translateY(70%);
+    -webkit-transform: translateY(70%); }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%); } }
+
+/*---------------------------
+END -> animation slideUp
+-----------------------------*/
+/*---------------------------
+animation slideDown
+-----------------------------*/
+@keyframes slideDown {
+  0% {
+    opacity: 1;
+    margin-top: 0;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%); }
+  100% {
+    opacity: 0;
+    margin-top: 100%;
+    transform: translateY(70%);
+    -webkit-transform: translateY(70%); } }
+
+@-webkit-keyframes slideDown {
+  0% {
+    opacity: 1;
+    margin-top: 0;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%); }
+  100% {
+    opacity: 0;
+    margin-top: 100%;
+    transform: translateY(70%);
+    -webkit-transform: translateY(70%); } }
+
+/*---------------------------
+END -> animation slideDown
+-----------------------------*/
+/*---------------------------
+animation slideRight
+-----------------------------*/
+@keyframes slideRight {
+  0% {
+    opacity: 1;
+    margin-left: 0;
+    transform: translateX(70%);
+    -webkit-transform: translateX(70%); }
+  100% {
+    opacity: 0;
+    margin-left: 100%;
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%); } }
+
+@-webkit-keyframes slideRight {
+  0% {
+    opacity: 1;
+    margin-left: 0;
+    transform: translateX(70%);
+    -webkit-transform: translateX(70%); }
+  100% {
+    opacity: 0;
+    margin-left: 100%;
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%); } }
+
+/*---------------------------
+END -> animation slideRight
+-----------------------------*/
+/*---------------------------
+animation slideLeft
+-----------------------------*/
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    margin-left: 100%;
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%); }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+    transform: translateX(70%);
+    -webkit-transform: translateX(70%); } }
+
+@-webkit-keyframes slideLeft {
+  0% {
+    opacity: 1;
+    margin-left: 100%;
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%); }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+    transform: translateX(70%);
+    -webkit-transform: translateX(70%); } }
+
+/*---------------------------
+END -> animation slideLeft
+-----------------------------*/
+/** .........................................................................................................
+** Slide up down left right, Slide the footer show/hide arrow in product-detail of store app
+.................. ...........................................................................................*/
+.slide-up {
+  margin-top: calc(100vh - 190px);
+  -webkit-transition: all 500ms linear 100ms;
+  -moz-transition: all 500ms linear 100ms;
+  -o-transition: all 500ms linear 100ms;
+  -ms-transition: all 500ms linear 100ms;
+  transition: all 500ms linear 100ms; }
+
+.slide-down {
+  margin-top: calc(100vh - 150px);
+  -webkit-transition: all 500ms linear 100ms;
+  -moz-transition: all 500ms linear 100ms;
+  -o-transition: all 500ms linear 100ms;
+  -ms-transition: all 500ms linear 100ms;
+  transition: all 500ms linear 100ms; }
+
+@media only screen and (min-width: 768px) {
+  .slide-up {
+    margin-top: calc(100vh - 265px); }
+  .slide-down {
+    margin-top: calc(100vh - 210px); } }
+
+/*@media only screen and (min-width: 500px)
+    {
+        .slide-up{
+            border: 1px solid red;
+            margin-top: 61vh;
+        }
+        .slide-down{
+            border: 1px solid red;
+            margin-top: 70vh;
+        }
+    }*/
+/** .........................................................................................................
+** End Slide up down left right, Slide the footer show/hide arrow in product-detail of store app
+.................. ...........................................................................................*/
+/*
+* Smooth full-screen background image animation....
+*/
+@-webkit-keyframes backgroundScrollToLeft {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -400px 0; } }
+
+@keyframes backgroundScrollToLeft {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -400px 0; } }
+
+@-webkit-keyframes backgroundScrollToTop {
+  0% {
+    background-position: -400px 0; }
+  100% {
+    background-position: -400px -400px; } }
+
+@keyframes backgroundScrollToTop {
+  0% {
+    background-position: -400px 0; }
+  100% {
+    background-position: -400px -400px; } }
+
+@-webkit-keyframes backgroundScrollToRight {
+  0% {
+    background-position: -400px -400px; }
+  100% {
+    background-position: 0 -400px; } }
+
+@keyframes backgroundScrollToRight {
+  0% {
+    background-position: -400px -400px; }
+  100% {
+    background-position: 0 -400px; } }
+
+@-webkit-keyframes backgroundScrollToBottom {
+  0% {
+    background-position: 0 -400px; }
+  100% {
+    background-position: 0 0; } }
+
+@keyframes backgroundScrollToBottom {
+  0% {
+    background-position: 0 -400px; }
+  100% {
+    background-position: 0 0; } }
+
+.animated.to-left {
+  -webkit-animation: backgroundScrollToLeft 35s linear 1;
+  animation: backgroundScrollToLeft 10s linear 1; }
+
+.animated.to-top {
+  -webkit-animation: backgroundScrollToTop 35s linear 1;
+  animation: backgroundScrollToTop 10s linear 1; }
+
+.animated.to-right {
+  -webkit-animation: backgroundScrollToRight 35s linear 1;
+  animation: backgroundScrollToRight 10s linear 1; }
+
+.animated.to-bottom {
+  -webkit-animation: backgroundScrollToBottom 35s linear 1;
+  animation: backgroundScrollToBottom 10s linear 1; }
+
+.animated.to-left-end {
+  background-position: -400px 0 !important; }
+
+.animated.to-top-end {
+  background-position: -400px -400px !important; }
+
+.animated.to-right-end {
+  background-position: 0 -400px !important; }
+
+/* Initial Position*/
+.animated.to-bottom-end {
+  background-position: 0 0 !important; }
+
+/*
+* END -> Smooth full-screen background image animation....
+*/
+/**....................................................................................
+** Radio and Checkbox design and animation
+........................................................................................*/
+@-moz-keyframes click-wave {
+  0% {
+    width: inherit;
+    height: inherit;
+    opacity: 0.35;
+    position: relative; }
+  100% {
+    width: 200px;
+    height: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0.0; } }
+
+@-webkit-keyframes click-wave {
+  0% {
+    width: inherit;
+    height: inherit;
+    opacity: 0.35;
+    position: relative; }
+  100% {
+    width: 200px;
+    height: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0.0; } }
+
+@-o-keyframes click-wave {
+  0% {
+    width: inherit;
+    height: inherit;
+    opacity: 0.35;
+    position: relative; }
+  100% {
+    width: 200px;
+    height: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0.0; } }
+
+@keyframes click-wave {
+  0% {
+    width: inherit;
+    height: inherit;
+    opacity: 0.35;
+    position: relative; }
+  100% {
+    width: 200px;
+    height: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0.0; } }
+
+/**....................................................................................
+** End Radio and Checkbox design and animation
+........................................................................................*/
+/*.......................................................
+** zoom, zoom-in/ zoom-out
+..........................................................*/
+.zoom-out {
+  opacity: 0;
+  transform: scale(0); }
+
+.zoom-in {
+  opacity: 1;
+  transform: scale(100%); }
+
+.zoom-in,
+.zoom-out {
+  -webkit-transition: all 500ms linear 100ms;
+  -moz-transition: all 500ms linear 100ms;
+  -o-transition: all 500ms linear 100ms;
+  -ms-transition: all 500ms linear 100ms;
+  transition: all 500ms linear 100ms; }
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0); }
+  to {
+    -webkit-transform: scale(1); } }
+
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+/*.......................................................
+** END -> zoom-in/ zoom-out
+..........................................................*/
+/*---------------------------
+animation zoomIn/ zoomOut
+-----------------------------*/
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1;
+    transform: scale(100%); } }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(100%); } }
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(100%); }
+  100% {
+    opacity: 0;
+    transform: scale(0); } }
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(100%); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0); } }
+
+/*---------------------------
+END -> animation zoomIn/ zoomOut
+-----------------------------*/
+/*.............................................................................................
+* Detecting and executing when transitions, and animation end with jQuery, tutorials
+..................................................................................................*/
+.button {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+  background-color: #777;
+  padding: 0.7em 2em;
+  border: 0;
+  margin: 1em auto 0;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 #444;
+  display: block;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: -webkit-transform 1.5s ease;
+  transition: -webkit-transform 1.5s ease;
+  transition: transform 1.5s ease; }
+
+.animate {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  animation-name: slideLeft; }
+
+/*.............................................................................................
+* End Detecting and executing when transitions end with jQuery, tutorials
+..................................................................................................*/
+
+.contact-us-wrap {
+  width: 50vw;
+  right: 0;
+  position: absolute;
+  float: right !important;
+  z-index: 1150;
+  padding-right: 17%; }
+  .contact-us-wrap:hover {
+    /*background-image: -moz-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: -o-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: -webkit-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: linear-gradient(to left, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));*/
+    width: 100vw;
+    background: #010156; }
+
+.contact-us-wrap
+.contact-us {
+  top: 0;
+  margin-right: 15px;
+  display: inline-block !important;
+  background-color: transparent;
+  font-weight: bold; }
+
+.contact-us i.fa,
+.contact-us i {
+  margin-right: 5px;
+  margin-left: 0; }
+
+.contact-us i:not(.fa) {
+  display: none; }
+
+.contact-us:hover i {
+  display: inline-block !important; }
+
+.contact-us,
+.contact-us:hover i.fa {
+  color: lightskyblue; }
+
+.contact-us i.fa,
+.contact-us:hover i {
+  color: red; }
+
+.contact-us:hover i.fa {
+  font-size: 110%; }
+
+/**.............................................................................................................................
+* Image Modal, 
+...............................................................................................................................*/
+/* The Modal (background) */
+.notification-modal,
+.modal {
+  display: block;
+  /* none,  Hidden by default */
+  /*position: fixed;  Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  /*left: 0;
+        top: 60px;*/
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(50, 60, 80, 0.8);
+  /* Black w/ opacity */ }
+  .notification-modal a.btn-close,
+  .modal a.btn-close {
+    width: 25px !important;
+    height: 25px !important;
+    opacity: 0 !important; }
+    .notification-modal a.btn-close:hover,
+    .modal a.btn-close:hover {
+      opacity: 1 !important; }
+  .notification-modal:hover a.btn-close,
+  .modal:hover a.btn-close {
+    opacity: 0.5 !important; }
+
+.modal {
+  /*MyAnimation return to base button, and MyMessage.ErrorMessage .modal window*/ }
+  .modal.zoom-in {
+    z-index: 1097 !important; }
+  .modal.window.zoom-in {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0; }
+  .modal .return-to-base,
+  .modal .modal.zoom-in {
+    position: fixed !important;
+    z-index: 1100 !important; }
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  height: 80%;
+  max-width: 700px; }
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 2% 0;
+  height: 150px; }
+
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -moz-animation-name: zoom;
+  -o-animation-name: zoom;
+  -ms-animation-name: zoom;
+  animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s; }
+
+/* The Close Button */
+.notification-modal a.btn-close,
+.modal a.btn-close,
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  float: right;
+  color: #010156;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 4; }
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer; }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 360px) {
+  .modal-content {
+    width: 100%; } }
+
+/*....................................................................................................
+*** End Image Modal
+...................................................................................................*/
+
+/**
+ * Image box, .img classes for different image box
+ */
+.img_120X140 {
+  width: 120px;
+  height: 140px; }
+
+.img-box-120X120 {
+  width: 120px;
+  height: 120px; }
+
+.img-box-300X300 {
+  width: 300px;
+  height: 300px; }
+
+.img-box-360X420 {
+  width: 360px;
+  height: 420px; }
+
+.img-box-220X300 {
+  width: 220px;
+  height: 300px; }
+
+.img-box-512X310 {
+  width: 512px;
+  height: 310px; }
+
+.img-box-1024X620 {
+  width: 1024px;
+  height: 620px; }
+
+.img-box-1920X1080 {
+  width: 1920px;
+  height: 1080px; }
+
+.img-box-fullscreen {
+  width: 100vw;
+  height: 100vh; }
+
+.img-box-widthXauto {
+  width: 100%;
+  height: auto; }
+
+.img-box-autoXheight {
+  width: auto;
+  height: inherit; }
+  .img-box-autoXheight img {
+    width: auto !important;
+    height: inherit !important; }
+
+.img-box-120X120, .img-box-120X140, .img-box-300X300, .img-box-360X420,
+.img-box-220X300, .img-box-512X310, .img-box-1024X620, .img-box-1920X1080,
+.img-box-fullscreen {
+  float: none; }
+
+/**
+* END -> Image box, .img classes for different image box
+*/
+
+.menubar {
+  z-index: 10; }
+
+.menu-icon {
+  width: inherit;
+  height: inherit;
+  min-height: 15px;
+  min-width: 15px;
+  max-width: 60px;
+  max-height: 60px;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s; }
+  .menu-icon span {
+    display: block;
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    background: linear-gradient(to right, #ddff99 10%, #ffdd99, #ffbb99 70%);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+
+/**
+ * Icon 1
+ */
+#menu-icon1 span:nth-child(1) {
+  top: 0px; }
+
+#menu-icon1 span:nth-child(2) {
+  top: 30%; }
+
+#menu-icon1 span:nth-child(3) {
+  top: 60%; }
+
+#menu-icon1.open span:nth-child(1) {
+  top: 30%;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+#menu-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -100%; }
+
+#menu-icon1.open span:nth-child(3) {
+  top: 30%;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg); }
+
+/**
+ * END -> Icon 1
+ */
+/**
+ * Icon 2
+ */
+#menu-icon2 {
+  display: normal; }
+  #menu-icon2 span {
+    display: block;
+    position: absolute;
+    height: 15%;
+    width: 50%;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+    #menu-icon2 span:nth-child(even) {
+      left: 50%;
+      border-radius: 0 15% 15% 0; }
+    #menu-icon2 span:nth-child(odd) {
+      left: 0px;
+      border-radius: 15% 0 0 15%; }
+    #menu-icon2 span:nth-child(1), #menu-icon2 span:nth-child(2) {
+      top: 0px; }
+    #menu-icon2 span:nth-child(3), #menu-icon2 span:nth-child(4) {
+      top: 30%; }
+    #menu-icon2 span:nth-child(5), #menu-icon2 span:nth-child(6) {
+      top: 60%; }
+  #menu-icon2.open span:nth-child(1), #menu-icon2.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  #menu-icon2.open span:nth-child(2), #menu-icon2.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  #menu-icon2.open span:nth-child(1) {
+    left: 8.33%;
+    top: 11.66%; }
+  #menu-icon2.open span:nth-child(2) {
+    left: calc(50% - 8.33%);
+    top: 11.66%; }
+  #menu-icon2.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0; }
+  #menu-icon2.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0; }
+  #menu-icon2.open span:nth-child(5) {
+    left: 8.33%;
+    top: 48.33%; }
+  #menu-icon2.open span:nth-child(6) {
+    left: calc(50% - 8.33%);
+    top: 48.33%; }
+
+/**
+ * END -> Icon 2
+ */
+/**
+ * Icon 3
+ */
+#menu-icon3 span:nth-child(1) {
+  top: 0px; }
+
+#menu-icon3 span:nth-child(2), #menu-icon3 span:nth-child(3) {
+  top: 30%; }
+
+#menu-icon3 span:nth-child(4) {
+  top: 60%; }
+
+#menu-icon3.open span:nth-child(1) {
+  top: 30%;
+  width: 0%;
+  left: 50%; }
+
+#menu-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+#menu-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+#menu-icon3.open span:nth-child(4) {
+  top: 30%;
+  width: 0%;
+  left: 50%; }
+
+/**
+ * END -> Icon 3
+ */
+/**
+ * Icon 4
+ */
+#menu-icon4 {
+  display: normal; }
+  #menu-icon4 span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center; }
+  #menu-icon4 span:nth-child(2) {
+    top: 30%;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center; }
+  #menu-icon4 span:nth-child(3) {
+    top: 60%;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center; }
+  #menu-icon4.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -5%;
+    left: 13.33%; }
+  #menu-icon4.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0; }
+  #menu-icon4.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 65%;
+    left: 13.33%; }
+
+/**
+ * END -> Icon 4
+ */
+
+#page-wrap {
+  width: 1000px;
+  margin: 25px auto; }
+
+.drop-down-menu a,
+a {
+  text-decoration: none;
+  text-decoration-style: none; }
+
+ul,
+.ul {
+  list-style: none; }
+
+.drop-down-menu,
+.drop-down-menu .ul,
+.drop-down-menu .li,
+.drop-down-menu a {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  text-align: center; }
+
+/* 
+	LEVEL ONE
+*/
+.drop-down-menu {
+  /* position: relative;    */
+  width: 100%;
+  cursor: pointer; }
+  .drop-down-menu .li {
+    font-weight: bold;
+    font-size: 16px;
+    float: left;
+    position: relative;
+    height: 60px; }
+    .drop-down-menu .li a {
+      display: block;
+      padding: 20px 8px;
+      color: white;
+      position: relative;
+      z-index: 1032; }
+  .drop-down-menu a:hover {
+    font-size: 110%;
+    color: greenyellow;
+    position: relative; }
+  .drop-down-menu:hover li a {
+    background: rgba(0, 0, 0, 0.7); }
+
+/* 
+    LEVEL TWO
+*/
+.drop-down-menu .ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1031; }
+  .drop-down-menu .ul .li {
+    font-weight: normal;
+    color: #000;
+    /* border-bottom: 1px solid #ccc;  */
+    margin-top: 2px; }
+
+.drop-down-menu .ul .li button,
+.drop-down-menu .li button,
+.drop-down-menu .ul a button,
+.drop-down-menu a button,
+.drop-down-menu .li a,
+.drop-down-menu .ul .li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* background: #eee !important;  */ }
+
+.drop-down-menu .li button,
+.drop-down-menu .ul .li button,
+.drop-down-menu .ul a button,
+.drop-down-menu a button {
+  background: transparent; }
+
+.drop-down-menu .li a:hover,
+.drop-down-menu .ul .li a:hover {
+  display: block;
+  color: greenyellow;
+  /* background: #F3D673 !important;  */ }
+
+.drop-down-menu .li {
+  background-image: -moz-linear-gradient(top, rgba(50, 60, 80, 0.8), rgba(50, 60, 80, 0));
+  background-image: -o-linear-gradient(top, rgba(50, 60, 80, 0.8), rgba(50, 60, 80, 0));
+  background-image: -webkit-linear-gradient(top, rgba(50, 60, 80, 0.8), rgba(50, 60, 80, 0));
+  background-image: linear-gradient(to bottom, rgba(50, 60, 80, 0.8), rgba(50, 60, 80, 0)); }
+
+.drop-down-menu .ul .li a,
+.drop-down-menu .ul .li {
+  background-image: -moz-linear-gradient(top, #0a325a, rgba(50, 60, 80, 0.5));
+  background-image: -o-linear-gradient(top, #0a325a, rgba(50, 60, 80, 0.5));
+  background-image: -webkit-linear-gradient(top, #0a325a, rgba(50, 60, 80, 0.5));
+  background-image: linear-gradient(to bottom, #0a325a, rgba(50, 60, 80, 0.5)); }
+
+.drop-down-menu .li a.hover,
+.drop-down-menu .li a:hover,
+.drop-down-menu .ul .li a:hover {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+
+/**.......................................................................................................
+* Scroll Up and Down of a section
+.......................................................................................................*/
+.scroll-section, .scroll-section .scroll-body {
+  width: inherit;
+  /* height: 300px; */
+  cursor: pointer;
+  position: relative;
+  /* important to positioned the absolute elements within container */ }
+  .scroll-section .scroll-body {
+    width: 100%;
+    height: 100%;
+    clear: both;
+    overflow: hidden; }
+
+.scroll-section, .scroll-section .scroll-body {
+  padding: 0;
+  margin: 0; }
+  .scroll-section .scroll-body .summary-pane {
+    position: absolute;
+    height: 100%;
+    max-height: 100%;
+    width: 20px;
+    max-width: 20px;
+    padding: 10px 1px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-break: normal;
+    color: greenyellow; }
+    .scroll-section .scroll-body .summary-pane.left {
+      left: 0; }
+    .scroll-section .scroll-body .summary-pane.right {
+      right: 0; }
+    .scroll-section .scroll-body .summary-pane * {
+      cursor: not-allowed;
+      word-break: normal; }
+  .scroll-section .scroll-content {
+    padding: 10px 0;
+    height: auto;
+    position: relative;
+    display: block; }
+    .scroll-section .scroll-content .li {
+      float: none;
+      /* float: left prevents calculative height of .li, and returns height always 0 */ }
+  .scroll-section:hover .controls, .scroll-section .scroll-body:hover .controls {
+    opacity: 1; }
+
+/**.......................................................................................................
+* End Scroll Up and Down of a section
+.......................................................................................................*/
+
+.message-section {
+  z-index: 1201 !important;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  border-radius: 0 !important;
+  width: 100vw;
+  max-height: 30vh;
+  overflow-y: auto;
+  /*padding-right: 10px;*/ }
+  .message-section div {
+    border-radius: 0 !important;
+    border-top: 1px dotted #ccc; }
+    .message-section div:first-of-type {
+      border-top: none; }
+  .message-section span.message-text {
+    padding: 5px;
+    margin-left: 13px;
+    margin-right: 5px;
+    white-space: normal;
+    word-wrap: break-word; }
+  .message-section span.message-type {
+    margin-top: -4px;
+    left: 3px;
+    border-radius: 50%;
+    /*border: 1px dotted;*/ }
+    .message-section span.message-type i {
+      border-radius: 50%; }
+      .message-section span.message-type i.fa-info {
+        padding-top: 4px;
+        padding-left: 10px; }
+      .message-section span.message-type i.fa-warning {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-danger {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-important {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-very-important {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-urgent {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.extreme {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-top-priority {
+        padding-top: 4px;
+        padding-left: 5px; }
+  .message-section a.btn-dismiss {
+    margin-top: -23px;
+    right: 15px; }
+  .message-section.live-message {
+    max-height: 150px;
+    height: 150px;
+    overflow: hidden; }
+    .message-section.live-message span.message-text {
+      z-index: -1 !important; }
+    .message-section.live-message a.btn-dismiss {
+      position: fixed !important;
+      z-index: 1202 !important; }
+  .message-section i.zoom-out {
+    position: absolute !important;
+    height: 1px !important;
+    width: 1px !important;
+    margin-top: -100vh !important; }
+  .message-section i.light.fa-eraser {
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    line-height: 20px;
+    background: transparent;
+    position: absolute !important;
+    z-index: 1101 !important;
+    left: 200; }
+
+.message-section span.message-type,
+.message-section a.btn-dismiss {
+  position: absolute;
+  width: 27px;
+  height: 27px; }
+
+.popup {
+  background-color: #f5f5f5;
+  top: 9vh;
+  left: 0;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 91vh;
+  padding: 0;
+  overflow: auto; }
+
+.popup-header {
+  margin: auto;
+  width: 100%;
+  height: 35px;
+  background-color: #f0f0f5;
+  border-bottom: 0.01px solid darkslateblue; }
+  .popup-header span {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    float: right; }
+
+.popup-footer {
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  height: 33px;
+  padding-right: 25px;
+  background-color: #f0f0f5;
+  border-top: 0.01px solid darkslateblue; }
+
+.popup-alert {
+  max-height: 105px !important;
+  line-height: 35px;
+  background-color: purple;
+  color: gold;
+  top: 60px;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  width: 100%;
+  padding-left: 1%;
+  opacity: 0.8;
+  z-index: 1043; }
+  .popup-alert:hover {
+    color: yellow;
+    opacity: 1; }
+  .popup-alert.popup-alert-live, .popup-alert.popup-alert-live .popup-alert.popup-alert-prop-section {
+    max-height: 35px;
+    height: 35px;
+    overflow: hidden;
+    z-index: 1042 !important; }
+    .popup-alert.popup-alert-live span, .popup-alert.popup-alert-live .popup-alert.popup-alert-prop-section span {
+      z-index: -1 !important;
+      position: absolute !important; }
+    .popup-alert.popup-alert-live button, .popup-alert.popup-alert-live .popup-alert.popup-alert-prop-section button {
+      z-index: 1045 !important;
+      position: fixed; }
+    .popup-alert.popup-alert-live .fa-info {
+      left: 10px;
+      float: left;
+      margin: 5px 10px; }
+
+.btn-alert {
+  right: 0;
+  background: rebeccapurple;
+  border-style: none;
+  float: right;
+  padding: 0 15px 0 15px; }
+
+/*Image Preview Box*/
+.popup-body {
+  overflow: auto;
+  width: 95%;
+  height: 83%;
+  margin: auto;
+  padding: auto;
+  vertical-align: center; }
+  .popup-body > * {
+    margin: auto; }
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+  .popup {
+    overflow: auto;
+    max-height: 84vh; } }
+
+/**
+ * Layout -> Top Navigation Menu
+ */
+.navbar-transparent {
+  min-height: 60px;
+  max-height: 60vh;
+  border: none;
+  background-image: -webkit-linear-gradient(top, rgba(50, 60, 80, 0.3), rgba(50, 60, 80, 0));
+  background-image: linear-gradient(to bottom, rgba(50, 60, 80, 0.3), rgba(50, 60, 80, 0)); }
+  .navbar-transparent.fixed-top {
+    padding: 0; }
+  .navbar-transparent.navbar-collapse.collapse {
+    height: 60px; }
+    .navbar-transparent.navbar-collapse.collapse.in {
+      height: 60vh;
+      max-height: 70vh; }
+  .navbar-transparent:hover {
+    background-image: -webkit-linear-gradient(top, #323c50, rgba(50, 60, 80, 0));
+    background-image: linear-gradient(to bottom, #323c50, rgba(50, 60, 80, 0)); }
+  .navbar-transparent .ul li,
+  .navbar-transparent .ul li a,
+  .navbar-transparent .ul li a button
+.ul li a > span {
+    margin: auto;
+    height: 60px;
+    padding: auto auto;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    /* */
+    font-family: cursive, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+  .navbar-transparent .ul li:hover,
+  .navbar-transparent .ul li a:hover,
+  .navbar-transparent .ul li a button:hover {
+    color: greenyellow;
+    border: none;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom: 10px solid;
+    border-bottom-color: -webkit-linear-gradient(bottom, lightcyan, cyan);
+    border-bottom-color: linear-gradient(to top, lightcyan, cyan);
+    background-image: -webkit-linear-gradient(top, #323c50, rgba(255, 255, 255, 0.2));
+    background-image: linear-gradient(to bottom, #323c50, rgba(255, 255, 255, 0.2)); }
+
+.navbar-transparent
+.navbar-transparent .ul li:hover,
+.navbar-transparent .ul li a:hover,
+.navbar-transparent .ul li a button:hover,
+.navbar-transparent .ul li,
+.navbar-transparent .ul li a,
+.navbar-transparent .ul li a button
+.navbar-transparent .ul li a > span,
+.navbar-transparent:hover {
+  -webkit-transition: all 600ms linear 100ms;
+  -moz-transition: all 600ms linear 100ms;
+  -o-transition: all 600ms linear 100ms;
+  -ms-transition: all 600ms linear 100ms;
+  transition: all 600ms linear 100ms; }
+
+a.navbar-transparent,
+.navbar-transparent ul li a > span {
+  width: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px !important; }
+
+a.navbar-transparent {
+  font-size: 12px !important; }
+
+.navbar-transparent .ul li a:hover > span {
+  color: deepskyblue; }
+
+.navbar-header a.navbar-toggle {
+  width: 35px;
+  height: 35px;
+  padding: 0; }
+  .navbar-header a.navbar-toggle .span-item {
+    width: inherit;
+    height: inherit;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #5353cc;
+    font-family: cursive, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
+/**
+* END -> Layout -> Top Navigation Menu
+*/
+
+.social-icons-wrapper {
+  float: right;
+  top: calc(50vh - 5px);
+  transform: translateY(-40%);
+  left: calc(100% - 50px);
+  vertical-align: middle;
+  margin-right: -100%;
+  position: fixed;
+  z-index: 5; }
+  .social-icons-wrapper.show-social {
+    margin-left: 0; }
+  .social-icons-wrapper.hide-social {
+    margin-left: -100%;
+    left: -50px;
+    /*important to make safe-distance from filter icon in store/home */ }
+  .social-icons-wrapper.hide-social, .social-icons-wrapper.show-social {
+    -webkit-transition: all 1s ease-in 100ms;
+    -moz-transition: all 1s ease-in 100ms;
+    -o-transition: all 1s ease-in 100ms;
+    -ms-transition: all 1s ease-in 100ms;
+    transition: all 1s ease-in 100ms; }
+  .social-icons-wrapper + div > a {
+    float: right;
+    top: 58vh;
+    left: calc(100% - 38px);
+    margin-top: -38px;
+    margin-left: 20px;
+    padding: 0;
+    font-size: 35px;
+    line-height: 35px;
+    position: fixed;
+    z-index: 6; }
+    .social-icons-wrapper + div > a:hover {
+      font-size: 55px;
+      line-height: 55px;
+      margin-top: -48px;
+      margin-left: 15px;
+      /*border: 1px solid yellow;*/ }
+  .social-icons-wrapper .diamond-level-0 {
+    left: calc(100% - 50px); }
+  .social-icons-wrapper .diamond-level-1 {
+    position: absolute;
+    transform: translateY(-113%);
+    left: calc(100% - 91px); }
+  .social-icons-wrapper .diamond-level-2 {
+    position: absolute;
+    transform: translateY(-134%);
+    left: calc(100% - 140px); }
+  .social-icons-wrapper .diamond-level-3 {
+    position: absolute;
+    transform: translateY(-176%);
+    left: calc(100% - 189px); }
+  .social-icons-wrapper .diamond-level-4 {
+    position: absolute;
+    transform: translateY(-301%);
+    left: calc(100% - 238px); }
+
+.social-icons-wrapper + div > a,
+.social-icons-wrapper + div > a:hover,
+.diamond-icons,
+.diamond-icons:hover,
+.diamond-icons:hover i.fa,
+.diamond-icons button,
+.diamond-icons button i.fa {
+  -webkit-transition: all 400ms linear 100ms;
+  -moz-transition: all 400ms linear 100ms;
+  -o-transition: all 400ms linear 100ms;
+  -ms-transition: all 400ms linear 100ms;
+  transition: all 400ms linear 100ms; }
+
+.diamond-icons {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 4px;
+  padding: 0;
+  border: 1px solid red;
+  transform: rotate(45deg);
+  /*standard syntax */
+  text-align: center;
+  position: relaxed absolute; }
+  .diamond-icons:hover {
+    background-color: #6e17f0;
+    border-style: none;
+    transform: scale(1.1); }
+    .diamond-icons:hover i.fa {
+      color: #e5ff00; }
+  .diamond-icons > div {
+    width: 35px;
+    height: 35px;
+    margin-left: -1px;
+    padding: 0 !important;
+    padding-bottom: 7px;
+    font-size: 30px;
+    text-align: center;
+    transform: rotate(315deg);
+    /* standard syntax */ }
+  .diamond-icons button i.fa {
+    margin-left: -4px;
+    color: #0303fa; }
+
+.hovered-diamond, .diamond-icons button, .diamond-icons button i.fa {
+  background-color: transparent;
+  /*border: 1px solid blue;*/
+  /*-webkit-margin-start: -1px !important; */
+  /*margin is creating imparfect position in safari,*/
+  border: none; }
+
+/*@supports (overflow: -webkit-marquee) and (justify-content:inherit){
+
+        /* type your custom css code here 
+        .diamond-icons button,.diamond-icons button i.fa
+        {
+            -webkit-margin-start: -12px !important;
+        }
+    }*/
+/*positioning properly of .fa icons inside diamond, for safari browser*/
+_::-webkit-full-page-media, _:future, :root .diamond-icons button, .diamond-icons button i.fa {
+  -webkit-margin-start: -12px !important; }
+
+/*Custom tool-tip*/
+.tooltip-custom {
+  text-decoration: none;
+  position: relative; }
+
+.tooltip-custom img {
+  transition-delay: 100ms;
+  transition-duration: 500ms; }
+
+.tooltip-custom img:hover {
+  z-index: 1160;
+  transform: scale(1.5);
+  padding-top: 10px;
+  padding-right: 5px;
+  -webkit-transition: all 500ms linear 100ms;
+  -moz-transition: all 500ms linear 100ms;
+  -o-transition: all 500ms linear 100ms;
+  -ms-transition: all 500ms linear 100ms;
+  transition: all 500ms linear 100ms; }
+
+/**
+* custom class, extension of bootstrap classes
+*/
+.my-focus, .nav-body .nav-item .u-item.gradient .l-item.active:hover {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 10px rgba(102, 175, 233, 0.7);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 10px rgba(102, 175, 233, 0.7); }
+
+/**
+* end custom class, extension of bootstrap classes
+*/
+/**
+* Nav menu in Layout page, 
+*/
+.navbar-header .nav {
+  display: inline-block; }
+  .navbar-header .nav li {
+    display: inline-block; }
+
+.span-item {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(to right, #ddff99 10%, #ffdd99, #ffbb99 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  cursor: pointer;
+  z-index: 1; }
+  .span-item:hover {
+    color: #9ca830; }
+  .span-item.fa-img {
+    -webkit-background-clip: content-box;
+    background-clip: content-box; }
+
+.nav-body {
+  z-index: 1199;
+  height: 60vh;
+  width: 100%;
+  overflow-y: auto; }
+  .nav-body .l-item:nth-child(1) {
+    transition: all 0.2s 0.1s ease-in; }
+  .nav-body .l-item:nth-child(2) {
+    transition: all 0.2s 0.2s ease-in; }
+  .nav-body .l-item:nth-child(3) {
+    transition: all 0.2s 0.3s ease-in; }
+  .nav-body .l-item:nth-child(4) {
+    transition: all 0.2s 0.4s ease-in; }
+  .nav-body .nav-item {
+    position: relative;
+    width: inherit;
+    margin: 0;
+    padding: 0 !important;
+    min-height: 60px;
+    left: 103%;
+    background: rgba(22, 22, 22, 0.9);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    @media only screen and (max-width: 767px) {
+      .nav-body .nav-item {
+        padding-top: 20px; } }
+    @media only screen and (max-width: 400px) {
+      .nav-body .nav-item {
+        padding-top: 45px; } }
+    .nav-body .nav-item.active {
+      left: 0; }
+    .nav-body .nav-item .u-item {
+      margin: 0 !important;
+      padding: 5px 15px 20px 15px;
+      position: relative;
+      display: block;
+      position: relative;
+      right: 10px; }
+      .nav-body .nav-item .u-item .l-item {
+        text-align: center; }
+      .nav-body .nav-item .u-item > a {
+        border: 1px solid yellow;
+        height: 35px;
+        width: 100%;
+        color: yellow; }
+        .nav-body .nav-item .u-item > a .btn-icon-left {
+          margin: 0;
+          margin-top: -7px;
+          padding: 5px;
+          height: 35px;
+          width: 35px; }
+          .nav-body .nav-item .u-item > a .btn-icon-left i {
+            height: 25px;
+            width: 25px;
+            line-height: 23px; }
+        .nav-body .nav-item .u-item > a.gradient-animation, .nav-body .nav-item .u-item > a.gradient-animation-light {
+          border: none; }
+      .nav-body .nav-item .u-item span:first-of-type.btn-icon-left {
+        border-right: none; }
+      .nav-body .nav-item .u-item.gradient .l-item {
+        display: inline-block;
+        padding: 3px 0;
+        opacity: 0;
+        cursor: pointer; }
+        .nav-body .nav-item .u-item.gradient .l-item:nth-child(1) {
+          transition: all 0.2s 0.1s ease-in; }
+        .nav-body .nav-item .u-item.gradient .l-item:nth-child(2) {
+          transition: all 0.2s 0.2s ease-in; }
+        .nav-body .nav-item .u-item.gradient .l-item:nth-child(3) {
+          transition: all 0.2s 0.3s ease-in; }
+        .nav-body .nav-item .u-item.gradient .l-item:nth-child(4) {
+          transition: all 0.2s 0.4s ease-in; }
+        .nav-body .nav-item .u-item.gradient .l-item.active {
+          opacity: 1;
+          background: linear-gradient(to right, #ddff99 10%, #ffdd99, #ffbb99 70%); }
+          .nav-body .nav-item .u-item.gradient .l-item.active:hover {
+            background: linear-gradient(to right, #ddff99 10%, #ffdd99, #ffbb99 70%); }
+            .nav-body .nav-item .u-item.gradient .l-item.active:hover a {
+              color: blue; }
+      .nav-body .nav-item .u-item.picture-box .l-item {
+        width: 190px;
+        height: 230px;
+        padding: 0;
+        margin: 10px; }
+        .nav-body .nav-item .u-item.picture-box .l-item .img-box {
+          width: 190px;
+          height: 190px;
+          display: block;
+          margin: 0;
+          padding: 0;
+          border: 1px solid transparent;
+          border-radius: 4px;
+          background: transparent; }
+          .nav-body .nav-item .u-item.picture-box .l-item .img-box img {
+            border-radius: 4px;
+            width: 190px;
+            height: 190px;
+            margin: 0; }
+        .nav-body .nav-item .u-item.picture-box .l-item a {
+          border: none;
+          border-top: none;
+          height: 40px;
+          padding: 0;
+          color: white;
+          overflow: hidden; }
+          .nav-body .nav-item .u-item.picture-box .l-item a span {
+            height: 40px; }
+            .nav-body .nav-item .u-item.picture-box .l-item a span:first-of-type {
+              width: 20px;
+              height: 100%; }
+              .nav-body .nav-item .u-item.picture-box .l-item a span:first-of-type i {
+                height: 20px;
+                width: 20px;
+                padding: 0;
+                margin: 10px auto;
+                font-size: 20px;
+                line-height: 20px;
+                overflow: visible; }
+            .nav-body .nav-item .u-item.picture-box .l-item a span:last-of-type {
+              width: calc(100% - 20px);
+              height: 100%;
+              padding: 0;
+              margin: 0 1px;
+              white-space: normal;
+              word-wrap: break-word;
+              font-weight: 300;
+              font-size: 11px !important;
+              line-height: 1.4;
+              -o-text-overflow: ellipsis;
+              -ms-text-overflow: ellipsis;
+              text-overflow: ellipsis; }
+              .nav-body .nav-item .u-item.picture-box .l-item a span:last-of-type:hover {
+                color: #ab8efa; }
+            .nav-body .nav-item .u-item.picture-box .l-item a span.btn-icon-left {
+              border-right: none; }
+          .nav-body .nav-item .u-item.picture-box .l-item a i.child-caret {
+            border: 1px solid gold;
+            position: absolute;
+            top: 60%;
+            left: 40%; }
+      .nav-body .nav-item .u-item .child-caret {
+        margin: 0 10px;
+        width: 20px;
+        height: 20px;
+        right: 0;
+        font-size: 20px;
+        line-height: 18px;
+        clear: right;
+        border: 1px solid blue;
+        border-radius: 4px; }
+        .nav-body .nav-item .u-item .child-caret:hover {
+          color: yellow;
+          border-color: blueviolet; }
+      .nav-body .nav-item .u-item .child-section {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        display: block; }
+        .nav-body .nav-item .u-item .child-section.collapse.in {
+          width: 0;
+          height: 0;
+          border: none;
+          overflow: hidden; }
+      .nav-body .nav-item .u-item .opened .child-caret {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        border: 1px solid yellow; }
+        .nav-body .nav-item .u-item .opened .child-caret:hover {
+          color: yellow;
+          border-color: blueviolet; }
+      .nav-body .nav-item .u-item .span-item {
+        font-size: 14px; }
+      .nav-body .nav-item .u-item .root-btn .fa-img, .nav-body .nav-item .u-item .child-btn .fa-img {
+        overflow: visible;
+        height: 20px;
+        width: 20px; }
+      .nav-body .nav-item .u-item .root-btn .fa-img {
+        height: 25px;
+        width: 25px; }
+  .nav-body.full-screen {
+    height: calc(100vh - 50px); }
+    .nav-body.full-screen .control.toolbar-base {
+      right: 10px; }
+  .nav-body .counter-on-nav {
+    top: calc(50vh - 20px);
+    left: calc(50vw - 20px);
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    z-index: 1101;
+    color: greenyellow; }
+  .nav-body .first-child, .nav-body .last-child {
+    display: none; }
+
+/**
+* end Nav menu in Layout page
+*/
+/** 
+* toolbar for nav menu
+*/
+.control.toolbar-base {
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #2196F3; }
+
+.control {
+  z-index: 100;
+  cursor: pointer; }
+  .control i {
+    cursor: pointer;
+    width: 25px; }
+
+.nav-toolbar {
+  position: absolute;
+  z-index: 9;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  display: none; }
+  .nav-toolbar.active {
+    display: flex; }
+  .nav-toolbar .toolbar-body {
+    display: flex;
+    color: #fff; }
+    .nav-toolbar .toolbar-body .control {
+      padding: 5px;
+      z-index: 10;
+      background-color: #2196F3; }
+      .nav-toolbar .toolbar-body .control i {
+        width: 35px; }
+      .nav-toolbar .toolbar-body .control input {
+        text-align: center;
+        width: 40px;
+        color: purple; }
+  .nav-toolbar .toolbar-drag-selector {
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff; }
+
+/** 
+*
+*/
+
+/**
+ * .btn-save, .btn-create etc.
+ */
+.btn-bracketed:before {
+  display: inline-block;
+  content: "[";
+  padding-right: 0.2em; }
+
+.btn-bracketed:after {
+  display: inline-block;
+  content: "]";
+  padding-left: 0.2em; }
+
+.btn-link i {
+  cursor: pointer; }
+
+.btn-save-file {
+  display: normal; }
+
+.btn-save {
+  color: purple;
+  border: 1px solid purple; }
+  .btn-save:hover {
+    color: greenyellow;
+    background-color: purple;
+    border: 1px solid lime; }
+
+.btn-create {
+  background-color: forestgreen;
+  border: 1px solid darkgoldenrod;
+  color: white; }
+  .btn-create:hover {
+    background-color: rebeccapurple;
+    border: 1px solid gold;
+    color: gold; }
+
+.btn-edit {
+  background-color: cornflowerblue;
+  color: white; }
+  .btn-edit:hover {
+    background-color: darkblue;
+    color: gold; }
+
+.btn-delete {
+  color: orangered;
+  border: 1px solid orangered; }
+  .btn-delete:hover {
+    background-color: orangered;
+    color: lightyellow; }
+
+.btn-cancel {
+  color: blueviolet;
+  border: 1px solid blueviolet; }
+  .btn-cancel:hover {
+    color: purple;
+    border: 1px solid #339433; }
+
+.btn-circle {
+  border-radius: 50%; }
+
+.btn-transparent {
+  background-color: transparent; }
+
+/**
+ * END -> .btn-save, .btn-create etc.
+ */
+/*****************************************************************************
+** btn, a, block, .btn-detail, .btn-cart etc.
+****************************************************************************/
+.btn-full-block {
+  display: block;
+  border: none;
+  height: 100%;
+  width: 100%; }
+
+.btn-cart {
+  background-color: rgba(110, 23, 240, 0.5);
+  color: darkgoldenrod;
+  font-size: 18px;
+  transition-duration: 500ms; }
+  .btn-cart:hover {
+    background-color: #6e17f0;
+    color: gold; }
+
+.btn-detail {
+  background-color: rgba(110, 23, 240, 0.1);
+  color: darkgoldenrod;
+  font-size: 18px;
+  transition-duration: 500ms; }
+  .btn-detail:hover {
+    background-color: rgba(110, 23, 240, 0.6);
+    color: gold; }
+
+/*****************************************************************************
+** END -> btn, a, block, .btn-detail, .btn-cart etc.
+****************************************************************************/
+.btn-save,
+.btn-save:hover,
+.btn-create,
+.btn-create:hover,
+.btn-edit,
+.btn-edit:hover,
+.btn-cancel,
+.btn-cancel:hover,
+.btn-delete,
+.btn-delete:hover {
+  -webkit-transition: all 500ms linear 100ms;
+  -moz-transition: all 500ms linear 100ms;
+  -o-transition: all 500ms linear 100ms;
+  -ms-transition: all 500ms linear 100ms;
+  transition: all 500ms linear 100ms; }
+
+/*..........................................................................
+ * .fa-img, .fa-success, .fa-error, .fa-verify etc. image button classes
+ ............................................................................*/
+.fa-img {
+  display: inline-block;
+  width: 15px;
+  max-width: 40px;
+  height: 15px;
+  max-height: 40px; }
+
+.fa-generic {
+  background-image: url(/images/icons/error.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; }
+
+.fa-success {
+  background-image: url(/images/icons/success.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; }
+
+.fa-error {
+  background-image: url(/images/icons/error.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; }
+
+.fa-verify, .fa-verify.v0, .fa-verify.v1, .fa-verify.v2, .fa-verify.v3, .fa-verify.v4, .fa-verify.v5 {
+  background: transparent url(/images/icons/verify.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .v1.fa-verify {
+    background: transparent url(/images/icons/verify1.png); }
+  .v2.fa-verify {
+    background: transparent url(/images/icons/verify2.png); }
+  .v3.fa-verify {
+    background: transparent url(/images/icons/verify3.png); }
+  .v4.fa-verify {
+    background: transparent url(/images/icons/verify4.png); }
+  .v5.fa-verify {
+    background: transparent url(/images/icons/verify5.png); }
+
+.fa-rank {
+  background: transparent url(/images/icons/rank3.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.fa-rank-indicator {
+  /*background: transparent url(/images/icons/rank-indicator.gif);*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute; }
+  .fa-rank-indicator.v0 {
+    margin: auto; }
+  .fa-rank-indicator.v1 {
+    margin-top: 52.5px;
+    margin-bottom: -52.5px;
+    margin-left: -37.0px; }
+  .fa-rank-indicator.v2 {
+    margin-top: 46.0px;
+    margin-bottom: -46.0px;
+    margin-left: -14.0px; }
+  .fa-rank-indicator.v3 {
+    margin-top: 35.5px;
+    margin-bottom: -35.5px;
+    margin-left: 3px; }
+  .fa-rank-indicator.v4 {
+    margin-top: 25.6px;
+    margin-bottom: -25.6px;
+    margin-left: 26.0px;
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Safari */
+    transform: rotate(90deg); }
+  .fa-rank-indicator.v5 {
+    margin-top: 6.5px;
+    margin-bottom: -6.5px;
+    margin-left: 14.2px; }
+
+.fa-warning.v1 {
+  background: transparent url(/images/icons/fa-warning1.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.fa-danger, .fa-danger.v1, .fa-danger.v2, .fa-danger.v3 {
+  background: transparent url(/images/icons/fa-danger.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .v1.fa-danger {
+    background: transparent url(/images/icons/fa-danger1.png); }
+  .v2.fa-danger {
+    background: transparent url(/images/icons/fa-danger2.png); }
+  .v3.fa-danger {
+    background: transparent url(/images/icons/fa-danger3.png); }
+
+.fa-important, .fa-important.v1 {
+  background: transparent url(/images/icons/fa-important.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .v1.fa-important {
+    background: transparent url(/images/icons/fa-important1.png); }
+
+.fa-very-important {
+  background: transparent url(/images/icons/fa-important1.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.fa-urgent {
+  background: transparent url(/images/icons/fa-urgent.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.fa-extreme {
+  background: transparent url(/images/icons/fa-urgent.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.fa-top-priority {
+  background: transparent url(/images/icons/fa-urgent.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+/*..........................................................................
+* End -> .fa-img, .fa-success, .fa-error, .fa-verify etc. image button classes
+............................................................................*/
+/*..................................................................
+** Image Buttons, .check-box, .btn-img, .checkbox-check, .lock, .lock-open etc.
+......................................................................*/
+.check-box {
+  width: 20px;
+  height: 20px;
+  font-size: 40px;
+  border: red 1px solid; }
+
+/*input + div.checkbox-icon {
+        margin-left: -20px;
+        border: 1px solid;
+        display: inline-block;
+        min-width: 10px;
+        min-height: 10px;
+        position: relative;
+        margin-right: 20px;
+    }
+    input + div.checkbox-icon:hover{
+        z-index: -1;
+    }*/
+.btn-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: 10px;
+  min-height: 10px;
+  display: inline-block;
+  transition-duration: 200ms; }
+
+.checkbox-checked-1 {
+  background-image: url(/images/icons/checked-1.svg); }
+
+.lock {
+  background-image: url(/images/icons/lock.svg); }
+
+.lock-open {
+  background-image: url(/images/icons/lock-open.svg); }
+
+.manage {
+  background-image: url(/images/icons/account-settings.png); }
+
+.power {
+  background-image: url(/images/icons/power.svg); }
+
+.notification {
+  /*background-image: url("/images/icons/notification.svg");*/
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCA0MyAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+YW1leC0tYmx1ZTwvdGl0bGU+PHBhdGggZD0iTTM5Ljg4MiA2bC0zLjUxNCA0LjQ1NEwzOS43ODQgMTVoLTIuMjNsLTIuNDEtMi45NkwzMi43NTIgMTVoLTguMzY2VjZoOC42NjVsMi4xNzQgMi45MjNMMzcuNTU0IDZoMi4zMjh6TTI2LjI1IDkuNDE4aDQuNDEzdjEuODIzSDI2LjI1djEuOTM4aDQuNDEzdjEuMzA2bDMuMjcyLTQuMTA3LTMuMjcyLTQuMDg2djEuNTM0SDI2LjI1VjkuNDJ2LS4wMDJ6TTIyLjcyIDZ2OWgtMS44NjRWNy43ODRMMTguMTk0IDE1SDE2LjQ0bC0yLjY1LTcuMzI3VjE1aC0zLjhsLS43NTItMi4wNUg1LjMzNkw0LjY1NiAxNUgyLjYxMmwzLjMzNS05SDguNzlsMy4xMzggOC43MjdWNmgzLjAzNWwyLjQ0NCA2LjAzOEwxOS42OSA2aDMuMDN6TTUuOTQ2IDExLjEyN2gyLjY0OEw3LjMxOCA3LjQ4bC0xLjM3IDMuNjQ3em0zMC40NjMtNi45bC0xLjEzIDEuNDE4LTEuMDQzLTEuNDAyQS42MDUuNjA1IDAgMCAwIDMzLjc1MyA0SDE4LjcyNWEuNjAzLjYwMyAwIDAgMC0uNTY1LjM5bC0uODE0IDIuMTU2LS44OC0yLjE3QS42MDUuNjA1IDAgMCAwIDE1LjkxIDRINC45NzJhLjYwNC42MDQgMCAwIDAtLjU2NS4zOTNMLjAzOCAxNi4xOWEuNi42IDAgMCAwIC41NjUuODFoNS4wNjNjLjI2IDAgLjQ5LS4xNjYuNTctLjQxMmwuNTQ2LTEuNjRoMS4wNmwuNjA0IDEuNjU2YS42MDMuNjAzIDAgMCAwIC41NjYuMzk2aDI0LjQxYS42MDcuNjA3IDAgMCAwIC40Ny0uMjI0bDEuMjYtMS41NiAxLjI3IDEuNTYyYy4xMTYuMTQuMjkuMjIyLjQ3LjIyMmg0Ljk5MmEuOTUuOTUgMCAwIDAgLjc2LTEuNTIzbC0zLjc1LTQuOTkzIDMuOS00Ljk0M0EuOTUuOTUgMCAwIDAgNDIuMDQ2IDRoLTUuMTYzYS41OTguNTk4IDAgMCAwLS40Ny4yMjhoLS4wMDN6IiBmaWxsPSIjMDA5OUU1IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=");
+  background-image: url(/images/icons/notification.svg); }
+
+.switch-on {
+  background-image: url(/images/icons/switch-on.svg); }
+
+.switch-off {
+  background-image: url(/images/icons/switch-off.svg); }
+
+.amex-icon {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCA0MyAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+YW1leC0tYmx1ZTwvdGl0bGU+PHBhdGggZD0iTTM5Ljg4MiA2bC0zLjUxNCA0LjQ1NEwzOS43ODQgMTVoLTIuMjNsLTIuNDEtMi45NkwzMi43NTIgMTVoLTguMzY2VjZoOC42NjVsMi4xNzQgMi45MjNMMzcuNTU0IDZoMi4zMjh6TTI2LjI1IDkuNDE4aDQuNDEzdjEuODIzSDI2LjI1djEuOTM4aDQuNDEzdjEuMzA2bDMuMjcyLTQuMTA3LTMuMjcyLTQuMDg2djEuNTM0SDI2LjI1VjkuNDJ2LS4wMDJ6TTIyLjcyIDZ2OWgtMS44NjRWNy43ODRMMTguMTk0IDE1SDE2LjQ0bC0yLjY1LTcuMzI3VjE1aC0zLjhsLS43NTItMi4wNUg1LjMzNkw0LjY1NiAxNUgyLjYxMmwzLjMzNS05SDguNzlsMy4xMzggOC43MjdWNmgzLjAzNWwyLjQ0NCA2LjAzOEwxOS42OSA2aDMuMDN6TTUuOTQ2IDExLjEyN2gyLjY0OEw3LjMxOCA3LjQ4bC0xLjM3IDMuNjQ3em0zMC40NjMtNi45bC0xLjEzIDEuNDE4LTEuMDQzLTEuNDAyQS42MDUuNjA1IDAgMCAwIDMzLjc1MyA0SDE4LjcyNWEuNjAzLjYwMyAwIDAgMC0uNTY1LjM5bC0uODE0IDIuMTU2LS44OC0yLjE3QS42MDUuNjA1IDAgMCAwIDE1LjkxIDRINC45NzJhLjYwNC42MDQgMCAwIDAtLjU2NS4zOTNMLjAzOCAxNi4xOWEuNi42IDAgMCAwIC41NjUuODFoNS4wNjNjLjI2IDAgLjQ5LS4xNjYuNTctLjQxMmwuNTQ2LTEuNjRoMS4wNmwuNjA0IDEuNjU2YS42MDMuNjAzIDAgMCAwIC41NjYuMzk2aDI0LjQxYS42MDcuNjA3IDAgMCAwIC40Ny0uMjI0bDEuMjYtMS41NiAxLjI3IDEuNTYyYy4xMTYuMTQuMjkuMjIyLjQ3LjIyMmg0Ljk5MmEuOTUuOTUgMCAwIDAgLjc2LTEuNTIzbC0zLjc1LTQuOTkzIDMuOS00Ljk0M0EuOTUuOTUgMCAwIDAgNDIuMDQ2IDRoLTUuMTYzYS41OTguNTk4IDAgMCAwLS40Ny4yMjhoLS4wMDN6IiBmaWxsPSIjMDA5OUU1IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=");
+  min-width: 60px; }
+
+.visa-icon {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDEiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCA0MSAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+dmlzYS0tYmx1ZTwvdGl0bGU+PHBhdGggZD0iTTIwLjMgNC4yM0wxNy41NiAxNi44aC0zLjMxbDIuNzM4LTEyLjU3SDIwLjN6TTM0LjI0IDEyLjM1bDEuNzQ1LTQuNzIyIDEuMDAzIDQuNzJIMzQuMjRsLS4wMDIuMDAyem0zLjcgNC40NTNINDFMMzguMzIzIDQuMjNoLTIuODI1YTEuNTEgMS41MSAwIDAgMC0xLjQxMi45MmwtNC45NyAxMS42NWgzLjQ4bC42OS0xLjg3Nmg0LjI0OGwuNDA1IDEuODc2aC0uMDAyem0tOC42NS00LjEwM2MuMDE0LTMuMzE4LTQuNjczLTMuNTAyLTQuNjQtNC45ODQuMDEtLjQ1LjQ0Ni0uOTMgMS40MDMtMS4wNTMuNDc2LS4wNiAxLjc4NS0uMTA4IDMuMjcuNTYybC41OC0yLjY2N0E5LjA5MyA5LjA5MyAwIDAgMCAyNi44IDRjLTMuMjczIDAtNS41NzggMS43MDgtNS41OTcgNC4xNTYtLjAyIDEuODEgMS42NDYgMi44MiAyLjkgMy40MiAxLjI5Mi42MTcgMS43MjYgMS4wMTMgMS43MiAxLjU2NC0uMDEuODQyLTEuMDMgMS4yMTYtMS45ODIgMS4yMy0xLjY2Ni4wMjUtMi42MzItLjQ0Mi0zLjQwMi0uNzk0bC0uNiAyLjc1NmMuNzc0LjM0OCAyLjIwMy42NTIgMy42ODIuNjY4IDMuNDgyIDAgNS43Ni0xLjY5IDUuNzctNC4zMDNoLS4wMDN6TTE1LjU2NyA0LjIzbC01LjM3IDEyLjU3SDYuN0w0LjA1NCA2Ljc3Yy0uMTYtLjYyLS4zLS44NDQtLjc4OC0xLjEwNkMyLjQ3IDUuMjM4IDEuMTU3IDQuODQgMCA0LjU5NGwuMDgtLjM2M2g1LjYzN2MuNzE2IDAgMS4zNjIuNDY4IDEuNTI4IDEuMjhsMS4zOTQgNy4yNzYgMy40NDYtOC41NTVIMTUuNTY4eiIgZmlsbD0iIzAwOTlFNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+  min-width: 60px; }
+
+.mastercard-icon {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAzNiAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+bWFzdGVyY2FyZC0tYmx1ZTwvdGl0bGU+PHBhdGggZD0iTTI1LjUgMjFhMTAuNDUgMTAuNDUgMCAwIDEtNi41MjUtMi4yODIgMTEuODEzIDExLjgxMyAwIDAgMCAyLjcyNy00LjVIMjAuMzFBMTAuNTI2IDEwLjUyNiAwIDAgMSAxOCAxNy44NDJhMTAuNTQgMTAuNTQgMCAwIDEtMi4zMS0zLjYyM2gtMS4zNmExMS44MSAxMS44MSAwIDAgMCAyLjcyIDQuNDhBMTAuNDUzIDEwLjQ1MyAwIDAgMSAxMC41IDIxQzQuNyAyMSAwIDE2LjMgMCAxMC41UzQuNyAwIDEwLjUgMGMyLjQ4IDAgNC43NTMuODY0IDYuNTUgMi4zYTExLjc5NSAxMS43OTUgMCAwIDAtMi44NiA0LjkyaDEuMzQzQTEwLjUxNCAxMC41MTQgMCAwIDEgMTggMy4xNTdhMTAuNTIgMTAuNTIgMCAwIDEgMi40NjcgNC4wNmgxLjM3NWExMS44MjIgMTEuODIyIDAgMCAwLTIuODY3LTQuOTM2QTEwLjQ1NCAxMC40NTQgMCAwIDEgMjUuNSAwQzMxLjMgMCAzNiA0LjcgMzYgMTAuNVMzMS4zIDIxIDI1LjUgMjF6TTQuODc0IDcuOTk0bC0xLjA2MiAzLjA4OC0uMDQ0LTMuMDg4SDIuMTkzbC0uODU2IDQuOTg4SDIuMzZsLjY2My0zLjgxMi4wOSAzLjgxMmguNzQ3bDEuNC0zLjgzNC0uNjI4IDMuODM0SDUuNzNsLjg0NC00Ljk4OGgtMS43em0zLjUxLjg0MmMtLjQwMyAwLS43NjQuMDU4LTEuMzEuMjE1IDAgMC0uMTQuODQ1LS4xNS45MTNBMy43MSAzLjcxIDAgMCAxIDguMDggOS43OGMuNTE1IDAgLjcwNS4xLjcwNS4zNyAwIC4wNy0uMDA4LjEzLS4wNDIuMjYzYTMuODg1IDMuODg1IDAgMCAwLS40NDYtLjAzMmMtMS4yMTYgMC0xLjkyMy41NzYtMS45MjMgMS41NjUgMCAuNjU2LjQwNyAxLjExIDEgMS4xMS41MDIgMCAuODcyLS4xNiAxLjE0OC0uNDkybC0uMDIuNDJoLjkwN2MuMDI3LS4zMDYuMjMyLTEuNTY3LjMyNi0yLjE1My4wNTUtLjM0LjA5LS41OTcuMDktLjgwNiAwLS43NzctLjUtMS4xODgtMS40NC0xLjE4OGgtLjAwMnptMy41MSAwYy0xLjIyNiAwLTEuNjUuNjIyLTEuNjQ2IDEuMzczIDAgLjUxLjI1NS44NjQuODM0IDEuMTMuNDQzLjIwMy41MTIuMjYzLjUxMi40NDcgMCAuMjU0LS4xOTYuMzY3LS42My4zNjctLjMyNSAwLS42My0uMDUtLjk4LS4xNiAwIDAtLjE0NC44OTQtLjE1LjkzOC4yNDguMDUyLjQ3LjEgMS4xMzguMTIgMS4xNTcgMCAxLjY5LS40MyAxLjY5LTEuMzU2IDAtLjU1OC0uMjIyLS44ODYtLjc3Mi0xLjEzLS40Ni0uMjA3LS41MTItLjI1My0uNTEyLS40NDIgMC0uMjIuMTgyLS4zMzIuNTM3LS4zMzIuMjE1IDAgLjUwOC4wMjMuNzg2LjA2MmwuMTU4LS45NGE3LjU3MiA3LjU3MiAwIDAgMC0uOTY0LS4wOHYuMDAyem0xLjcyNC0uNTI1Yy0uNDI4LjU5LS40MTIgMi4zOS0uNDc1IDIuNzctLjA3LjQzMy0uMTU4LjkwMy0uMTUgMS4wODMgMCAuNTc2LjMwNi44OS44NjUuODkuMjU0IDAgLjQ4Ny0uMDQuNzg3LS4xM2wuMTQ1LS45YS44OC44OCAwIDAgMS0uMjk1LjAzOGMtLjI2IDAtLjM3NS0uMDktLjM3NS0uMy4wMDItLjEyNi4xODMtMS4wODcuMzEtMS44NmguNTZsLjE1LS45NzRoLS41NmwuMTI2LS42MTRoLTEuMDg4em0zLjQ1NC41MjdjLTEuMDk2IDAtMS45MDUgMS4wMi0xLjkwNSAyLjQwNyAwIDEuMTg4LjYzNiAxLjgwOCAxLjg1NSAxLjgxLjM4MiAwIC43NDMtLjA1MyAxLjExNi0uMTY1bC4xODMtMS4wMWEyLjU5IDIuNTkgMCAwIDEtMS4xMy4yNTZjLS42MzQgMC0xLjAyLS4yNDYtLjk0Ny0uODM0aDIuMTY4Yy4wOTUtLjQxLjEzNS0uNjk4LjEzNS0uOTk2IDAtLjg5OC0uNTczLTEuNDY4LTEuNDcyLTEuNDY4em0zLjEzNS43MDRjLjAyNS0uMjA1LjA3NC0uNDEuMDY0LS42MTRoLTEuMDA0Yy0uMTM3IDEuMjU3LS4zOCAyLjUyOC0uNTcgMy43ODRsLS4wNS4yNzJoMS4wOTVjLjM5My0yLjQ4LjQ4Ny0yLjk2NSAxLjEtMi45MDQuMS0uNTA4LjI4LS45NTQuNDE2LTEuMTc3LS40NTctLjA5LS43MTQuMTYtMS4wNDguNjR6bTMuNTA2LTEuNjdjLTEuNDUyIDAtMi40NjYgMS4yNDYtMi40NjYgMy4wMyAwIDEuMzI3LjczMyAyLjE1NCAxLjkxMiAyLjE1NC4zMDIgMCAuNTYzLS4wNC45NjYtLjE0N2wuMTkyLTEuMTM4Yy0uMzY0LjE3NS0uNjYuMjU2LS45My4yNTYtLjYzNyAwLTEuMDIyLS40NTgtMS4wMjItMS4yMTQgMC0xLjA5Ny41NzItMS44NjggMS4zOS0xLjg2OC4zMDQgMCAuNTg4LjA3Ny45OC4yN2wuMTc4LTEuMDg0Yy0uMTYtLjA2LS43MjUtLjI1OC0xLjIwMy0uMjU4aC4wMDN6bTIuOTMuOTY3Yy0uNDA1IDAtLjc2Ni4wNTgtMS4zMS4yMTVsLS4xNTIuOTEyYTMuNzM4IDMuNzM4IDAgMCAxIDEuMTYtLjE4MmMuNTEgMCAuNzAzLjEuNzAzLjM3IDAgLjA3LS4wMS4xMy0uMDQyLjI2MmEzLjkgMy45IDAgMCAwLS40NDYtLjAzMmMtMS4yMTYgMC0xLjkyMi41NzUtMS45MjIgMS41NjQgMCAuNjU2LjQwNyAxLjExIDEgMS4xMS41IDAgLjg3LS4xNiAxLjE0OC0uNDkybC0uMDIuNDJoLjkwNmMuMDMtLjMwNi4yMzMtMS41NjcuMzI3LTIuMTUzLjA1Ny0uMzQuMDkzLS41OTYuMDktLjgwNSAwLS43NzctLjQ5Ni0xLjE4OC0xLjQzNy0xLjE4OGgtLjAwM3ptMy4xMzUuNzA0Yy4wMjctLjIwNS4wNzUtLjQxLjA2Ny0uNjE0aC0xLjAwOGMtLjEzNiAxLjI1Ny0uMzggMi41MjgtLjU3IDMuNzg0bC0uMDUuMjcyaDEuMDk0Yy4zOTUtMi40OC40OS0yLjk2NSAxLjEwMy0yLjkwNC4xLS41MDguMjgtLjk1NC40MTctMS4xNzctLjQ2LS4wOS0uNzE2LjE2LTEuMDUyLjY0em0zLjU2Ni0uMTA0Yy0uMy0uMzgzLS42Mi0uNTUyLTEuMDQ1LS41NTItLjk3IDAtMS43ODUgMS4xMzctMS43ODUgMi40ODcgMCAxLjAxNC41MjYgMS42ODQgMS4zMjIgMS42ODQuNDAzIDAgLjcxLS4xMzcgMS4wMS0uNDVsLS4wNS4zOGgxLjAzNWwuODM1LTQuOTloLTEuMDgybC0uMjQyIDEuNDQyem0tMS4xMjcgMi42MWMtLjM3MyAwLS41Ni0uMjctLjU2LS44IDAtLjc5OC4zNS0xLjM2Mi44NS0xLjM2Mi4zNzQgMCAuNTguMjguNTguNzk0IDAgLjgwNS0uMzYgMS4zNjgtLjg3IDEuMzY4em0tNi4xMzUuMTQ0Yy0uMjQgMC0uMzkyLS4xNjItLjM5Mi0uNDE1IDAtLjQxLjMxMy0uNjE2LjkzNS0uNjE2LjA3OCAwIC4xMjggMCAuMjQzLjAxNC0uMDIuNi0uMzQgMS4wMTQtLjc4NiAxLjAxNHYuMDAyem0tOS43NTgtMS43MWMuMTAyLS40NjQuMzUtLjcyMi42OTYtLjcyMi42MjIgMCAuNTEzLjY0LjUwNy43MjNoLTEuMjAzem0tOC41IDEuNzFjLS4yNCAwLS4zOTItLjE2Mi0uMzkyLS40MTUgMC0uNDEuMzE0LS42MTYuOTM0LS42MTYuMDggMCAuMTMgMCAuMjQ0LjAxNC0uMDE4LjYtLjM0IDEuMDE0LS43ODUgMS4wMTR2LjAwMnoiIGZpbGw9IiMwMDk5RTUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
+  min-width: 60px; }
+
+.discover-icon {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCA1MCAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZGlzY292ZXItLWJsdWU8L3RpdGxlPjxwYXRoIGQ9Ik01MCAxNC44MDZoLTEuOTE3bC0yLjE1Mi0zLjA2OGgtLjIwMnYzLjA2NmgtMS41NTZ2LTcuNjNoMi4zMDhjMS43OTQgMCAyLjgyMi44MjMgMi44MjIgMi4yNTMgMCAxLjE2OC0uNjQ1IDEuOTM1LTEuODE4IDIuMTY1bDIuNTEyIDMuMjE1SDUwem0tMi4yOTYtNS4zYzAtLjc0NS0uNTI0LTEuMTM0LTEuNDk3LTEuMTM0aC0uNDc2djIuMzEzaC40NTNjLjk5NiAwIDEuNTItLjQxMyAxLjUyLTEuMTh6bS04Ljk2Ny0yLjMzM2g0LjQxdjEuMjkySDQwLjI5djEuNjkzaDIuNzQ4djEuMjkzSDQwLjI5djIuMDYzaDIuODU4djEuMjkyaC00LjQxNFY3LjE3M2guMDAzek0zMy43NDcgMTVsLTMuMzg0LTcuODI3aDEuNjk4bDIuMTMgNS4xMjUgMi4xNTQtNS4xMjVoMS42ODRMMzQuNTg0IDE1aC0uODM3em0tNy4zMTgtLjAyMmMtMi40MyAwLTQuMjUyLTEuNzIzLTQuMjUyLTQuMDI3IDAtMi4xNjUgMS45MDMtMy45MjIgNC4yNS0zLjkyMiAyLjM4MyAwIDQuMjQgMS43NDYgNC4yNCAzLjk3IDAgMi4yMzMtMS44NyAzLjk4LTQuMjQgMy45OHptLTYuNzk0IDBjLTIuMzY3IDAtNC4yMS0xLjc0LTQuMjEtMy45ODYgMC0yLjIxOCAxLjg5LTMuOTkyIDQuMjQ2LTMuOTkyLjY3IDAgMS4yMzMuMTM2IDEuOTE1LjQ2N1Y5LjIyYy0uNjQ1LS42MDgtMS4yMS0uODYtMS45NS0uODZhMi41OSAyLjU5IDAgMCAwLTIuNjA4IDIuNjJjMCAxLjU0NyAxLjExMyAyLjYzNSAyLjY4IDIuNjM1LjcwNSAwIDEuMjU1LS4yNCAxLjg3OC0uODM2djEuNzVjLS43MDUuMzItMS4yOC40NDYtMS45NS40NDZsLS4wMDIuMDAyem0tNC43LTIuNDk3YzAgMS40OC0xLjEzNSAyLjUxLTIuNzUgMi41MS0xLjE4NCAwLTIuMDQ1LS40NDgtMi43NjMtMS40NTRsMS4wMDUtLjkyOGMuMzYuNjY0Ljk1OCAxLjAyIDEuNyAxLjAyLjY5NCAwIDEuMjEtLjQ2IDEuMjEtMS4wNzggMC0uMzItLjE1Ni0uNTk0LS40NjgtLjc4OC0uMTU1LS4wOTUtLjQ2Ny0uMjMtMS4wNzctLjQzNi0xLjQ2LS41MDQtMS45Ni0xLjA0My0xLjk2LTIuMDk2IDAtMS4yNDcgMS4wNzUtMi4xODUgMi40ODQtMi4xODVhMy41OCAzLjU4IDAgMCAxIDIuMzQ2Ljg0OEwxMy44NSA4LjkxYy0uNDEtLjQzNS0uNzktLjYxOC0xLjI1OC0uNjE4LS42NyAwLTEuMTYuMzY3LTEuMTYuODQ4IDAgLjQxLjI3NC42MyAxLjIxLjk2IDEuNzcuNjIgMi4yOTQgMS4xNyAyLjI5NCAyLjM4MnpNNy4yODQgNy4xNzRoMS41NTR2Ny42MzNINy4yODNWNy4xNzN6bS01LjAwOCA3LjYzM0gwVjcuMTczaDIuMjg2YzIuNTIyIDAgNC4yOCAxLjU2NiA0LjI4IDMuODIgMCAxLjEyMy0uNTQgMi4yMS0xLjQ0OCAyLjkzMi0uNzY0LjYwNi0xLjYzNy44OC0yLjg0My44OHptMS44My01LjcyNGMtLjUxNy0uNDQ2LTEuMTI1LS42MTgtMi4xMy0uNjE4aC0uNDE3djUuMDVoLjQxNmMxLjAwNiAwIDEuNjQtLjE4NSAyLjEzLS42MS41MzgtLjQ1Ni44NTctMS4xOS44NTctMS45MjQgMC0uNzMyLS4zMTgtMS40NC0uODU2LTEuOXYuMDAyeiIgZmlsbD0iIzAwOTlFNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+  min-width: 60px; }
+
+.jcb-icon {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyNiAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+amNiLS1ibHVlPC90aXRsZT48cGF0aCBkPSJNMjEuNjc3IDExLjk3Yy4zNi4wODguNjYyLjQ1LjY2Mi45NDMgMCAuNDkzLS4zLjg1NC0uNjYzLjk0MmExLjE2NCAxLjE2NCAwIDAgMS0uMjIzLjAyNGgtMS44ODJ2LTEuOTM1aDEuODgyYy4wNiAwIC4xNy4wMS4yMjMuMDI0em0tMi4xMDUtMi45aDEuNzA2Yy4wNjIgMCAuMTUyLjAxLjE4NS4wMTYuMzUyLjA2OC42NTQuMzkyLjY1NC44NzZzLS4zMDIuODEtLjY1NC44NzZhMS4xOCAxLjE4IDAgMCAxLS4xODUuMDE3aC0xLjcwNlY5LjA3ek0yMi43NTIgMjFoLTQuNzY4di01Ljk3Nmg1LjA0YzEuMTggMCAyLjA3LS43MTcgMi4wNy0xLjgzMyAwLTEuMDMtLjgxLTEuNjg0LTEuODY1LTEuNzY3di0uMDRjLjk1NC0uMTYgMS40OC0uODYyIDEuNDgtMS42ODQgMC0xLjA0OC0uNzctMS42NS0xLjgxLTEuNzEtLjA4LS4wMDUtLjIxLS4wMTMtLjMxOC0uMDEzaC00LjZ2LTIuODFjMC0xLjc0NyAxLjQ1Ny0zLjE2NSAzLjI1LTMuMTY1SDI2djE1LjgzM0MyNiAxOS41OCAyNC41NDYgMjEgMjIuNzUgMjF6TTguOTkgMjF2LTYuOTY3Yy44MTMuNzk2IDIuMjIgMS4yOTQgNC41IDEuMTc3IDEuMjIzLS4wNjQgMi41Mi0uNDM4IDIuNTItLjQzOHYtMS41NWMtLjY0LjM2NS0xLjQyNy43MjItMi40My44MDgtMS43My4xNS0yLjc3NC0uODE3LTIuNzc0LTIuNTMgMC0xLjcxMyAxLjA0My0yLjY4IDIuNzc1LTIuNTMgMS4wMDIuMDg2IDEuNzguNDM0IDIuNDMuODFWOC4yMjhjLTEuMTA1LS4yMjgtMS4yOTctLjM3NS0yLjUyLS40MzctMi4yODItLjExNi0zLjY4Ny4zOC00LjUgMS4xOHYtMy44QzguOTkyIDMuNDE2IDEwLjQ0NyAyIDEyLjI0MiAyaDQuNzY3djE1LjgzM2MwIDEuNzQ4LTEuNDU3IDMuMTY2LTMuMjUyIDMuMTY2SDguOTl6TTAgMjF2LTYuMjNjLjAwMi4yMyAxLjQuNDU0IDMuMTgyLjQ1NCAyLjk2MiAwIDMuODI1LTEuMzM0IDMuODI1LTIuOTk3VjcuOTc1SDQuMzR2NC4yNTNjMCAxLjA0LS41ODYgMS44MTQtMS42NTggMS44MTQtLjkxNCAwLTEuODEyLS4zMjUtMi42OC0uODIzVjUuMTY3Qy4wMDIgMy40MiAxLjQ1IDIgMy4yMzcgMmg0Ljc1djE1LjgzM2MwIDEuNzQ4LTEuNDUgMy4xNjYtMy4yNCAzLjE2NkgweiIgZmlsbD0iIzAwOTlFNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+  min-width: 60px; }
+
+.diners-icon {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyNyAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZGluZXJzLS1ibHVlPC90aXRsZT48cGF0aCBkPSJNMTUuMzM0IDIyaC00LjA4QzUuMDgyIDIyLjAzIDAgMTcuMDk3IDAgMTEuMDk1IDAgNC41MzUgNS4wOCAwIDExLjI1MyAwaDQuMDhDMjEuNDMyIDAgMjcgNC41MzQgMjcgMTEuMDk1YzAgNi01LjU2NiAxMC45MzQtMTEuNjY2IDEwLjkwNXpNMTEuNSAxLjkzQzYuMjU1IDEuOTMgMiA2LjAxMyAyIDExLjA1YzAgNS4wNCA0LjI1NCA5LjEyMyA5LjUgOS4xMjMgNS4yNDcgMCA5LjUtNC4wODQgOS41LTkuMTIyIDAtNS4wMzctNC4yNTMtOS4xMi05LjUtOS4xMnpNMTMgMTcuMTFWNC45OTNjMi44NjMuNjUzIDUgMy4xMSA1IDYuMDU4IDAgMi45NS0yLjEzNyA1LjQwNy01IDYuMDZ6bS0zIDBDNy4xNCAxNi40NTcgNSAxNCA1IDExLjA1YzAtMi45NDYgMi4xMzgtNS40MDQgNS02LjA1N1YxNy4xMXoiIGZpbGw9IiMwMDk5RTUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
+  min-width: 60px; }
+
+.check-box,
+.btn-img,
+.checkbox-checked-1,
+.lock,
+.lock-open,
+.manage,
+.power,
+.notification,
+.switch-on,
+.switch-off,
+.amex-icon,
+.visa-icon,
+.mastercard-icon,
+.discover-icon,
+.jcb-icon,
+.diners-icon {
+  -webkit-transition: all 500 linear 100ms;
+  -moz-transition: all 500 linear 100ms;
+  -o-transition: all 500 linear 100ms;
+  -ms-transition: all 500 linear 100ms;
+  transition: all 500 linear 100ms; }
+
+/*..................................................................
+** END -> Image Buttons, .check-box, .btn-img, .checkbox-check, .lock, .lock-open etc.
+......................................................................*/
+/*....................................................................................................
+*** .btn-img, .btn-close, .btn- etc.....
+...................................................................................................*/
+.btn-tick,
+.btn-close {
+  cursor: pointer;
+  border: 1px solid white;
+  z-index: 1071 !important;
+  /*background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;*/ }
+  .btn-tick:hover,
+  .btn-close:hover {
+    border: 1px solid red;
+    background-color: #000019; }
+
+.btn-tick {
+  background: transparent url(/images/icons/success.svg);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.btn-close {
+  background: rgba(0, 0, 25, 0.8) url(/images/icons/multiply.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.btn-verify {
+  background: transparent url(/images/icons/verify.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .btn-verify.v0 {
+    background: transparent url(/images/icons/verify.png); }
+  .btn-verify.v1 {
+    background: transparent url(/images/icons/verify1.png); }
+  .btn-verify.v2 {
+    background: transparent url(/images/icons/verify2.png); }
+  .btn-verify.v3 {
+    background: transparent url(/images/icons/verify3.png); }
+  .btn-verify.v4 {
+    background: transparent url(/images/icons/verify4.png); }
+  .btn-verify.v5 {
+    background: transparent url(/images/icons/verify5.png); }
+
+.btn-unverify {
+  background: transparent url(/images/icons/un-verify.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .btn-unverify.v0 {
+    background: transparent url(/images/icons/un-verify.png); }
+  .btn-unverify.v1 {
+    background: transparent url(/images/icons/un-verify1.png); }
+
+.btn-verify,
+.btn-tick,
+.btn-close,
+.btn-verify:hover,
+.btn-tick:hover,
+.btn-close:hover {
+  -webkit-transition: all 200ms linear 50ms;
+  -moz-transition: all 200ms linear 50ms;
+  -o-transition: all 200ms linear 50ms;
+  -ms-transition: all 200ms linear 50ms;
+  transition: all 200ms linear 50ms; }
+
+/*....................................................................................................
+*** End .btn-img, .btn-icon, .btn-tick, .btn- etc.....
+...................................................................................................*/
+.btn-location {
+  color: goldenrod;
+  font-size: 16px; }
+
+.fa-location {
+  color: white;
+  font-size: 10px; }
+
+.fa-location,
+.btn-location {
+  background-color: transparent;
+  transition-duration: 500ms;
+  border: none; }
+
+.fa-location:hover,
+.btn-location:hover {
+  color: gold; }
+
+.fa-location:hover,
+.btn-location:hover,
+.btn-cart:hover,
+.btn-detail:hover {
+  -webkit-transition: all 500ms linear 100ms;
+  -moz-transition: all 500ms linear 100ms;
+  -o-transition: all 500ms linear 100ms;
+  -ms-transition: all 500ms linear 100ms;
+  transition: all 500ms linear 100ms; }
+
+/**....................................................................................
+** Radio and Checkbox design and animation
+........................................................................................*/
+/* end .slideThree */
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  position: relative;
+  /*top: 13.33333px;*/
+  width: inherit;
+  height: inherit;
+  padding: 0;
+  background: #0f4e30;
+  border: none;
+  color: #fff000;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  margin-right: 0.5rem;
+  z-index: 1000;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  -o-transition: all 0.15s ease-out 0s;
+  -ms-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s; }
+  .option-input:hover {
+    background: #9f0ab0; }
+  .option-input:checked {
+    background: #4fa0d5;
+    border: none; }
+    .option-input:checked:before {
+      width: inherit;
+      height: inherit;
+      padding: 0;
+      margin: -25% auto auto -5%;
+      position: absolute;
+      content: '\2716';
+      display: inline-block;
+      font-size: inherit;
+      text-align: center;
+      line-height: inherit; }
+    .option-input:checked:after {
+      -webkit-animation-name: click-wave 0.65s;
+      -moz-animation-name: click-wave 0.65s;
+      -o-animation-name: click-wave 0.65s;
+      -ms-animation-name: click-wave 0.65s;
+      animation-name: click-wave 0.65s;
+      background: #40e0d0;
+      content: '';
+      display: inline-block;
+      position: relative;
+      z-index: 100; }
+  .option-input.radio {
+    border-radius: 50%; }
+    .option-input.radio:after {
+      border-radius: 50%; }
+
+/**....................................................................................
+** End Radio and Checkbox design and animation
+........................................................................................*/
+/*...........................................................................
+* fly menu
+............................................................................*/
+.fly-wrap {
+  position: fixed;
+  right: 10px;
+  /*top: 80%;*/
+  padding: 0 5px 0 5px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 15px;
+  z-index: 22; }
+
+.fly-section {
+  /*margin-top: 20px;*/
+  border-radius: 50%;
+  border: 1px solid red; }
+
+.btn-fly-wrap {
+  position: fixed;
+  max-width: 40px;
+  max-height: 40px;
+  right: 20px;
+  margin-top: -20px;
+  padding: 0;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 22; }
+
+.btn-fly {
+  font-size: 35px;
+  color: rgba(102, 122, 120, 0.5);
+  text-decoration: none; }
+  .btn-fly i {
+    animation-name: fa-spin;
+    animation-duration: 2s; }
+
+/*...........................................................................
+* END -> fly menu
+............................................................................*/
+/*........................................................................................................
+    //  transition-timing (optional)
+
+    // The transition-timing-function property allows you to define the speed of the transition over the duration. 
+    // The default timing is ease, which starts out slow, quickly speeds up, and then slows down at the end. The other 
+    // timing options are: linear, ease, ease-in, ease-out, and ease-in-out.
+........................................................................................................*/
+.container {
+  margin: 100px; }
+
+.circle, .circle0, .circle1, .circle2, .circle3, .circle4, .circle5 {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin: 10px; }
+  .container:hover .circle, .container:hover .circle0, .container:hover .circle1, .container:hover .circle2, .container:hover .circle3, .container:hover .circle4, .container:hover .circle5 {
+    transform: translateX(200px); }
+
+.circle0 {
+  background: PaleTurquoise;
+  transition: all 1.5s linear; }
+
+.circle1 {
+  background: salmon;
+  transition: all 1.5s ease; }
+
+.circle2 {
+  background: lightskyblue;
+  transition: all 1.5s ease-in; }
+
+.circle3 {
+  background: khaki;
+  transition: all 1.5s ease-out; }
+
+.circle4 {
+  background: mediumturquoise;
+  transition: all 1.5s ease-in-out; }
+
+.circle5 {
+  background: thistle;
+  transition: all 1.5s cubic-bezier(0, 1, 0.98, 0); }
+
+/*........................................................................................................
+transition-timing (optional)
+........................................................................................................*/
+/**
+ * .controls,
+ */
+.controls {
+  border-radius: 50%;
+  padding: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  margin-top: -20px;
+  z-index: 1; }
+  .controls a {
+    cursor: pointer;
+    padding: 0;
+    height: 100%;
+    border-radius: 50%; }
+  .controls.hover {
+    opacity: 1;
+    color: greenyellow; }
+    .controls.hover a {
+      color: greenyellow; }
+
+.controls,
+.controls a,
+.controls.hover,
+:hover .controls {
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s; }
+
+/**
+* END -> .controls,
+*/
+/**............................................................................................................
+** Multi-directional arrow, used in home.component/filter section
+.............................................................................................................*/
+.arrow-container {
+  float: right;
+  color: yellow;
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7b6785), to(rgba(123, 103, 133, 0)));
+  background-image: -webkit-linear-gradient(top, #7b6785, rgba(123, 103, 133, 0));
+  background-image: -moz-linear-gradient(top, #7b6785, rgba(123, 103, 133, 0));
+  background-image: linear-gradient(to bottom, #7b6785, rgba(123, 103, 133, 0));
+  border: none; }
+  .arrow-container:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#7b6799), to(rgba(123, 103, 153, 0)));
+    background-image: -webkit-linear-gradient(top, #7b6799, rgba(123, 103, 153, 0));
+    background-image: -moz-linear-gradient(top, #7b6799, rgba(123, 103, 153, 0));
+    background-image: linear-gradient(to bottom, #7b6799, rgba(123, 103, 153, 0));
+    border: 1px solid greenyellow; }
+
+.sf-arrow {
+  display: block;
+  cursor: pointer;
+  margin: 22%;
+  padding: 0;
+  position: absolute;
+  height: 56%;
+  width: 56%;
+  background: url(/images/icons/sf-icon-arrow.svg) no-repeat 0 0;
+  background-size: 100%; }
+  .sf-arrow.right-arrow {
+    transform: rotate(0); }
+  .sf-arrow.down-arrow {
+    transform: rotate(90deg); }
+  .sf-arrow.left-arrow {
+    transform: rotate(180deg); }
+  .sf-arrow.up-arrow {
+    transform: rotate(270deg); }
+
+.sf-arrow,
+.sf-arrow.right-arrow,
+.sf-arrow.down-arrow,
+.sf-arrow.left-arrow,
+.sf-arrow.up-arrow {
+  -webkit-transition: transform 0.5s ease-in-out 0s;
+  -moz-transition: transform 0.5s ease-in-out 0s;
+  -o-transition: transform 0.5s ease-in-out 0s;
+  -ms-transition: transform 0.5s ease-in-out 0s;
+  transition: transform 0.5s ease-in-out 0s; }
+
+/**............................................................................................................
+** End Multi-directional arrow, used in home.component/filter section
+.............................................................................................................*/
+/*....................................................................................................
+*** .btn-icon-left, .btn-tick, .btn- etc.....
+...................................................................................................*/
+.btn-icon-left {
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  border-right: 1px dotted; }
+  .btn-icon-left i.fa, .btn-icon-left span.fa {
+    font-size: 135%; }
+
+.form-control .btn-icon-left {
+  margin-top: -7px; }
+  .form-control .btn-icon-left i.fa, .form-control .btn-icon-left span.fa {
+    margin-top: 8px; }
+
+/*....................................................................................................
+*** END -> .btn-icon-left, .btn-tick, .btn- etc.....
+...................................................................................................*/
+
+@charset "UTF-8";
+/*
+Colors
+#20C1C7
+#204648
+#189094
+#61CED2
+#0C4648
+#009C75
+#00A0B5
+#rgba(10, 100, 105 , 1)
+*/
+html {
+  font-size: 12px; }
+
+/* Update link url on document load */
+.ToBeUpdated {
+  display: normal; }
+
+.progress-bar {
+  height: 15px; }
+
+i.fa {
+  font-size: 110% !important; }
+
+body {
+  /*padding-top: 50px;*/
+  padding-bottom: 0; }
+
+html, body {
+  /* Allows content to fill the viewport and go beyond the bottom */
+  /* Allows you to scroll below the viewport; default value is visible */
+  /* To smooth any scrolling behavior */
+  height: 100%;
+  /*overflow-y: scroll;*/
+  -webkit-overflow-scrolling: touch; }
+
+.body-content {
+  padding-top: 60px; }
+
+#selectLanguage select {
+  z-index: 1038;
+  color: springgreen;
+  background: #000; }
+
+/* QR code generator */
+#qrCode {
+  margin: 15px; }
+
+/**
+  * Back to Top -> Icon to scroll body to top
+  */
+.back-to-top-wrap {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 10px;
+  top: 80%;
+  padding: 0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  z-index: 22;
+  border: 1px dotted #1fc210; }
+  .back-to-top-wrap .back-to-top,
+  .back-to-top-wrap a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #3c0bcf;
+    text-decoration: none;
+    font-size: 30px; }
+  .back-to-top-wrap:hover .back-to-top,
+  .back-to-top-wrap:hover a {
+    color: #2fc52a; }
+
+/**
+* END -> Back to Top -> Icon to scroll body to top
+*/
+/**
+* Contact Us -> top section of NavBar
+*/
+.contact-us-wrap {
+  width: 50vw;
+  right: 0;
+  position: absolute;
+  float: right !important;
+  z-index: 1150;
+  padding-right: 17%; }
+  .contact-us-wrap:hover {
+    /*background-image: -moz-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: -o-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: -webkit-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: linear-gradient(to left, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));*/
+    width: 100vw;
+    background: #010156; }
+
+.contact-us {
+  top: 0;
+  margin-right: 15px;
+  display: inline-block !important;
+  background-color: transparent;
+  font-weight: bold;
+  color: lightskyblue; }
+  .contact-us i {
+    margin-right: 5px;
+    margin-left: 0; }
+    .contact-us i.fa {
+      margin-right: 5px;
+      margin-left: 0;
+      color: red; }
+    .contact-us i:not(.fa) {
+      display: none; }
+  .contact-us:hover i {
+    display: inline-block !important;
+    color: red; }
+    .contact-us:hover i.fa {
+      color: lightskyblue;
+      font-size: 110%; }
+
+/**
+* END -> Contact Us -> top section of NavBar
+*/
+/**
+ * Document load state 
+ */
+.documentCover,
+.documentState {
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  background: rgba(23, 23, 123, 0.97);
+  margin: auto;
+  color: white;
+  text-align: center;
+  z-index: 9999;
+  /*border: 1px solid red;*/ }
+  .documentCover.transparent,
+  .documentState.transparent {
+    background: none !important;
+    opacity: 0 !important;
+    color: transparent; }
+
+.documentCover #documentState {
+  margin: auto;
+  top: 50vh;
+  padding: 0;
+  position: relative;
+  line-height: 50px;
+  font-size: 20px; }
+
+/**
+* END -> Document load state 
+*/
+/**
+ * Layout -> Footer section 
+ */
+.footer,
+footer {
+  padding: 0 !important;
+  padding-top: 3px;
+  margin: auto;
+  min-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: rgba(50, 60, 80, 0); }
+  .footer a.btn-close,
+  footer a.btn-close {
+    /*position: absolute; float: left;*/
+    visibility: hidden;
+    opacity: 0;
+    margin: -25px auto auto 0px;
+    width: 25px !important;
+    height: 25px !important;
+    cursor: pointer;
+    z-index: 1069 !important; }
+  .footer p,
+  footer p {
+    display: none;
+    margin: 0 !important; }
+  .footer.show-footer p,
+  footer.show-footer p {
+    display: block; }
+  .footer.navbar-fixed-bottom,
+  footer.navbar-fixed-bottom {
+    width: 280px !important; }
+  .footer:focus, .footer.show-footer,
+  footer:focus,
+  footer.show-footer {
+    max-height: 65px;
+    min-height: 55px;
+    width: 100%;
+    background-color: #323c50; }
+  .footer:hover a.btn-close,
+  footer:hover a.btn-close {
+    opacity: 1;
+    visibility: visible; }
+  .footer #selectLanguage select,
+  footer #selectLanguage select {
+    z-index: 1038;
+    color: springgreen;
+    background: #000; }
+
+/*Internet Explorer 10-11 */
+_:-ms-input-placeholder, :root .footer:not(.show-footer) {
+  min-height: 30px !important;
+  max-height: 30px !important; }
+
+.sf-config-steps .show-footer {
+  z-index: 1071 !important; }
+
+.footer-menu {
+  padding: 10px 10px 20px 25px;
+  margin: auto;
+  bottom: 0;
+  min-height: 300px;
+  clear: both;
+  color: white;
+  background-color: rgba(10, 100, 105, 0.8); }
+  .footer-menu:hover {
+    background-color: #0a6469; }
+
+.footer,
+footer,
+.footer:focus,
+.footer.show-footer {
+  -webkit-transition: all 600ms linear 100ms;
+  -moz-transition: all 600ms linear 100ms;
+  -o-transition: all 600ms linear 100ms;
+  -ms-transition: all 600ms linear 100ms;
+  transition: all 600ms linear 100ms; }
+
+/**
+* END -> Layout -> Footer section 
+*/
+/**
+ * 3D-text and anchor element (a)
+ */
+.text-3d a:hover {
+  /* color: blueviolet; */
+  color: white;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+  /* Gordon Hall’s True Inset Text
+                background-color: #666666;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-shadow: rgba(255,255,255,0.5) 0px 3px 3px; */ }
+
+a,
+.text-3d a,
+a:hover,
+.text-3d a:hover {
+  -webkit-transition: all 600ms linear 100ms;
+  -moz-transition: all 600ms linear 100ms;
+  -o-transition: all 600ms linear 100ms;
+  -ms-transition: all 600ms linear 100ms;
+  transition: all 600ms linear 100ms; }
+
+/**
+* END -> 3D-text and anchor element (a)
+*/
+/**
+ * Layout -> Body Section
+ */
+.body-section {
+  display: normal;
+  min-height: 100vh; }
+
+.background-section {
+  float: left;
+  padding: 100px 0;
+  color: #fff !important;
+  /*width: 100%;*/
+  width: inherit;
+  /*min-height: 641px;*/
+  min-height: inherit;
+  height: inherit;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  background-attachment: fixed; }
+
+#bannerCarousel, #bannerCarousel .item img {
+  height: 100vh !important; }
+  #bannerCarousel .item img {
+    width: 100vw !important; }
+
+#bannerCarousel, #bannerCarousel .item img {
+  position: fixed !important; }
+
+#carouselCover {
+  height: 100vh !important;
+  padding: 0;
+  margin: 0;
+  background: transparent; }
+
+.content {
+  border: 1px solid red;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center top;
+  border-style: none none none none;
+  margin: auto;
+  width: 100%;
+  padding: 0;
+  padding-top: 100vh;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.content-section {
+  /*margin-left: -15px;
+        margin-right: -15px;*/
+  /*margin-bottom: 30px;*/
+  min-height: 300px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  color: white; }
+
+#bannerCarousel + .content-section, #bannerCarousel .item img + .content-section {
+  color: white; }
+  #bannerCarousel + .content-section:hover, #bannerCarousel .item img + .content-section:hover {
+    background: rgba(0, 0, 0, 0.2); }
+
+.content-section-1 {
+  display: block;
+  min-height: 300px; }
+  .content-section-1.zero {
+    min-height: 100vh;
+    background: transparent; }
+  .content-section-1.first {
+    background: rgba(1, 1, 76, 0.5); }
+  .content-section-1.second {
+    background: transparent;
+    padding: 0; }
+    .content-section-1.second > div {
+      height: 400px;
+      padding: 0; }
+      .content-section-1.second > div .carousel {
+        margin: 0;
+        height: inherit;
+        width: 100%; }
+        .content-section-1.second > div .carousel img {
+          border: 1px solid yellow;
+          height: inherit;
+          width: inherit; }
+    .content-section-1.second .panel-box {
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .content-section-1.second .panel-box.p1 {
+        background-image: url(/Images/panel11_600X400.png); }
+      .content-section-1.second .panel-box.p2 {
+        background-image: url(/Images/panel21_600X400.png); }
+  .content-section-1.third {
+    background: rgba(1, 1, 76, 0.5); }
+
+.content-section-2 {
+  /*border: 1px solid red;*/
+  padding: 20px 0 5px 0;
+  display: block; }
+
+.content-section-form-carousel {
+  top: 60px;
+  background: rgba(22, 22, 11, 0.8);
+  color: white;
+  overflow: auto;
+  min-height: 85vh;
+  max-height: 85vh;
+  max-width: 95vw; }
+  .content-section-form-carousel input {
+    color: purple; }
+
+/**
+* END -> Layout -> Body Section
+*/
+/**
+ * Structure classes, .my-row, .col-full-width
+ */
+.my-row {
+  display: block;
+  padding: 0;
+  margin: 0; }
+  .my-row:after, .my-row:before {
+    display: table;
+    content: " "; }
+  .my-row:after {
+    clear: both; }
+
+.my-center-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+
+@media only screen and (max-width: 400px) {
+  .col-full-width {
+    width: 100%; }
+  .hidden-full-width {
+    width: 0;
+    display: none; } }
+
+/**
+* END -> Structure classes, .my-row, .col-full-width
+*/

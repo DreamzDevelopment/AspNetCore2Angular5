@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="~/store" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - @Localizer["AspNetCore2Angular5"]</title>
+
+    <environment include="Development">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+
+        <!-- Packages Start -->
+        <link rel="stylesheet" href="~/packages/dl-menu/component.css" />
+        <!-- Packages End         -->
+
+        <!-- Custom styles of library Start -->
+        <link rel="stylesheet" href="~/dist/sass/Custom.animate-css.css" />
+        <link rel="stylesheet" href="~/dist/sass/Custom.bootstrap.css" />
+        <!-- Custom styles of library End -->
+
+        <!-- SASS stylesheets start -->
+        <link rel="stylesheet" href="~/dist/sass/SiteAnimation.css" />
+                
+        <link rel="stylesheet" href="~/dist/sass/contact-us/ContactUs.css" />
+        <link rel="stylesheet" href="~/dist/sass/image-modal/ImageModal.css" />
+        <link rel="stylesheet" href="~/dist/sass/media-image/MediaImage.css" />
+        <link rel="stylesheet" href="~/dist/sass/menu-icon/MenuIcon.css" />
+        <link rel="stylesheet" href="~/dist/sass/menu-panel/MenuPanel.css" />
+        <link rel="stylesheet" href="~/dist/sass/message-section/MessageSection.css" />
+        <link rel="stylesheet" href="~/dist/sass/popup/Popup.css" />
+        <link rel="stylesheet" href="~/dist/sass/site-navigation/SiteNavigation.css" />
+        <link rel="stylesheet" href="~/dist/sass/social-panel/SocialPanel.css" />
+        <link rel="stylesheet" href="~/dist/sass/tooltip/Tooltip.css" />
+
+        <link rel="stylesheet" href="~/dist/ts/nav-menu/NavMenu.css" />
+
+        <link rel="stylesheet" href="~/dist/sass/SiteIcon.css" />
+        <link rel="stylesheet" href="~/dist/sass/Site.css" />
+        <!-- SASS stylesheets End -->
+        
+    </environment>
+    <environment exclude="Development">
+        <!-- href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css" -->
+        <!-- href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" -->
+        <link rel="stylesheet" crossorigin="anonymous"
+            href="~/dist/lib/bootstrap/css/bootstrap.min.css"
+            asp-fallback-href="~/dist/lib/bootstrap/css/bootstrap.min.css"
+            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <!-- href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" -->
+        <link rel="stylesheet" crossorigin="anonymous"
+            href="~/dist/lib/font-awesome/font-awesome.min.css"
+            asp-fallback-href="~/dist/lib/font-awesome/font-awesome.min.css"
+            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <!-- integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" -->
+
+        <link rel="stylesheet" href="~/dist/layout-store/css/layout-store.package.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/dist/layout-store/css/layout-store.min.css" asp-append-version="true" />
+        
+    </environment>
+</head>
+<body>
+    <!-- top navigation menu bar -->
+    <div class="navbar navbar-transparent navbar-fixed-top" style="z-index: 1053">
+        <div class="navbar-transparent">
+            <div class="navbar-header" >
+                <a class="btn navbar-toggle" data-toggle="collapse" 
+                    data-target="#navbarCollapse" onclick="NavMenu.ToggleNav(event)" >
+                    <span data-parent="#navbarCollapse" data-expanded="false" class="navbarCollapse span-item active">☰</span>
+                </a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="btn" style="width: 50px;height: 50px;padding: 0;margin-right: 10px" >
+                    <img class="brand-logo img-responsive" src="@Url.Content("~/images/icons/logo.png")" alt="@Localizer["AspNetCore2Angular5"]" />
+                </a>
+                @await Html.PartialAsync("_MenuControlPartial", "hidden-xs", new ViewDataDictionary(this.ViewData) { { "IND", "India" }, {"BD", "Bangladesh" } })
+            </div>
+            @await Html.PartialAsync("_ContactUs")
+            <div id="navbarCollapse" class="navbar-collapse navbar-transparent collapse text-3d" data-options="{ 'parent':'#navbarCollapse' }">
+                @await Html.PartialAsync("_MenuControlPartial", "visible-xs")
+                @await Html.PartialAsync("_LoginPartial")
+            </div>
+            <div id="navbody1" class="nav-body collapse" data-options="{ 'parent':'#navbody1', 'elements':'.nav-item,.l-item'}" style="background: none !important" >
+                <nav class="nav-item" >
+                    <!-- Available options : { picture-box, gradient } -->
+                    @await Html.PartialAsync("_MenuPartial", "picture-box"  ) 
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End top navigation menu bar -->
+    <!-- body section -->
+    <div id="bodySection" class="body-section">
+        @if(TempData["message"] != null)
+        {
+            <div class="message-section">@TempData["message"]</div>
+        }
+        <!--Message Section-->
+        <div class="message-section"></div>
+        
+        <!-- if(!SignInManager.IsSignedIn(User))
+        { -->
+        <div>
+            <div class="social-icons-wrapper hide-social">
+                @await Component.InvokeAsync("SocialPanel", new { viewType = "Diamond" })
+            </div>
+            <div>
+                <a class="btn" title="@Localizer["Show Social Communication"]" ><i class="fa fa-caret-left"></i></a>
+            </div>
+        </div>
+        <!-- } -->
+        <div class="back-to-top-wrap slideDown btn-save" title="@Localizer["Scroll Me Up"]" >
+            <a id="btnScrollTop" class="back-to-top" href="#">
+                <i class="fa fa-angle-up"></i><br />
+            </a>
+        </div>
+        <div class="documentState">
+            <span id="documentState" style="margin-top: 50vh;"></span>
+        </div>
+        @RenderBody()
+    </div>
+    <!-- End body section -->
+    <!-- footer section -->
+    <div class="navbar footer navbar-fixed-bottom" >
+        <p class="set-language">
+            <a class="pull-left btn-close"></a>
+            @await Html.PartialAsync("_SelectLanguage")
+        </p>
+        <p style="border: 1px solid transparent;">&copy;@Localizer["AspNetCore2Angular5"]&nbsp;-
+            <span class="NumberText" data-options="{ 'useGrouping': false }" >
+                @DateTime.Now.Year.ToString()
+            </span>
+        </p>
+    </div>
+    <!-- End footer section -->
+
+    <environment include="Development">
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery-migrate/dist/jquery-migrate.js"></script>
+        <!-- tether js -->
+        <script src="~/lib/tether/dist/js/tether.js"></script>
+        <!-- bootstrap bundle -->
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+        <script src="~/lib/jquery-lazyload/jquery.lazyload.js"></script>
+        
+        <!-- Packages Start -->
+        <script src="~/packages/dl-menu/modernizr.custom.js"></script>
+        <script src="~/packages/dl-menu/component.js"></script>
+        <!-- Packages End         -->
+
+        <!-- TypeScript reference start -->
+        <script src="~/dist/ts/types/MyDictionary.js" asp-append-version="true"></script>
+
+        <script src="~/dist/models/SiteNavigationModel.js" asp-append-version="true"></script>
+        
+        <script src="~/dist/ts/animations/AnimationControl.js" asp-append-version="true"></script>
+
+        <script src="~/dist/ts/nav-menu/NavMenu.js" asp-append-version="true"></script>
+        <script src="~/dist/ts/toolbar/Toolbar.js" asp-append-version="true"></script>
+        <script src="~/dist/ts/timer-counter/TimerCounter.js" asp-append-version="true"></script>
+
+        <script src="~/dist/ts/extensions/FormatterExtension.js" asp-append-version="true"></script>
+        <script src="~/dist/ts/validators/MyValidator.js" asp-append-version="true"></script>
+
+        <script src="~/dist/ts/ApiCallService.js" asp-append-version="true"></script>
+        <script src="~/dist/ts/MyMessage.js" asp-append-version="true"></script>
+        <script src="~/dist/ts/MyNotification.js" asp-append-version="true"></script>
+        <script src="~/dist/ts/MyResponse.js" asp-append-version="true"></script>
+        <script src="~/dist/ts/Site.js" asp-append-version="true"></script>
+        <!-- TypeScript reference End -->
+        
+    </environment>
+    <environment exclude="Development">
+        <!-- src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js" -->
+        <script src="~/dist/lib/jquery/jquery.min.js"
+                asp-fallback-src="~/dist/lib/jquery/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                >
+        </script>
+        <!-- integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk" -->
+        
+        <!-- src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js" -->
+        <script src="~/dist/lib/bootstrap/js/bootstrap.min.js"
+                asp-fallback-src="~/dist/lib/bootstrap/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                >
+        </script>
+        <!-- integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" -->
+
+        <script src="~/dist/layout-store/js/layout-store.lib.min.js" asp-append-version="true"></script>
+        <script src="~/dist/layout-store/js/layout-store.package.min.js" asp-append-version="true"></script>
+        <script src="~/dist/layout-store/js/layout-store.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

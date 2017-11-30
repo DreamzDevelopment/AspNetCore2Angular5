@@ -1,0 +1,278 @@
+
+/**
+* END -> .fa-shake, CrossFade In & Out
+*/
+    @-webkit-keyframes CrossFadeInOut {
+        0% {
+            opacity:1;
+        }
+        17% {
+            opacity:1;
+        }
+        25% {
+            opacity:0;
+        }
+        92% {
+            opacity:1;
+        }
+        100% {
+            opacity:1;
+        }
+    }
+    @keyframes CrossFadeInOut {
+        0% {
+            opacity:1;
+        }
+        17% {
+            opacity:1;
+        }
+        25% {
+            opacity:0;
+        }
+        92% {
+            opacity:1;
+        }
+        100% {
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes CrossFadeInOut2 {
+        0% {
+            opacity:0;
+        }
+        30% {
+            opacity:1;
+        }
+        50% {
+            opacity:1;
+        }
+        80% {
+            opacity:0.3;
+        }
+        100% {
+            opacity:0;
+        }
+    }
+    @keyframes CrossFadeInOut2 {
+        0% {
+            opacity:0;
+        }
+        30% {
+            opacity:1;
+        }
+        50% {
+            opacity:1;
+        }
+        80% {
+            opacity:0.3;
+        }
+        100% {
+            opacity:0;
+        }
+    }
+    @-webkit-keyframes CrossFadeInOut3 {
+        0% {
+            opacity:0;
+        }
+        20% {
+            opacity:0.8;
+        }
+        33.33% {
+            opacity:1;
+        }
+        86.67% {
+            opacity:0.13;
+        }
+        100% {
+            opacity:0;
+        }
+    }
+    @keyframes CrossFadeInOut3 {
+        0% {
+            opacity:0;
+        }
+        20% {
+            opacity:0.8;
+        }
+        33.33% {
+            opacity:1;
+        }
+        86.67% {
+            opacity:0.13;
+        }
+        100% {
+            opacity:0;
+        }
+    }
+/**
+* END -> .fa-shake, CrossFade In & Out
+*/
+
+/** .........................................................................................................
+    Demo 1 - One image to another, on hover
+    Plan
+
+    Put one image on top of the other
+*    Change the opacity of the top image on hover
+.................. ...........................................................................................*/
+    .cross-fade {
+        position:relative;
+        margin:0 auto;
+        &.box {
+            height:281px;
+            width:450px;
+        }
+        &.opaque {
+            .img ,
+            img {
+                @include mixin-transition(opacity, 1s, ease-in-out, 0s);
+                &.top {
+                    &:hover {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .img ,
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute !important;
+            left: 0;
+        }
+
+    }
+    .shadow {
+        -webkit-box-shadow: 5px 5px 5px #aaa;
+        -moz-box-shadow: 5px 5px 5px #aaa;
+        box-shadow: 5px 5px 5px #aaa;
+        margin-bottom: 10px;
+    }
+    .cross-fade-4  {
+        .img,
+        img {
+            &.top {
+                -webkit-transform: scale(0,0);
+                -moz-transform: scale(0,0);
+                -o-transform: scale(0,0);
+                transform: scale(0,0);
+                opacity: 0;
+            }
+            position:absolute;
+            left:0;
+            @include mixin-transition(all, 1s, ease-in-out, 0s);
+        }
+    }
+    .hover, .img , img {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
+    .hover {
+        cursor: pointer;
+    }
+    /* img {
+        max-width: 100%;
+        width: auto\9;
+        height: auto;
+        vertical-align: middle;
+        border: 0;
+        -ms-interpolation-mode: bicubic;
+    } */
+/**.................. ...........................................................................................
+*    One image to another, on hover
+.................. ...........................................................................................*/
+
+
+
+/* One image to another with a timer (CSS animations)
+Plan
+
+You could implement this by using Javascript to toggle classes with a delay - that would allow older browsers to
+still have the images change. As we are looking forward though, we'll use CSS keyframes.
+
+Start with two images absolutely positioned on top of each other.
+Use CSS keyframes to define two states, one with top image transparent, one with it opaque.
+Set the animations number of iterations to infinite.
+Thanks to Pafson's comment, this is finally working as expected! He proposes the following algorithm to determine the percentages and timings:
+
+For "n" images You must define:
+a=presentation time for one image
+b=duration for cross fading
+Total animation-duration is of course t=(a+b)*n
+
+animation-delay = t/n or = a+b
+
+Percentage for keyframes:
+    0%
+    a/t*100%
+    (a+b)/t*100% = 1/n*100%
+    100%-(b/t*100%)
+    100%
+
+.................. ...........................................................................................*/
+
+    .cf-in-out  {
+        .img ,
+        img {
+            animation-name: CrossFadeInOut;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 11s;
+            /* animation-direction: alternate; */
+            &:nth-of-type(1) {
+                animation-delay: 6.1s;
+            }
+            &:nth-of-type(2) {
+                animation-delay: 0.1s;
+            }
+            // &:nth-of-type(3) {
+            //     animation-delay: 2s;
+            // }
+            // &:nth-of-type(4) {
+            //  animation-delay: 0;
+            // } 
+
+        }
+    }
+    .cf-in-out-3 {
+        .img ,
+        img {
+            animation-name: CrossFadeInOut3;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 15s;
+            &:nth-of-type(1) {
+                animation-delay: 10s;
+            }
+            &:nth-of-type(2) {
+                animation-delay: 5s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: 0s;
+            }
+        }
+    }
+
+    .cf-in-out-2 {
+        .img ,
+        img {
+            animation-name: CrossFadeInOut2;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            position: absolute;
+            /* animation-direction: alternate; */
+            &:nth-of-type(1) {
+                animation-delay: 5s;
+            }
+            &:nth-of-type(2) {
+                animation-delay: 0s;
+            }
+        }
+    }
+/**.................. ...........................................................................................
+*    One image to another with a timer (CSS animations)
+.................. ...........................................................................................*/

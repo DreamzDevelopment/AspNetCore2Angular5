@@ -1,0 +1,26 @@
+@model string
+<div class="ul nav @Model" >
+    <li>
+        <a asp-controller="Store" asp-action="Index" style="cursor:pointer;font-size: 22px">
+            <i class="fa fa-home span-item"></i>
+        </a>
+    </li>
+    <li>
+        <!-- control must have selector class of target element -->
+        <a class="btn" data-toggle="collapse" data-target="#navbody1" onclick="NavMenu.ToggleNav(event)" >
+            @Localizer["Menu"] 
+            <!-- How to receive ViewDataDictionery ViewData["IND"] vs ViewData["BD"] -->
+            <span data-parent="#navbody1" data-expanded="false" class="navbody1 span-item active">☰</span>
+        </a>
+    </li>
+    <!-- <li>
+        <a class="btn" data-toggle="collapse" data-target="#navbody2" onclick="NavMenu.ToggleNav(event)" >
+            Menu 2 <span data-parent="#navbody2" data-expanded="false" class="navbody2 span-item active">☰</span>
+        </a>
+    </li>
+    <li>
+        <a class="btn" data-toggle="collapse" data-target="#navbody3" onclick="NavMenu.ToggleNav(event)" >
+            Menu 3 <span data-parent="#navbody3" data-expanded="false" class="navbody3 span-item active">☰</span>
+        </a>
+    </li> -->
+</div>

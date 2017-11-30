@@ -1,0 +1,58 @@
+/**
+ * Gradient animation generated in https://www.gradient-animator.com
+ */
+    .gradient-animation {
+        background: linear-gradient(359deg, #3f58bd, #8c428c);
+        background-size: 400% 400%;
+        @include mixin-animation(gradient-animation, 4s, ease, infinite);
+    }
+
+    @-webkit-keyframes gradient-animation {
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+    @-moz-keyframes gradient-animation {
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+    @-o-keyframes gradient-animation {
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+    @keyframes gradient-animation { 
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+    .gradient-animation-light {
+        background: linear-gradient(359deg, #4212a3, #c69c6a);
+        background-size: 400% 400%;
+        @include mixin-animation(gradient-animation, 4s, ease, infinite);
+        
+    }
+    @-webkit-keyframes gradient-animation-light {
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+    @-moz-keyframes gradient-animation-light {
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+    @-o-keyframes gradient-animation-light {
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+    @keyframes gradient-animation-light { 
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+/**
+* END -> Gradient animation generated in https://www.gradient-animator.com
+*/

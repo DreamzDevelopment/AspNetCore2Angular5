@@ -1,0 +1,33 @@
+
+<div class="menu-panel text-3d" [ngClass]="{'open': openPanel}" >
+    <div class="menu-item" [ngClass]="{'open': lockPanel && (panel === 'store-list') }" >
+        <store-list (open)="onOpen($event)" (close)="onClose($event)" ></store-list>
+    </div>
+    <br>
+    <div class="menu-item" [ngClass]="{'open': lockPanel && (panel === 'store-list1')}" >
+        <i class="fa-img fa-error" aria-hidden="true"></i>
+    </div>
+    <br>
+    <div class="menu-item" [ngClass]="{'open': lockPanel && (panel === 'store-list2')}" >
+        <i class="fa-img fa-important v1" aria-hidden="true"></i>
+    </div>
+    <br>
+    <div class="menu-item" [ngClass]="{'open': lockPanel && (panel === 'store-list3')}" >
+        <i class="fa-img fa-urgent v2" aria-hidden="true"></i>
+    </div>
+    <br>
+    <div class="menu-item" [ngClass]="{'open': lockPanel && (panel === 'store-list4')}" >
+        <i class="fa-img fa-error" aria-hidden="true"></i>
+    </div>
+    <br>
+    <div class="menu-item" [ngClass]="{'open': lockPanel && (panel === 'store-list5')}" >
+        <i class="fa-img fa-important v1" aria-hidden="true"></i>
+    </div>
+    <!-- keep menu-panel base open/auto-hide -->
+    <div class="panel-open" title="{{ 'Click to change' }}" >
+        <i class="fa" [ngClass]="{'fa-chevron-right': !openPanel, 'fa-chevron-left': openPanel}"
+            (click)="openCloseMenu($event)" aria-hidden="true" ></i>
+    </div>
+</div>
+
+

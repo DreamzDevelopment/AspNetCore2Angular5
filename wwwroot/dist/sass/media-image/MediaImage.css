@@ -1,0 +1,58 @@
+/**
+ * Image box, .img classes for different image box
+ */
+.img_120X140 {
+  width: 120px;
+  height: 140px; }
+
+.img-box-120X120 {
+  width: 120px;
+  height: 120px; }
+
+.img-box-300X300 {
+  width: 300px;
+  height: 300px; }
+
+.img-box-360X420 {
+  width: 360px;
+  height: 420px; }
+
+.img-box-220X300 {
+  width: 220px;
+  height: 300px; }
+
+.img-box-512X310 {
+  width: 512px;
+  height: 310px; }
+
+.img-box-1024X620 {
+  width: 1024px;
+  height: 620px; }
+
+.img-box-1920X1080 {
+  width: 1920px;
+  height: 1080px; }
+
+.img-box-fullscreen {
+  width: 100vw;
+  height: 100vh; }
+
+.img-box-widthXauto {
+  width: 100%;
+  height: auto; }
+
+.img-box-autoXheight {
+  width: auto;
+  height: inherit; }
+  .img-box-autoXheight img {
+    width: auto !important;
+    height: inherit !important; }
+
+.img-box-120X120, .img-box-120X140, .img-box-300X300, .img-box-360X420,
+.img-box-220X300, .img-box-512X310, .img-box-1024X620, .img-box-1920X1080,
+.img-box-fullscreen {
+  float: none; }
+
+/**
+* END -> Image box, .img classes for different image box
+*/

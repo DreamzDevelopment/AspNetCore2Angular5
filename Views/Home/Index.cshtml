@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = @Localizer["Home Page"];
+}
+<div class="hidden">
+    <!--// these are used to define value of data-interval attribute for banner carousel and image carousel-->
+    <input type="hidden" id="bannerDataInterval" value="@ViewData["BannerDataInterval"]" />
+    <input type="hidden" id="imageDataInterval" value="@ViewData["ImageDataInterval"]" />
+</div>
+    <!-- background animation works with AnimationControl.ts script and 
+    'animated' css class from animate.css, included the snippet into SiteAnimation.scss -->
+<div id="bannerCarousel" class="carousel slide" data-ride="carousel" >
+    <div class="carousel-inner" role="listbox" >
+        <div class="img-box-fullscreen item active" >
+            @await Component.InvokeAsync("StaticImage", new { 
+                path=@"wwwroot/Images", fileIndex= @ImageIndexs.Banner1_1920X1080, imageOnly= "true", 
+                animated= "true", background="true"
+            })
+            
+            <div class="carousel-caption" role="option">
+                <!--<p>-->
+                    <!--// TODO: ADD custom template with popular product...-->
+                    <!--Learn ...-->
+                    <!--http://www.freepik.com/free-vector/coming-soon-web-page-template_719104.htm-->
+                    <!--<a class="btn btn-default" href="">
+                        Learn More
+                    </a>-->
+                <!--</p>-->
+            </div>
+        </div>
+        <div class="img-box-fullscreen item">
+            @await Component.InvokeAsync("StaticImage", new { 
+                path=@"wwwroot/Images", fileIndex= @ImageIndexs.Banner2_1920X1080, imageOnly= "true", 
+                animated= "true", background="true"
+            })
+             <div class="carousel-caption" role="option">
+            </div>
+        </div>
+        <div class="img-box-fullscreen item" >
+            @await Component.InvokeAsync("StaticImage", new { 
+                path=@"wwwroot/Images", fileIndex= @ImageIndexs.Banner3_1920X1080, imageOnly= "true", 
+                animated= "true", background="true"
+            })
+            
+            <div class="carousel-caption" role="option">
+            </div>
+        </div>
+        <div class="img-box-fullscreen item">
+            @await Component.InvokeAsync("StaticImage", new { 
+                path=@"wwwroot/Images", fileIndex= @ImageIndexs.Banner4_1920X1080, imageOnly= "true", 
+                animated= "true", background="true"
+            })
+            <div class="carousel-caption" role="option">
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="col-md-12 content-section" style="top: 0;">
+    <div class="col-md-12 content-section-1 zero">
+        <div class="col-md-3 col-xs-1 hidden-full-width" >
+            <!--Left Panel-->
+        </div>
+        <div class="col-md-6 col-xs-10 col-full-width text-center" >
+            <!--Main Panel-->
+        </div>
+        <div class="col-md-3 col-xs-1 hidden-full-width text-right" >
+            <!--Right Panel-->
+        </div>
+    </div>
+</div>
+<!--must needed for positioning the banner-->
+<!--<div id="carouselCover" class="my-row">
+    <h1>Heading 1</h1>
+</div>-->
+<div class="my-row content-section" >
+    <div class="col-md-12 content-section-1 first" >
+        <h1>@ViewData["Welcome1"]</h1>
+        <h2>This is first section</h2>
+    </div>
+</div>
+<div class="my-row content-section" >
+    <div class="col-md-12 content-section-1 second">
+        <div class="col-md-6 col-xs-6 col-full-width panel-box p1">
+        </div>
+        <div class="col-md-6 col-xs-6 col-full-width panel-box p2">
+           
+        </div>
+    </div>
+</div>
+<div class="my-row content-section" >
+    <div class="col-md-12 content-section-1 third" >
+        <h1>@ViewData["Welcome2"]</h1>
+        <h2>This is last section</h2>
+    </div>
+</div>
+
+<div id="footerMenu" class="col-md-12 footer-menu">
+    @await Html.PartialAsync("_FooterMenu")
+</div>
+
+
+@section Scripts {
+    <environment include="Development">
+    </environment>
+    <environment exclude="Development">
+    </environment>
+    <script type="text/javascript">
+            $('img.lazy, div.lazy').lazyload({ 
+                threshold: 10, 
+                skip_invisible : true 
+            });
+    
+            $('#bannerCarousel, #pn_1_Carousel, #pn_2_Carousel, #pn_3_Carousel, #pn_4_Carousel').on('slid.bs.carousel', function(){
+                $(this).find('img.lazy, div.lazy').lazyload({
+                    threshold : 10, // set pixels in screen to start loading image..
+                    //event : 'lazy-img', // Event to Trigger Loading..
+                    //container: $('#pn_1_Carousel')
+                    // effect : "fadeIn" // animation of loading image..
+                    skip_invisible : true 
+            });
+        });
+        window.onload = async () => {
+            console.log('Window On load from Index.Html');
+        };
+    </script>
+}

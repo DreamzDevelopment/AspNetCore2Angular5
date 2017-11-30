@@ -1,0 +1,138 @@
+@using Microsoft.EntityFrameworkCore
+   
+@{
+    var loginProviders = // new List<string> { "Facebook", "Google", "Microsoft", "Twitter", "LinkedIn" } ;
+            await SignInManager.GetExternalAuthenticationSchemesAsync();
+    
+        if (loginProviders.Count() == 0)
+        {
+            <div class="diamond-icons" style="display:inherit;">
+                <div>
+                    <button type="button">
+                    <a title="Log in using your account" >
+                        <i class="fa fa-openid"></i>
+                    </a>
+                    </button>
+                </div>
+            </div>
+        }
+        else
+        {
+            var maxLength = 5;
+            var level = 0;
+
+            var providers = loginProviders.ToArray();
+            int j = 0;
+            <form style="display:inherit;" href="#" method="post" class="form-horizontal">
+                <div style="display:inherit;" >                  
+                    <!-- // foreach (var provider in loginProviders)
+                    // Go through all element of providers  -->
+                    @for (int i = 0; i < providers.Length; i++) { 
+                        var classForMainDiv = "";
+                        var classList = "";
+                        
+                        if(maxLength <= 1) {
+                            var provider = providers[j];
+                            if(maxLength == 1) {
+                                classForMainDiv += "diamond-level-" + level;
+                                <div class="@classForMainDiv" >
+                                    <div class="diamond-icons" style="display:inherit">
+                                        <div>
+                                            <button type="submit" value="More Provider">
+                                            <a title="View more provider" >
+                                                <i class="fa fa-more" style="font-size: 15px !important" >more<br>...</i>
+                                            </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                maxLength = maxLength - 1;
+                            }
+                            // Full-screen modal window
+                            <div class="diamond-level-fly" >
+
+                            </div>
+                        } 
+                        else {
+
+                            // check the current position of providers (i) with implmented providers (j) 
+                            if (i == j) {
+                                // implement list of the providers for current level
+                                if(j < providers.Length) {
+                                    classForMainDiv += "diamond-level-" + level;
+                                    <div class="@classForMainDiv" >
+                                    @for(int k = 0; k < maxLength; k++) {
+                                        // initial or last implemented provider + 1
+                                        if(j < providers.Length) {
+                                            var provider = providers[j];
+                                            if(provider != null) {
+                                                switch(provider.Name)
+                                                {
+                                                    case "Facebook":
+                                                        classList = "fa fa-facebook";
+                                                        break;
+                                                    case "Google":
+                                                        classList = "fa fa-google-plus";
+                                                        break;
+                                                    case "Microsoft":
+                                                        classList = "fa fa-windows";
+                                                        break;
+                                                    case "Twitter":
+                                                        classList = "fa fa-twitter";
+                                                        break;
+                                                    case "LinkedIn":
+                                                        classList = "fa fa-linkedin";
+                                                        break;
+                                                    case "GitHub":
+                                                        classList = "fa fa-github";
+                                                        break;
+                                                    case "Paypal":
+                                                        classList = "fa fa-paypal";
+                                                        break;
+                                                    case "Yahoo":
+                                                        classList = "fa fa-yahoo";
+                                                        break;
+                                                    default:
+                                                        classList = "fa fa-openid";
+                                                        break;
+                                                } // End of Switch(Provider.name)
+                                                <!-- if(maxLength <= 0) {
+                                                    break;
+                                                } -->
+                                                <!-- Add a button to click to open a panel with rest of the icon  -->
+                                                if(maxLength == 0) { 
+
+                                                } 
+                                                else {
+                                                    <div class="diamond-icons" style="display:inherit">
+                                                        <div>
+                                                            <button type="submit" name="@provider.Name" value="@provider.Name">
+                                                            <a title="Log in using your @provider.Name account">
+                                                                <i class="@classList"></i>
+                                                            </a>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                }
+
+                                            } // End of If(Provider != null)
+                                        }   
+                                        j++;
+                                    } 
+                                    <!-- // End of k -->
+                                    </div>
+                                } 
+                                // End of j
+                                // reset maxLength
+                                maxLength = maxLength - 1;
+                                level++;
+                            } // End of i >= j
+
+                            // End of providers
+                        }
+                    }
+                </div>
+            </form>        
+
+        }
+}

@@ -1,0 +1,38 @@
+/**
+ * .fa-shake
+ */
+    .fa-shake {
+        -webkit-animation: fa-shake .5s infinite steps(4);
+        animation: fa-shake .5s infinite steps(4);
+    }
+    @-webkit-keyframes fa-shake {
+        0% {
+            -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+        }
+        50% {
+            -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+        }
+        100% {
+            -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+        }
+    }
+    @keyframes fa-shake {
+        0% {
+            -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+        }
+        50% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+        }
+        100% {
+            -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+        }
+    }
+/**
+ * END -> .fa-shake
+ */

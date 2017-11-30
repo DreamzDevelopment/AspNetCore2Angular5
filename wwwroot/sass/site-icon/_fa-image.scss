@@ -1,0 +1,176 @@
+/*..........................................................................
+ * .fa-img, .fa-success, .fa-error, .fa-verify etc. image button classes
+ ............................................................................*/
+    .fa-img {
+        display: inline-block;
+        width: 15px;
+        max-width: 40px;
+        height: 15px;
+        max-height: 40px;
+    }
+    .fa-generic {
+        background-image: url(/images/icons/error.svg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+    .fa-success {
+        background-image: url(/images/icons/success.svg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+    .fa-error {
+        background-image: url(/images/icons/error.svg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+    .fa-verify {
+        background: transparent url(/images/icons/verify.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        &.v0 {
+            @extend .fa-verify;
+            // background: transparent url(/images/icons/verify.png);
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+        &.v1{
+            background: transparent url(/images/icons/verify1.png);
+            @extend .fa-verify;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+        &.v2{
+            background: transparent url(/images/icons/verify2.png);
+            @extend .fa-verify;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+        &.v3{
+            background: transparent url(/images/icons/verify3.png);
+            @extend .fa-verify;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+        &.v4{
+            background: transparent url(/images/icons/verify4.png);
+            @extend .fa-verify;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+        &.v5{
+            background: transparent url(/images/icons/verify5.png);
+            @extend .fa-verify;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+    }
+
+    .fa-rank{
+        background: transparent url(/images/icons/rank3.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .fa-rank-indicator{
+        /*background: transparent url(/images/icons/rank-indicator.gif);*/
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        &.v0{
+            margin: auto;
+        }
+        &.v1{
+            margin-top: 52.5px;
+            margin-bottom: -52.5px;
+            margin-left: -37.0px;
+        }
+        &.v2{
+            margin-top: 46.0px;
+            margin-bottom: -46.0px;
+            margin-left: -14.0px;
+        }
+        &.v3{
+            margin-top: 35.5px;
+            margin-bottom: -35.5px;
+            margin-left: 3px;
+        }
+        &.v4{
+            margin-top: 25.6px;
+            margin-bottom: -25.6px;
+            margin-left: 26.0px;
+            -ms-transform:  rotate(90deg);  /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Safari */
+            transform: rotate(90deg);
+        }
+        &.v5{
+            margin-top: 6.5px;
+            margin-bottom: -6.5px;
+            margin-left: 14.2px;
+        }
+    }
+    .fa-warning.v1 {
+        background: transparent url(/images/icons/fa-warning1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .fa-danger {
+        background: transparent url(/images/icons/fa-danger.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        &.v1 {
+            background: transparent url(/images/icons/fa-danger1.png);
+            @extend .fa-danger;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+        &.v2 {
+            background: transparent url(/images/icons/fa-danger2.png);
+            @extend .fa-danger;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+        &.v3 {
+            background: transparent url(/images/icons/fa-danger3.png);
+            @extend .fa-danger;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+    }
+
+    .fa-important {
+        background: transparent url(/images/icons/fa-important.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        &.v1 {
+            background: transparent url(/images/icons/fa-important1.png);
+            @extend .fa-important;
+            // background-size: contain;
+            // background-repeat: no-repeat;
+        }
+    }
+    .fa-very-important {
+        background: transparent url(/images/icons/fa-important1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .fa-urgent {
+        background: transparent url(/images/icons/fa-urgent.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .fa-extreme {
+        background: transparent url(/images/icons/fa-urgent.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .fa-top-priority {
+        background: transparent url(/images/icons/fa-urgent.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+/*..........................................................................
+* End -> .fa-img, .fa-success, .fa-error, .fa-verify etc. image button classes
+............................................................................*/

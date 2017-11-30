@@ -1,0 +1,99 @@
+/**............................................................................................................
+** snippet from Animate.css - zoomIn effect, used in product-detail.component/detail section,
+.............................................................................................................*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+  .animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s; }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn; }
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  100% {
+    opacity: 0; } }
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  100% {
+    opacity: 0; } }
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut; }
+
+#accordion .panel-title i.fa, #accordion .panel-title i.glyphicon {
+  -webkit-transition: transform 0.5s ease-in-out 0s;
+  -moz-transition: transform 0.5s ease-in-out 0s;
+  -o-transition: transform 0.5s ease-in-out 0s;
+  -ms-transition: transform 0.5s ease-in-out 0s;
+  transition: transform 0.5s ease-in-out 0s; }
+
+.rotate-icon {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+
+.panel {
+  border: 0px;
+  border-bottom: 1px solid #30bb64; }
+
+.panel-group .panel + .panel {
+  margin-top: 0px; }
+
+.panel-group .panel {
+  border-radius: 0px; }
+  .panel-group .panel:last-child {
+    border-bottom: 5px solid #2ba659; }
+
+.panel-heading {
+  border-radius: 0px;
+  color: white;
+  padding: 25px 15px;
+  text-decoration: none; }
+
+.panel-custom .panel-heading,
+.panel-custom > .panel-heading {
+  background-color: #380c70; }
+
+.panel-collapse.collapse.in {
+  border-bottom: 0; }
+
+/**............................................................................................................
+** End snippet from Animate.css - zoomIn effect, used in product-detail.component/detail section,
+.............................................................................................................*/

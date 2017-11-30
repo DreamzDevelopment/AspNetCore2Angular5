@@ -1,0 +1,82 @@
+@using AspNetCore2Angular5.ViewModels.ImageStoreViewModels;
+
+@model StaticImageDto
+@{
+    <!--var imageFor = ImageFor.Item_Image;-->
+    var imgIndex = Model.FileIndex;
+    var imgSrc = Model.Url;
+    var fullFilePath = Model.Path;
+    var fileSize = (decimal)(Model.FileInfo.Length / 1024m); // fileSize in bytes, division result is KiloByte
+    var imgbox_Id = imgIndex + "_ImageBox";
+    var linkId = "link_" + imgbox_Id;
+    var form_Id = "Form_" +  imgbox_Id;
+    var form_ReturnUrl = "ReturnUrl_" +  form_Id;
+}
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf 
+@functions
+{
+    public string GetAntiXsrfRequestToken()
+    {
+        return Xsrf.GetAndStoreTokens(Context).RequestToken;
+    }    
+}
+@if(Model.ImageOnly == true) {
+    if(Model.Animated == true && Model.Background == true) {
+        <div class="background-section animated lazy" data-original="@imgSrc" asp-append-version="true" ></div>
+    }else if (Model.Animated != true && Model.Background == true) {
+        <div class="background-section lazy" data-original="@imgSrc" asp-append-version="true" ></div>
+    }
+    if(Model.Animated == true && Model.Background != true) {
+        <img class="img-responsive animated lazy" data-original="@imgSrc" asp-append-version="true" alt="No Preview Available" />
+    }else if (Model.Animated != true && Model.Background != true) {
+        <img class="img-responsive lazy" data-original="@imgSrc" asp-append-version="true" alt="No Preview Available" />
+    }
+    <!--<img class="background-section animated b-lazy" data-blazy="@imgSrc" asp-append-version="true" />-->
+}
+@if(Model.ImageOnly != true) {
+    <div class="col-md-6 col-xs-12" style="border: 1px solid red;">
+        <label class="control-label">Uploaded on: @Model.UploadDate </label>
+        <div id="@imgbox_Id">
+            <a class="ToBeUpdateLink" id="@linkId" asp-controller="ImageUpload" asp-action="UploadImage" asp-route-id="@Model.FileName" asp-route-index="@imgIndex" asp-route-homeContent="true"
+                asp-route-returnUrl="ToBeReplaced" title="Click to Change">
+                <img class="img-responsive lazy" data-original="@imgSrc" asp-append-version="true" alt="No Preview Available" />
+            </a>
+        </div>
+        <br>
+        <br>
+        <details>
+            <div>
+                <span><label>Image Id:&nbsp;</label>@Model.FileInfo.Name</span>
+                <span><label>File Type:&nbsp;</label>@Model.FileInfo.Extension</span>
+                <span><label>File Name:&nbsp;</label>@Model.FileInfo.Name</span>
+                <span><label>File Path:&nbsp;</label>@Model.FileInfo.DirectoryName</span>     
+                <span><label>Image Index:&nbsp;</label>@imgIndex</span>
+                <span><label>Image Url:&nbsp;</label>@imgSrc</span>
+                <span><label>FileSize:&nbsp;</label>@fileSize KB</span>
+            </div>
+            <div>
+                <label class="control-label">Action(s)</label>:&nbsp;
+                <a asp-controller="ImageUpload" asp-action="UploadImage" asp-route-id="@Model.FileName" asp-route-index="@imgIndex" asp-route-homeContent="true" asp-route-returnUrl="ToBeReplaced"
+                     class="btn btn-edit btn-sm ToBeUpdateLink">
+                     <span class="btn-icon-left pull-left"><i class="fa fa-edit"></i>&nbsp;&nbsp;</span>&nbsp;&nbsp;Edit
+                </a> |
+                <div style="display: inline-block">
+                    <form asp-controller="ImageUpload" asp-action="Delete" id="@form_Id">
+                        <input type="hidden" name="id" value="@Model.FileName" >
+                        <input type="hidden" name="index" value="@imgIndex" >
+                        <!--<input type="hidden" name="imageFor" value="imageFor" >-->
+                        <input type="hidden" id="file_Path" name="filePath" value="@fullFilePath" >
+                        <input type="hidden" id="home_Content" name="homeContent" value="true" >
+                        <input type="hidden" id="@form_ReturnUrl" name="returnUrl" value="" >
+                        <button type="button" onclick="RemoveConfirm('@form_Id', '@form_ReturnUrl', 'Are you certain to remove the Image?')" data-xsrf="@GetAntiXsrfRequestToken()" class="btn btn-delete btn-sm">
+                            <span class="btn-icon-left pull-left"><i class="fa fa-trash"></i>&nbsp;&nbsp;</span>&nbsp;&nbsp;Delete
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </details>
+    </div>
+}
+<script type="text/javascript">
+    
+</script>

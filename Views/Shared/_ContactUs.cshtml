@@ -1,0 +1,18 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+
+<div class="contact-us-wrap" style="top:0" >
+        <div class="contact-us pull-right">
+                <i class="fa fa-phone"></i>
+                <a title="@Localizer["Call us now"]" href="tel:+101000000000" ><i class="PhoneText" >+1 0100 000 0000</i></a>
+        </div>
+        <div class="contact-us pull-right">
+                <i class="fa fa-skype"></i>
+                <a title="@Localizer["Call us now"]" href="skype:chocolat-skype"><i>chocolat-skype</i></a>
+        </div>
+        <!--<div class="contact-us pull-right">
+                <i class="fa fa-google-plus"></i>
+                <a title="Call us now" href="google:mp-skype"><i>mp-skype</i></a>
+        </div>-->
+</div>

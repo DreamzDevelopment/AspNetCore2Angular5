@@ -1,0 +1,84 @@
+.message-section {
+  z-index: 1201 !important;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  border-radius: 0 !important;
+  width: 100vw;
+  max-height: 30vh;
+  overflow-y: auto;
+  /*padding-right: 10px;*/ }
+  .message-section div {
+    border-radius: 0 !important;
+    border-top: 1px dotted #ccc; }
+    .message-section div:first-of-type {
+      border-top: none; }
+  .message-section span.message-text {
+    padding: 5px;
+    margin-left: 13px;
+    margin-right: 5px;
+    white-space: normal;
+    word-wrap: break-word; }
+  .message-section span.message-type {
+    margin-top: -4px;
+    left: 3px;
+    border-radius: 50%;
+    /*border: 1px dotted;*/ }
+    .message-section span.message-type i {
+      border-radius: 50%; }
+      .message-section span.message-type i.fa-info {
+        padding-top: 4px;
+        padding-left: 10px; }
+      .message-section span.message-type i.fa-warning {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-danger {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-important {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-very-important {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-urgent {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.extreme {
+        padding-top: 4px;
+        padding-left: 5px; }
+      .message-section span.message-type i.fa-top-priority {
+        padding-top: 4px;
+        padding-left: 5px; }
+  .message-section a.btn-dismiss {
+    margin-top: -23px;
+    right: 15px; }
+  .message-section.live-message {
+    max-height: 150px;
+    height: 150px;
+    overflow: hidden; }
+    .message-section.live-message span.message-text {
+      z-index: -1 !important; }
+    .message-section.live-message a.btn-dismiss {
+      position: fixed !important;
+      z-index: 1202 !important; }
+  .message-section i.zoom-out {
+    position: absolute !important;
+    height: 1px !important;
+    width: 1px !important;
+    margin-top: -100vh !important; }
+  .message-section i.light.fa-eraser {
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    line-height: 20px;
+    background: transparent;
+    position: absolute !important;
+    z-index: 1101 !important;
+    left: 200; }
+
+.message-section span.message-type,
+.message-section a.btn-dismiss {
+  position: absolute;
+  width: 27px;
+  height: 27px; }

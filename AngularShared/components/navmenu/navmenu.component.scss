@@ -1,0 +1,146 @@
+@import '../../../wwwroot/sass/_mixins.scss';
+@import '../../styles/_declares.scss';
+
+    .panel-open { 
+        position: absolute;
+        top: 0;
+        left: 30px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 15px;
+        text-align: center;
+        color: #F583F5;
+        &:hover {
+            color: #02BE11;
+        }
+        cursor: pointer;
+        background: $rgba-0009;
+        i {
+            @include transform-rotate(45deg);
+        }
+        z-index: -1;
+        @include border-bottom-right-radius(100%);
+        @include mixin-transition(all, 400ms, ease-in-out, 0s);
+    }
+    .menu-panel {
+        position: fixed;
+        margin-top: 60px;
+        margin-left: -40px;
+        width: 40px;
+        height: calc(100vh - 60px);
+        background: $rgba-0009;
+        padding-top: #{$panel-padding-top}px;
+        padding-bottom: 10px;
+        z-index:  1101 !important;  // z-index: >= 1153; for layout-navbar 
+        @include mixin-transition(all, 400ms, ease-in-out, 0s);
+        .menu-item {
+            color: #ccc;
+            width: 35px;
+            height: 35px;
+            margin: 2.5px;
+            z-index:  1102 !important;  // z-index: 1101 for .menu-panel 
+            border: 1px solid #348;
+            @include mixin-transition(all, 400ms, ease-in-out, 0s);
+            .fa-img {
+                @extend .menu-item;
+                display: none;
+                overflow: visible;
+                @include mixin-transition(all, 400ms, ease-in-out, 0s);
+                .control {
+                    margin-top: 4px;
+                    width: 35px;
+                    height: 35px;
+                    font-size: 35px;
+                    line-height: 35px;
+                    text-align: center;
+                    border: 1px solid $border-c1;
+                    display: none;
+                    
+                }
+                &:hover {
+                    .control {
+                        cursor: pointer;
+                        display: inline-block;
+                        @include mixin-transition(all, 400ms, ease-in-out, 0s);
+                    }
+                }
+            }
+            
+            @for $i from 1 through $n-items {
+                &:nth-of-type(#{$i}).open,
+                &:nth-of-type(#{$i}):hover {
+                    margin-top: -#{( ($i - 1) * 47) + ($i * 13) + ($panel-padding-top - 10) }px !important;
+                }
+            }
+            .menu-body { // shared accross any menu-body added to the menu-panel
+                width: 0;
+                overflow-x: hidden;
+                @include mixin-transition(all, 400ms, ease-in-out, 0s);
+            }
+            &.open,
+            &:hover {
+                top: 0;
+                width: 300px;
+                max-width: 100vw;
+                margin-left: 15px;
+                padding-right: 1px;
+                height: calc(100vh - 55px);
+                background: rgba(0, 0, 0, 0.9);
+                border: none;
+                z-index: 1104;  // z-index: 1101 for .menu-panel 
+                @include mixin-transition(all, 400ms, ease-in-out, 0s);
+                .menu-body {
+                    display: block;
+                    width: inherit;
+                    cursor: pointer;
+                    text-overflow: ellipsis;
+                    overflow-x: hidden;
+                    @include mixin-transition(all, 400ms, ease-in-out, 0s);
+                    .item {
+                        @extend .menu-body;
+                        overflow: hidden;
+                        margin-bottom: 10px;
+                        text-decoration: none;
+                        @include mixin-transition(all, 400ms, ease-in-out, 0s);
+                        i {
+                            position: absolute;
+                            left: 0;
+                            margin: 2.5px;
+                        }
+                        label{
+                            @extend .menu-body;
+                            overflow-y: hidden;
+                            margin-bottom: 0;
+                        }
+                        span{
+                            @extend .menu-body;
+                            overflow-y: hidden;
+                        }
+                        &.my-focus {
+                            border-color: #6525E4;
+                            @include mixin-transition(all, 400ms, ease-in-out, 0s);
+                            & * {
+                                @extend .my-focus;
+                                @include mixin-transition(all, 400ms, ease-in-out, 0s);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.open,
+        &:hover {
+            margin-left: -10px;
+            .menu-item {
+                margin-left: 15px;
+                .fa-img {
+                    margin: 2.5px;
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    
+    

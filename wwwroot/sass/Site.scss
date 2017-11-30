@@ -1,0 +1,239 @@
+
+@import './_mixins.scss';
+@import './Shared.scss';
+
+/*
+Colors
+#20C1C7
+#204648
+#189094
+#61CED2
+#0C4648
+#009C75
+#00A0B5
+#rgba(10, 100, 105 , 1)
+*/
+    html {
+        font-size: 12px;
+    }
+    /* Update link url on document load */
+    .ToBeUpdated {
+        display: normal;
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+    i.fa {
+        font-size: 110% !important;
+    }
+    body {
+        /*padding-top: 50px;*/
+        padding-bottom: 0;
+    }
+    html,body {
+        /* Allows content to fill the viewport and go beyond the bottom */
+        /* Allows you to scroll below the viewport; default value is visible */
+        /* To smooth any scrolling behavior */
+        height: 100%;
+        /*overflow-y: scroll;*/
+        -webkit-overflow-scrolling: touch;
+    }
+    .body-content {
+        padding-top: 60px;
+    }
+    #selectLanguage {
+        select {
+            z-index: 1038;
+            color: springgreen;
+            background: #000;
+        }
+    }
+    /* QR code generator */
+    #qrCode {
+        margin: 15px;
+    }
+
+    @import './site/_back-to-top.scss';
+    @import './site/_contact-us.scss';
+    @import './site/_document-cover.scss';
+    @import './site/_footer.scss';
+    @import './site/_text.scss';
+
+/**
+ * Layout -> Body Section
+ */
+    .body-section {
+        display: normal;
+        min-height: 100vh;
+    }
+    .background-section {
+        float: left;
+        padding: 100px 0;
+        color:#fff !important;
+        /*width: 100%;*/
+        width: inherit;
+        /*min-height: 641px;*/
+        min-height: inherit;
+        height: inherit;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;
+        background-position: 0 0;
+        background-attachment: fixed;
+        
+    }
+    #bannerCarousel {       
+        height: 100vh !important;
+        .item {
+            img {
+                @extend #bannerCarousel;
+                width: 100vw !important;
+        
+            }
+        }
+    }
+    #bannerCarousel {
+        position: fixed !important;
+    }
+    #carouselCover {
+        
+        height: 100vh !important;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+    }
+
+    .content {
+        border: 1px solid red;
+        
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center top;
+        border-style: none none none none;
+        margin: auto;
+        width: 100%;
+        padding: 0;
+        padding-top: 100vh;
+        position: relative;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .content-section {
+        /*margin-left: -15px;
+        margin-right: -15px;*/
+        /*margin-bottom: 30px;*/
+        min-height: 300px;
+        padding: 0;
+        margin: 0;
+        display: block; 
+        color: white;
+    }
+    #bannerCarousel+.content-section {
+        color: white;
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+    .content-section-1 {
+        display: block;
+        min-height: 300px;
+        &.zero {
+            min-height: 100vh;
+            background: transparent;
+        }
+        &.first {
+            background: rgba(01, 01, 76, 0.5);
+        }
+        &.second {
+            background: transparent;
+            padding: 0;
+            & > div {
+                height: 400px;
+                padding: 0;
+                .carousel {
+                    margin: 0;
+                    height: inherit;
+                    width: 100%;
+                    img {
+                        border: 1px solid yellow;
+                        height: inherit;
+                        width: inherit;
+                    }
+                }
+            }
+            .panel-box {
+                background-repeat: no-repeat;
+                background-size: cover;
+                &.p1 {
+                    background-image: url(/Images/panel11_600X400.png);
+                }
+                &.p2 {
+                    background-image: url(/Images/panel21_600X400.png);
+                }
+            }
+            
+        }
+        &.third {
+            background: rgba(01, 01, 76, 0.5);
+        }
+    }
+    .content-section-2 {
+        /*border: 1px solid red;*/
+        padding: 20px 0 5px 0;
+        display: block;
+    }
+    .content-section-form-carousel {
+        top: 60px;
+        background: rgba(22,22,11, 0.8);
+        color: white;
+        overflow: auto;
+        min-height: 85vh;
+        max-height: 85vh;
+        max-width: 95vw;
+        input {
+            color: purple;
+        }
+    }
+/**
+* END -> Layout -> Body Section
+*/
+
+
+/**
+ * Structure classes, .my-row, .col-full-width
+ */
+    .my-row {
+        display: block;
+        padding: 0;
+        margin: 0;
+        &:after,
+        &:before {
+            display: table;
+            content: " ";
+        }
+        &:after {
+            clear: both;
+        }
+    }
+    .my-center-block {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%); 
+    }
+    @media only screen and (max-width: 400px) {
+        .col-full-width {
+            width: 100%;
+        }
+        .hidden-full-width {
+            width: 0;
+            display: none;
+        }
+    }
+/**
+* END -> Structure classes, .my-row, .col-full-width
+*/
+

@@ -1,0 +1,126 @@
+@{
+    var currentUser = await UserManager.GetUserAsync(User);
+    var profileImage = (currentUser == null) ? Url.Content("~/images/icons/user.svg") :
+                Url.Action("GetImage", "apiImage", new { imageOf = currentUser.Id, index = ImageIndexs.ProfileLogin_120X120 }); 
+    <!-- if(currentUser != null) {
+        var profileImg = await _ImageRepository.GetProfileImageByIdAndIndex(currentUser.Id, ImageIndexs.ProfileLogin_120X120);
+        if(profileImg != null) {
+            imgSrc = profileImg.FullPathImageUrl;
+        }
+    } -->
+    
+}
+<style type="text/css">
+    .container-nav ul li ul{ background-color: rgba(00,33,44, 0.9); }
+    .container-nav ul li { background-color: inherit; border:none; }
+    .account-menu .container-nav ul, .account-menu. .container-nav ul li{ width: 160px !important;  }
+    .account-menu .container-nav a.btn{ vertical-align: middle; padding: 10%; }
+
+</style>
+@if (SignInManager.IsSignedIn(User))
+{  
+    <div class="theme-5 navbar-nav pull-right" style="width: 220px; padding: 0;">
+        <div id="dl-menu" class="dl-menuwrapper text-3d">
+            <a class="btn truncate btn-lg dl-trigger" style="width: calc(100% - 50px)">
+                <span class="truncate text-center" style="font-size: 16px;"><span style="font-size: 80%;">@Localizer["Hello"]</span>&nbsp;@Localizer["@UserManager.GetUserName(User)"]&nbsp;!</span>
+            </a>
+            <button class="dl-trigger">
+                <a class="pull-left" style="margin: 0;margin-left: -5px; width: 30px; height: 30px;padding-top: 7.5px;" >
+                    @await Component.InvokeAsync("MenuIcon", new { iconType = "3"})
+                </a>  
+            </button>
+            <div class="ul dl-menu">
+                <div class="left-section" style="width: calc(100% - 100px);">
+                    <div class="li">
+                        @if(currentUser != null && !string.IsNullOrWhiteSpace(currentUser.Id)) {                               
+                            <a class="btn truncate" asp-area="" asp-controller="Account" asp-action="Index" asp-route-id="@currentUser.Id" title="Manage Account" >
+                                <span class="btn-icon-left pull-left truncate"><i class="fa fa-cog"></i>&nbsp;&nbsp;</span>&nbsp;&nbsp;@Localizer["Manage Account"]
+                            </a>
+                        }else{
+                            <a class="btn truncate" asp-area="" asp-controller="Account" asp-action="Index" asp-route-id="" title="Manage Account" >
+                                <span class="btn-icon-left pull-left truncate"><i class="fa fa-cog"></i>&nbsp;&nbsp;</span>&nbsp;&nbsp;@Localizer["Manage Account"]
+                            </a>
+                        }
+                    </div>
+                    <div class="li">
+                        <form asp-area="" asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm">
+                            <a href="javascript:document.getElementById('logoutForm').submit()" class="btn" title="@Localizer["Log Off"]" >
+                                <span class="btn-icon-left pull-left truncate"><i class="fa fa-power-off"></i>&nbsp;&nbsp;</span>&nbsp;&nbsp;@Localizer["Log Off"]
+                            </a>
+                        </form>
+                    </div>
+                    @await Component.InvokeAsync("Cart", new { id = "ID" })
+                </div>
+                <div class="li right-section" style="width: 100px; display: inline-block;">
+                    <div title="@Localizer["Click to upload new"]">
+                        @if(currentUser != null && !string.IsNullOrWhiteSpace(currentUser.Id)) {
+                            <a class="tooltip-custom ToBeUpdateLink" id="link_ProfileLogin_120X120" asp-controller="ImageUpload" asp-action="UploadImage" asp-route-id="@currentUser.Id" 
+                                asp-route-index="@ImageIndexs.ProfileLogin_120X120" asp-route-returnUrl="ToBeReplaced">
+                                <img id="imgProfile" class="img-responsive" style="width:50px; height:50px;"
+                                    src="@profileImage"
+                                    onerror="this.onerror=null;this.src='@Url.Content("~/images/icons/user.svg")'" alt="@Localizer["Profile Image"]" />
+                            </a>
+                        }else{
+                            <a class="tooltip-custom ToBeUpdateLink" id="link_ProfileLogin_120X120" asp-controller="ImageUpload" asp-action="UploadImage" asp-route-id="" 
+                                asp-route-index="@ImageIndexs.ProfileLogin_120X120" asp-route-returnUrl="ToBeReplaced">
+                                <img id="imgProfile" class="img-responsive" style="width:50px; height:50px;"
+                                src="@profileImage"
+                                onerror="this.onerror=null;this.src='@Url.Content("~/images/icons/user.svg")'" alt="@Localizer["Profile Image"]" />
+                            </a>
+                        }
+                    </div>
+                    <div title="@Localizer["Hover Me"]!">
+                        <div class="cart-menu-icon" > 
+                            @await Component.InvokeAsync("Cart", new { id = "Icon" })
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div><!-- /dl-menuwrapper -->
+    </div>
+   }
+else
+{
+    <div class="theme-5 navbar-nav pull-right" style="width: 220px; padding: 0;">
+        <div id="dl-menu" class="dl-menuwrapper text-3d">
+            <a class="btn truncate btn-lg dl-trigger" style="width: calc(100% - 50px)">
+                <span class="truncate text-center" style="font-size: 16px;"><span style="font-size: 80%;">@Localizer["Welcome"]</span>&nbsp;@Localizer["Guest"]&nbsp;!</span>
+            </a>
+            <button class="dl-trigger" >
+                <a class="pull-left" style="margin: 0;margin-left: -5px; width: 30px; height: 30px;padding-top: 7.5px;" >
+                    @await Component.InvokeAsync("MenuIcon", new { iconType = "3"})
+                </a>  
+            </button>
+            <div class="ul dl-menu">
+                <div class="left-section" style="width: calc(100% - 100px);">
+                    <div class="li">
+                        <a class="btn truncate ToBeUpdateLink" asp-area="" asp-controller="Account" asp-action="Register" asp-route-returnUrl="ToBeReplaced">
+                            <span class="btn-icon-left pull-left"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;</span>&nbsp;&nbsp;@Localizer["Register"]
+                        </a>
+                    </div>
+                    <div class="li">
+                        <a class="btn truncate ToBeUpdateLink" asp-area="" asp-controller="Account" asp-action="Login" asp-route-returnUrl="ToBeReplaced">
+                            <span class="btn-icon-left pull-left"><i class="fa fa-user-secret"></i>&nbsp;&nbsp;</span>&nbsp;&nbsp;@Localizer["Log in"]
+                        </a>
+                    </div>
+                    <!-- await Component.InvokeAsync("Cart", new { id = "ID" }) -->
+                </div>
+                <div class="li right-section" style="width: 100px; display: inline-block;">
+                    <div class="cross-fade" style="width: 100px;height: 75px;padding:0;" >
+                        <a class="tooltip-custom cf-in-out" style="width:50px;height:50px;margin:25px 25px 0 25px;padding:0" >
+                            <img src="@Url.Content("/images/icons/user_profile_male.jpg")" alt="Profile Image"
+                                onerror="this.onerror=null;this.src='@Url.Content("~/images/icons/user.svg")'" />
+                            <img src="@Url.Content("/images/icons/user_profile_female.jpg")" alt="Profile Image" 
+                                onerror="this.onerror=null;this.src='@Url.Content("~/images/icons/user.svg")'" />
+                        </a>
+                    </div>
+                    <div title="@Localizer["Hover Me"]" >
+                        <div class="cart-menu-icon" > 
+                            <!-- await Component.InvokeAsync("Cart", new { id = "Icon" }) -->
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div><!-- /dl-menuwrapper -->
+    </div>
+}

@@ -1,0 +1,24 @@
+    .btn-location {
+        color: goldenrod;
+        font-size: 16px;
+    }
+    .fa-location {
+        color: white;
+        font-size: 10px;
+    }
+    .fa-location,
+    .btn-location {
+        background-color: transparent;
+        transition-duration: 500ms;
+        border: none;
+    }
+    .fa-location:hover,
+    .btn-location:hover {
+        color: gold;
+    }
+    .fa-location:hover,
+    .btn-location:hover,
+    .btn-cart:hover ,
+    .btn-detail:hover {
+        @include mixin-transition(all, 500ms, linear, 100ms);
+    }

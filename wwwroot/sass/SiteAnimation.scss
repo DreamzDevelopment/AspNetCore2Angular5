@@ -1,0 +1,46 @@
+    // Imports must be in proper order
+    @import './_mixins.scss'; 
+    @import './Shared.scss';
+
+    @import './site-animation/_crossfade.scss';
+    @import './site-animation/_gradient.scss';
+    @import './site-animation/_shake.scss';
+    @import './site-animation/_slide.scss';
+    @import './site-animation/_smooth-background.scss';
+    @import './site-animation/_wave.scss';
+    @import './site-animation/_zoom.scss';
+    
+
+
+/*.............................................................................................
+* Detecting and executing when transitions, and animation end with jQuery, tutorials
+..................................................................................................*/
+    .button {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: white;
+        background-color: #777;
+        padding: 0.7em 2em;
+        border: 0;
+        margin: 1em auto 0;
+        border-radius: 3px;
+        box-shadow: 0 3px 0 #444;
+        display: block;
+        cursor: pointer;
+        -webkit-appearance: none;
+            -moz-appearance: none;
+                appearance: none;
+        -webkit-transition: -webkit-transform 1.5s ease;
+        transition: -webkit-transform 1.5s ease;
+        transition: transform 1.5s ease;
+    }
+
+    .animate {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+            animation-name: slideLeft;
+    }
+/*.............................................................................................
+* End Detecting and executing when transitions end with jQuery, tutorials
+..................................................................................................*/
+

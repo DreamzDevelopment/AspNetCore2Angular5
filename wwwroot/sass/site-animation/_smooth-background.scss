@@ -1,0 +1,72 @@
+/*
+* Smooth full-screen background image animation....
+*/
+    @-webkit-keyframes backgroundScrollToLeft {
+        0% { background-position: 0 0; }
+        100% { background-position: -400px 0; }
+    }
+
+    @keyframes backgroundScrollToLeft {
+        0% { background-position: 0 0; }
+        100% { background-position: -400px 0; }
+    }
+    @-webkit-keyframes backgroundScrollToTop {
+        0% { background-position: -400px 0; }
+        100% { background-position: -400px -400px; }
+    }
+
+    @keyframes backgroundScrollToTop {
+        0% { background-position: -400px 0; }
+        100% { background-position: -400px -400px; }
+    }
+    @-webkit-keyframes backgroundScrollToRight {
+        0% { background-position: -400px -400px; }
+        100% { background-position: 0 -400px; }
+    }
+
+    @keyframes backgroundScrollToRight {
+        0% { background-position: -400px -400px; }
+        100% { background-position: 0 -400px; }
+    }
+    @-webkit-keyframes backgroundScrollToBottom {
+        0% { background-position: 0 -400px; }
+        100% { background-position: 0 0; }
+    }
+
+    @keyframes backgroundScrollToBottom {
+        0% { background-position: 0 -400px; }
+        100% { background-position: 0 0; }
+    }
+    .animated.to-left {
+        -webkit-animation: backgroundScrollToLeft 35s linear 1;
+        animation: backgroundScrollToLeft 10s linear 1;
+    }
+    .animated.to-top {
+        -webkit-animation: backgroundScrollToTop 35s linear 1;
+        animation: backgroundScrollToTop 10s linear 1;
+    }
+    .animated.to-right {
+                -webkit-animation: backgroundScrollToRight 35s linear 1;
+        animation: backgroundScrollToRight 10s linear 1;
+    }
+    .animated.to-bottom {
+        -webkit-animation: backgroundScrollToBottom 35s linear 1;
+        animation: backgroundScrollToBottom 10s linear 1;
+    }
+    .animated.to-left-end {
+        background-position: -400px 0 !important;
+    }
+    .animated.to-top-end {
+        background-position: -400px -400px !important;
+    }
+    .animated.to-right-end {
+        background-position: 0 -400px !important;
+    }
+    /* Initial Position*/
+    .animated.to-bottom-end {
+        background-position: 0 0 !important;
+    }
+
+/*
+* END -> Smooth full-screen background image animation....
+*/

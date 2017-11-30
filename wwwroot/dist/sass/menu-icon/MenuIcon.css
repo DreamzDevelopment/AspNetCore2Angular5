@@ -1,0 +1,233 @@
+.menubar {
+  z-index: 10; }
+
+.menu-icon {
+  width: inherit;
+  height: inherit;
+  min-height: 15px;
+  min-width: 15px;
+  max-width: 60px;
+  max-height: 60px;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s; }
+  .menu-icon span {
+    display: block;
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    background: linear-gradient(to right, #ddff99 10%, #ffdd99, #ffbb99 70%);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+
+/**
+ * Icon 1
+ */
+#menu-icon1 span:nth-child(1) {
+  top: 0px; }
+
+#menu-icon1 span:nth-child(2) {
+  top: 30%; }
+
+#menu-icon1 span:nth-child(3) {
+  top: 60%; }
+
+#menu-icon1.open span:nth-child(1) {
+  top: 30%;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+#menu-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -100%; }
+
+#menu-icon1.open span:nth-child(3) {
+  top: 30%;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg); }
+
+/**
+ * END -> Icon 1
+ */
+/**
+ * Icon 2
+ */
+#menu-icon2 {
+  display: normal; }
+  #menu-icon2 span {
+    display: block;
+    position: absolute;
+    height: 15%;
+    width: 50%;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+    #menu-icon2 span:nth-child(even) {
+      left: 50%;
+      border-radius: 0 15% 15% 0; }
+    #menu-icon2 span:nth-child(odd) {
+      left: 0px;
+      border-radius: 15% 0 0 15%; }
+    #menu-icon2 span:nth-child(1), #menu-icon2 span:nth-child(2) {
+      top: 0px; }
+    #menu-icon2 span:nth-child(3), #menu-icon2 span:nth-child(4) {
+      top: 30%; }
+    #menu-icon2 span:nth-child(5), #menu-icon2 span:nth-child(6) {
+      top: 60%; }
+  #menu-icon2.open span:nth-child(1), #menu-icon2.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  #menu-icon2.open span:nth-child(2), #menu-icon2.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  #menu-icon2.open span:nth-child(1) {
+    left: 8.33%;
+    top: 11.66%; }
+  #menu-icon2.open span:nth-child(2) {
+    left: calc(50% - 8.33%);
+    top: 11.66%; }
+  #menu-icon2.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0; }
+  #menu-icon2.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0; }
+  #menu-icon2.open span:nth-child(5) {
+    left: 8.33%;
+    top: 48.33%; }
+  #menu-icon2.open span:nth-child(6) {
+    left: calc(50% - 8.33%);
+    top: 48.33%; }
+
+/**
+ * END -> Icon 2
+ */
+/**
+ * Icon 3
+ */
+#menu-icon3 span:nth-child(1) {
+  top: 0px; }
+
+#menu-icon3 span:nth-child(2), #menu-icon3 span:nth-child(3) {
+  top: 30%; }
+
+#menu-icon3 span:nth-child(4) {
+  top: 60%; }
+
+#menu-icon3.open span:nth-child(1) {
+  top: 30%;
+  width: 0%;
+  left: 50%; }
+
+#menu-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+#menu-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+#menu-icon3.open span:nth-child(4) {
+  top: 30%;
+  width: 0%;
+  left: 50%; }
+
+/**
+ * END -> Icon 3
+ */
+/**
+ * Icon 4
+ */
+#menu-icon4 {
+  display: normal; }
+  #menu-icon4 span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center; }
+  #menu-icon4 span:nth-child(2) {
+    top: 30%;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center; }
+  #menu-icon4 span:nth-child(3) {
+    top: 60%;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center; }
+  #menu-icon4.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -5%;
+    left: 13.33%; }
+  #menu-icon4.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0; }
+  #menu-icon4.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 65%;
+    left: 13.33%; }
+
+/**
+ * END -> Icon 4
+ */

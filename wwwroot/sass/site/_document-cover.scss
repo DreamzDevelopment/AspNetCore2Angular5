@@ -1,0 +1,35 @@
+/**
+ * Document load state 
+ */
+    .documentCover,
+    .documentState {
+        top:0;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        background: rgba(23,23,123, 0.97);
+        margin: auto;
+        color: white;
+        text-align: center;
+        z-index: 9999;
+        /*border: 1px solid red;*/
+        &.transparent {
+            background: none !important;
+            opacity: 0 !important;
+            color: transparent;
+        }
+    }
+    .documentCover
+    #documentState {
+        margin: auto;
+        top: 50vh;
+        padding: 0;
+        position: relative;
+
+        line-height: 50px;
+        font-size: 20px;
+    }
+/**
+* END -> Document load state 
+*/

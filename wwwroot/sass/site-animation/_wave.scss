@@ -1,0 +1,69 @@
+/**....................................................................................
+** Radio and Checkbox design and animation
+........................................................................................*/
+    @-moz-keyframes click-wave { 
+        0% {
+            width: inherit;
+            height: inherit;
+            opacity: 0.35;
+            position: relative;
+        }
+        100% {
+            width: 200px;
+            height: 200px;
+            margin-left: -80px;
+            margin-top: -80px;
+            opacity: 0.0;
+        }
+    }
+    @-webkit-keyframes
+    click-wave { 
+        0% {
+            width: inherit;
+            height: inherit;
+            opacity: 0.35;
+            position: relative;
+        }
+        100% {
+            width: 200px;
+            height: 200px;
+            margin-left: -80px;
+            margin-top: -80px;
+            opacity: 0.0;
+        }
+    }
+
+    @-o-keyframes click-wave { 
+        0% {
+            width: inherit;
+            height: inherit;
+            opacity: 0.35;
+            position: relative;
+        }
+        100% {
+            width: 200px;
+            height: 200px;
+            margin-left: -80px;
+            margin-top: -80px;
+            opacity: 0.0;
+        }
+    }
+
+    @keyframes click-wave { 
+        0% {
+            width: inherit;
+            height: inherit;
+            opacity: 0.35;
+            position: relative;
+        }
+        100% {
+            width: 200px;
+            height: 200px;
+            margin-left: -80px;
+            margin-top: -80px;
+            opacity: 0.0;
+        }
+    }
+/**....................................................................................
+** End Radio and Checkbox design and animation
+........................................................................................*/

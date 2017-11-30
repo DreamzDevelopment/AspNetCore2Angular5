@@ -1,0 +1,51 @@
+@using AspNetCore2Angular5.ViewModels.ImageStoreViewModels;
+
+@model StaticImageDto
+@{
+    <!--var imageFor = ImageFor.Item_Image;-->
+    var imgIndex = Model.FileIndex;
+    var imgSrc = Model.Url;
+    var fullFilePath = Model.Path;
+    <!--var fileSize = (decimal)(Model.FileInfo.Length / 1024m); // fileSize in bytes, division result is KiloByte-->
+    var imgbox_Id = imgIndex + "_ImageBox";
+    var linkId = "link_" + imgbox_Id;
+    var form_Id = "Form_" +  imgbox_Id;
+    var form_ReturnUrl = "ReturnUrl_" +  form_Id;
+}
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf 
+@functions
+{
+    public string GetAntiXsrfRequestToken()
+    {
+        return Xsrf.GetAndStoreTokens(Context).RequestToken;
+    }    
+}
+@if(Model.ImageOnly == true) {
+    <img class="img-responsive lazy" data-original="@imgSrc" alt="No Preview Available" />
+}
+@if(Model.ImageOnly != true) {
+    <div class="col-md-6 col-xs-12" style="border: 1px solid red;">
+        <label class="control-label">Uploaded on: @Model.UploadDate</label>
+        <div id="@imgbox_Id">
+            <a class="ToBeUpdateLink" id="@linkId" asp-controller="ImageUpload" asp-action="UploadImage" asp-route-id="@Model.FileName" asp-route-index="@imgIndex" asp-route-returnUrl="ToBeReplaced" 
+                asp-route-homeContent="true" title="Click to Change">
+                <img class="img-responsive lazy" data-original="@imgSrc" alt="No Preview Available" />
+            </a>
+        </div>
+        <br>
+        <br>
+        <details>
+            <div>
+                <span><label>Image Index:&nbsp;</label>@imgIndex</span>
+                <span><label>Image Url:&nbsp;</label>@imgSrc</span>
+            </div>
+            <div>
+                <label class="control-label">Action(s)</label>:&nbsp;
+                <a asp-controller="ImageUpload" asp-action="UploadImage" asp-route-id="@Model.FileName" asp-route-index="@imgIndex" asp-route-returnUrl="ToBeReplaced"
+                    asp-route-homeContent="true" class="btn btn-create btn-sm ToBeUpdateLink">
+                    <span class="btn-icon-left pull-left"><i class="fa fa-upload"></i>&nbsp;&nbsp;</span>&nbsp;&nbsp;Upload Image
+                </a>
+            </div>
+        </details>
+    </div>
+}

@@ -1,0 +1,12 @@
+    <i class="fa-img fa-success" aria-hidden="true">
+        <i class="control fa" aria-hidden="true"
+            [ngClass]="{'fa-lock': lockPanel, 'fa-unlock': !lockPanel}" (click)="lockUnlockPanel($event)" ></i>
+    </i>
+    <div class="menu-body" >
+        <a class="item" *ngFor="let store of storeTypes | async" routerLinkActive="my-focus" [routerLink]="[ '/', getFriendlyTitle(store.storeTitle)]" >
+            <i class="btn" [style.background-image]="sanitizeImage(store.storeIconUrl || 'url(/images/icons/store.png)')" 
+                style="width: 50px;height: 80px;background-size: contain;background-repeat: no-repeat;"></i>
+            <label class="control-label" l10n-title title="{{store.storeTitle.toLowerCase()}}" l10nTranslate>{{store.storeTitle.toLowerCase()}}</label>
+            <span l10n-title title="{{store.description && store.description.toLowerCase()}}">{{store.description && store.description.toLowerCase()}}</span>
+        </a>
+    </div>

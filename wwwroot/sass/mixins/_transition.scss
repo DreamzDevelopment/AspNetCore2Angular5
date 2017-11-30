@@ -1,0 +1,7 @@
+@mixin mixin-transition($properties, $duration, $timingFunc, $delay) {
+    -webkit-transition: $properties $duration $timingFunc $delay;
+    -moz-transition: $properties $duration $timingFunc $delay;
+    -o-transition: $properties $duration $timingFunc $delay;
+    -ms-transition: $properties $duration $timingFunc $delay;
+    transition: $properties $duration $timingFunc $delay;
+}

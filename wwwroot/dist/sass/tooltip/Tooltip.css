@@ -1,0 +1,19 @@
+/*Custom tool-tip*/
+.tooltip-custom {
+  text-decoration: none;
+  position: relative; }
+
+.tooltip-custom img {
+  transition-delay: 100ms;
+  transition-duration: 500ms; }
+
+.tooltip-custom img:hover {
+  z-index: 1160;
+  transform: scale(1.5);
+  padding-top: 10px;
+  padding-right: 5px;
+  -webkit-transition: all 500ms linear 100ms;
+  -moz-transition: all 500ms linear 100ms;
+  -o-transition: all 500ms linear 100ms;
+  -ms-transition: all 500ms linear 100ms;
+  transition: all 500ms linear 100ms; }

@@ -1,0 +1,61 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+<style>
+    .container ul {
+        list-style-type:none; 
+        padding: 0;
+    }
+    .footer-container li i.fa {
+        font-size: 70% !important;
+        line-height: 100%;
+    }
+</style>
+    <div class="container footer-container">      
+        <div class="col-md-3 col-xs-6 col-full-width">
+            <h4>@Localizer["Useful Links"]</h4>  
+            <ul>
+                <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Home"]</li>
+                <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Privacy"]</li>
+                <li class="truncate"><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Terms and Conditions"]</li>
+                <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["About Us"]</li>
+                <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Contact Us"]</li>
+            </ul>
+        </div>
+
+        <div class="col-md-3 col-xs-6 col-full-width">
+            <h4>@Localizer["Services"]</h4>
+            <ul>
+                <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Instore Service"]</li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-xs-6 col-full-width">
+            <h4>@Localizer["Our Partners"]</h4>
+            <ul>
+                <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Dhulo Bali"]</li>
+                <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Dupurer Rowd"]</li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-xs-6 col-full-width">
+            <div class="col-md-12" style="padding: 0;">
+                <h4>@Localizer["Customer Service"]</h4>
+                <ul>
+                    <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Agrabad"] @Localizer["C/A"], @Localizer["Chittagong"]</li>
+                </ul>
+            </div>
+            <div class="col-md-12" style="padding: 0;">
+                <h4>@Localizer["Opening Hours"]</h4>
+                <ul>
+                    <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Sunday"] - @Localizer["Thursday"] (<span class="NumberText">9</span> @Localizer["am"] - <span class="NumberText">5</span> @Localizer["pm"])</li>
+                </ul>
+            </div>
+            <div class="col-md-12" style="padding: 0">
+                <h4>@Localizer["Phone Service"]</h4> 
+                <ul>
+                    <li><i class="fa fa-chevron-right"></i>&nbsp;@Localizer["Sunday"] - @Localizer["Saturday"] (<span class="NumberText">24</span> X <span class="NumberText">7</span>)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p><a class="btn" >tech@dreamzdevelopment</a></p>
+    

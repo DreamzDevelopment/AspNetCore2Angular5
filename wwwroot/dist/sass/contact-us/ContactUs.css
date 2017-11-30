@@ -1,0 +1,44 @@
+.contact-us-wrap {
+  width: 50vw;
+  right: 0;
+  position: absolute;
+  float: right !important;
+  z-index: 1150;
+  padding-right: 17%; }
+  .contact-us-wrap:hover {
+    /*background-image: -moz-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: -o-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: -webkit-linear-gradient(right, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));
+            background-image: linear-gradient(to left, rgba(01, 01, 56, 0.8), rgba(01, 01, 56, 0));*/
+    width: 100vw;
+    background: #010156; }
+
+.contact-us-wrap
+.contact-us {
+  top: 0;
+  margin-right: 15px;
+  display: inline-block !important;
+  background-color: transparent;
+  font-weight: bold; }
+
+.contact-us i.fa,
+.contact-us i {
+  margin-right: 5px;
+  margin-left: 0; }
+
+.contact-us i:not(.fa) {
+  display: none; }
+
+.contact-us:hover i {
+  display: inline-block !important; }
+
+.contact-us,
+.contact-us:hover i.fa {
+  color: lightskyblue; }
+
+.contact-us i.fa,
+.contact-us:hover i {
+  color: red; }
+
+.contact-us:hover i.fa {
+  font-size: 110%; }

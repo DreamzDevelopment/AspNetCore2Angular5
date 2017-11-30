@@ -1,0 +1,44 @@
+/*...........................................................................
+* fly menu
+............................................................................*/
+    .fly-wrap {
+        position: fixed;
+        right: 10px;
+        /*top: 80%;*/
+        padding: 0 5px 0 5px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 15px;
+        z-index: 22;
+    }
+
+    .fly-section {
+        /*margin-top: 20px;*/
+        border-radius: 50%;
+        border: 1px solid red;
+    }
+    .btn-fly-wrap {
+        position: fixed;
+        max-width: 40px;
+        max-height: 40px;
+        right: 20px;
+        margin-top: -20px;
+        padding: 0;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 22;
+    }
+    .btn-fly {
+        font-size: 35px;
+        color: rgba(102,122,120, 0.5);
+        text-decoration: none;
+        i
+        /*i.fa:hover*/
+        {
+            animation-name: fa-spin;
+            animation-duration: 2s;
+        }
+    }
+/*...........................................................................
+* END -> fly menu
+............................................................................*/

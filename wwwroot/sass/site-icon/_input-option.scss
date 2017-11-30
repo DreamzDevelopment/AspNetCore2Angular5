@@ -1,0 +1,61 @@
+/**....................................................................................
+** Radio and Checkbox design and animation
+........................................................................................*/
+    /* end .slideThree */
+    .option-input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        position: relative;
+        /*top: 13.33333px;*/
+        width: inherit;
+        height: inherit;
+        padding:0;
+        
+        background: #0f4e30;
+        border: none;
+        color: #fff000;
+        display: inline-block;
+        outline: none;
+        position: relative;
+        margin-right: 0.5rem;
+        z-index: 1000;
+        @include mixin-transition(all, 0.15s, ease-out, 0s);
+        &:hover { 
+            background: #9f0ab0; 
+        }
+        &:checked {
+            background: #4fa0d5; 
+            border: none;
+            &:before {
+                width: inherit;
+                height: inherit;
+                padding: 0;  
+                margin: -25% auto auto -5%;
+                position: absolute;
+                content: '\2716';
+                display: inline-block;
+                font-size: inherit;
+                text-align: center;
+                line-height: inherit;
+            }
+            &:after {
+                @include mixin-animation(click-wave, 0.65s);
+                background: #40e0d0;
+                content: '';  
+                display: inline-block;
+                position: relative;
+                z-index: 100;
+            }
+        }
+        &.radio { 
+            border-radius: 50%; 
+            &:after { 
+                border-radius: 50%; 
+            }
+        }
+    }
+/**....................................................................................
+** End Radio and Checkbox design and animation
+........................................................................................*/

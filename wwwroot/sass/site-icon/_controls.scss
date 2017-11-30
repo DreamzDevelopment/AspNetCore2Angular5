@@ -1,0 +1,34 @@
+/**
+ * .controls,
+ */
+    .controls {
+        border-radius: 50%;
+        padding: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        margin-top: -20px;        
+        z-index: 1;
+        a {
+            cursor: pointer;
+            padding:0;
+            height: 100%;
+            border-radius: 50%;
+        }
+        &.hover {
+            opacity: 1;
+            color: greenyellow;
+            a {
+                color: greenyellow;
+            }
+        }
+    }
+    .controls,
+    .controls a,
+    .controls.hover,
+    :hover .controls {        
+        @include mixin-transition(all, 0.5s, ease-in-out, 0s);
+    }
+/**
+* END -> .controls,
+*/

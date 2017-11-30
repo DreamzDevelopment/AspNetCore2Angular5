@@ -1,0 +1,77 @@
+/*.......................................................
+** zoom, zoom-in/ zoom-out
+..........................................................*/
+    .zoom-out {
+        opacity: 0;
+        transform: scale(0);
+    }
+    .zoom-in {
+        opacity: 1;
+        transform: scale(100%);
+    }
+    .zoom-in,
+    .zoom-out
+    {
+        @include mixin-transition(all, 500ms, linear, 100ms);
+    }
+    @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)}
+        to {-webkit-transform:scale(1)}
+    }
+
+    @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+    }
+/*.......................................................
+** END -> zoom-in/ zoom-out
+..........................................................*/
+/*---------------------------
+animation zoomIn/ zoomOut
+-----------------------------*/
+    @keyframes zoomIn {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(100%);
+        }
+    }
+
+    @-webkit-keyframes zoomIn {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(0);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: scale(100%);
+        }
+    }
+
+    @keyframes zoomOut {
+        0% {
+            opacity: 1;
+            transform: scale(100%);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0);
+        }
+    }
+
+    @-webkit-keyframes zoomOut {
+        0% {
+            opacity: 1;
+            -webkit-transform: scale(100%);
+        }
+        100% {
+            opacity: 0;
+            -webkit-transform: scale(0);
+        }
+    }
+/*---------------------------
+END -> animation zoomIn/ zoomOut
+-----------------------------*/

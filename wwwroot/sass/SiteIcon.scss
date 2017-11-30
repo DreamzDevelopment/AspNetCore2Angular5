@@ -1,0 +1,40 @@
+
+@import './_mixins.scss';
+
+@import './site-icon/_btn.scss';
+@import './site-icon/_fa-image.scss';
+@import './site-icon/_btn-image.scss';
+@import './site-icon/_btn-location.scss';
+@import './site-icon/_input-option.scss';
+@import './site-icon/_fly-wrap.scss';
+@import './site-icon/_circle.scss';
+@import './site-icon/_controls.scss';
+@import './site-icon/_directional-arrow.scss';
+
+/*....................................................................................................
+*** .btn-icon-left, .btn-tick, .btn- etc.....
+...................................................................................................*/
+    .btn-icon-left {
+        height: inherit;
+        margin: 0; 
+        padding: 0; 
+        border-right: 1px dotted;
+        i.fa, span.fa {
+            font-size: 135%;
+        }
+    }
+    .form-control {
+        .btn-icon-left {
+            margin-top: -7px;
+            i.fa, span.fa {
+                margin-top: 8px;
+            }
+        }
+    }
+
+/*....................................................................................................
+*** END -> .btn-icon-left, .btn-tick, .btn- etc.....
+...................................................................................................*/
+
+
+

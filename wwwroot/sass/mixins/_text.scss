@@ -1,0 +1,5 @@
+@mixin mixin-text-overflow($type) {
+    -o-text-overflow: $type;
+    -ms-text-overflow: $type;
+    text-overflow: $type;
+}

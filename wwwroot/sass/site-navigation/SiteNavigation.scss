@@ -1,0 +1,103 @@
+
+@import '../Shared.scss';
+@import '../_fonts.scss';
+@import '../_mixins.scss';
+
+/**
+ * Layout -> Top Navigation Menu
+ */
+    .navbar-transparent {
+        min-height: 60px;
+        max-height: 60vh;
+        border: none;
+        background-image: -webkit-linear-gradient(top, rgba(50, 60, 80, 0.3), rgba(50, 60, 80, 0));
+        background-image: linear-gradient(to bottom, rgba(50, 60, 80, 0.3), rgba(50, 60, 80, 0));
+        &.fixed-top {
+            padding: 0;
+        }
+        &.navbar-collapse {
+            &.collapse {
+                height: 60px;
+                &.in {
+                    height: 60vh;
+                    max-height: 70vh;
+                }
+            }
+        }
+        &:hover {
+            background-image: -webkit-linear-gradient(top, rgba(50, 60, 80, 1), rgba(50, 60, 80, 0));
+            background-image: linear-gradient(to bottom, rgba(50, 60, 80, 1), rgba(50, 60, 80, 0));
+        }
+        // Navbar-menu , navbar nav etc.
+        .ul li,
+        .ul li a,
+        .ul li a button
+        .ul li a > span {
+            margin: auto;
+            height: 60px;
+            padding: auto auto;
+            color: white;
+            text-align: center;
+            font-size: medium; /* */
+            font-family: $font-group-1;
+        }
+        .ul li:hover,
+        .ul li a:hover,
+        .ul li a button:hover {
+            color: greenyellow;
+            border:none;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom: 10px solid;
+            border-bottom-color:-webkit-linear-gradient(bottom, lightcyan, cyan);
+            border-bottom-color: linear-gradient(to top, lightcyan, cyan);
+            background-image: -webkit-linear-gradient(top, rgba(50, 60, 80, 1), rgba(255, 255, 255, 0.2));
+            background-image: linear-gradient(to bottom, rgba(50, 60, 80, 1), rgba(255, 255, 255, 0.2));
+        }
+    }
+    .navbar-transparent
+    .navbar-transparent .ul li:hover,
+    .navbar-transparent .ul li a:hover,
+    .navbar-transparent .ul li a button:hover,
+    .navbar-transparent .ul li,
+    .navbar-transparent .ul li a,
+    .navbar-transparent .ul li a button
+    .navbar-transparent .ul li a > span,
+    .navbar-transparent:hover {
+        @include mixin-transition(all, 600ms, linear, 100ms);
+    }
+    // Navbar-menu , navbar nav etc.
+    a.navbar-transparent,
+    .navbar-transparent ul li a > span {
+        width: auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 14px !important;
+    }
+    a.navbar-transparent {
+        font-size: 12px !important;
+    }
+    .navbar-transparent .ul li a:hover > span {
+        color: deepskyblue;
+    }
+    .navbar-header {
+        a {
+            &.navbar-toggle {
+                width: 35px;
+                height: 35px;
+                padding: 0;
+                .span-item {
+                    width: inherit;
+                    height: inherit;
+                    display: block;
+                    border-radius: 4px; 
+                    border: 1px solid #5353cc;
+                    font-family: $font-group-1;
+                }
+            }
+        }   
+    }
+    
+/**
+* END -> Layout -> Top Navigation Menu
+*/
