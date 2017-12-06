@@ -1,7 +1,6 @@
 using System.IO;
 using System;
-using AspNetCore2Angular5.Data;
-using AspNetCore2Angular5.Helpers;
+using JsonManager.Helpers;
 
 namespace AspNetCore2Angular5.Helpers
 {

@@ -26,7 +26,8 @@ integrate Angular Core 5.0+ app with AspNet Core Server Prerendering.
     For creating Main database [ SQL Server | SQLite ], which is also (Identity | User) Database
     - dotnet ef migrations add Initial -c SQLServerContext
 
-    For Creating Secondary database [SQLite | any relational database] , which is used for non secured data, such as Images and Media, Site Navigation Menus
+    For Creating Secondary database [SQLite | any relational database] , which is used for non secured data, such as Images and
+     Media, Site Navigation Menus
     - dotnet ef migrations add Initial -c SQLiteContext -o Migrations/Sqlite
 
     [Note: Applying migrations and calling sample data injection, is automatic. When app runs with 'dotnet run' ]
@@ -57,14 +58,10 @@ integrate Angular Core 5.0+ app with AspNet Core Server Prerendering.
     This app contains, SQL Localization, inspired by Damien Bod's - https://damienbod.com/,
     AspNetCore Localization project.
 
-    The local version is with few major customization -
-        - When user changes current culture to other, the localization caches rebuild [ this is available in original version ],
-            in addition to that, this also rebuild client [Angular or any other Client App ] repository such as 'i18n'.
-        - One of the major changes is, the local version translates according to the sentence
-        - English (US), is using as base [culture = language], so the keys are the english version of translate content
-         In a result, it does not require to add database entry for base language [ which you can modify to your choice of language = culture ]
-        - There is single database for both Server [ AspNetCore ] and Client [ Angular or any other Client App ], central management of key-value pair
-        - And many more changes, you can find there
+    The local version is with few major customization-
+    Learn more at
+    - [DreamzDev.Localization.Sql](https://www.nuget.org/packages/DreamzDev.Localization.Sql/) 
+    - [this repo](https://github.com/DreamzDevelopment/Localization)
 
     [Must execute following commands ]
     [Must execute following commands ]

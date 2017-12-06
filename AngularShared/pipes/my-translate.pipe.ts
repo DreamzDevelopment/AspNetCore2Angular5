@@ -53,7 +53,7 @@ export class MyTranslatePipe implements PipeTransform {
             for (let i = 0; i < _value.length; i++) {
                 prevC = c;
                 c = _value[i];
-                nextC = i == (_value.length - 1) ? ' ' : _value[i + 1]; // Set implecite ' ', if end of sentence
+                nextC = i == (_value.length - 1) ? ' ' : _value[i + 1]; // Set implicit ' ' space, if end of sentence
                 if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || 
                 (c == '\'') || (c == '-') || (c == '/') || (c == '(') || (c == ')') || 
                     (c == ' ' && !(prevC == '!' || prevC == '.' || prevC == ',')) )
@@ -63,7 +63,7 @@ export class MyTranslatePipe implements PipeTransform {
                     stringBuilder[k] = c;
                     k++;
                 }
-                else if (c == '.' || c == ',' || c == '!' || (c == ' ' && nextC == ' ') ) { // End of a sentence, or breaks
+                else if (c == '.' || c == ',' || c == '!' || c == '"' || (c == ' ' && nextC == ' ') ) { // End of a sentence, or breaks
                     // stringBuilder.length > 0 ? 
                     // _values.push(new KeyValuePair<string,boolean>(<string>''.concat.apply('', stringBuilder), true)) : '';
                     // stringBuilder = []; // Reset string builder
@@ -80,6 +80,9 @@ export class MyTranslatePipe implements PipeTransform {
                         j++;
                     }
                     if(culture == "bn-BD" && c == '.' && nextC == ' ') {
+                        /// <summary>
+                        /// "|", change with the char is used to end of sentence in your locale for full-stop (.)
+                        /// </summary>
                         _values[j] = new KeyValuePair<string,boolean>('|'.toString(), false);
                         j++;
                     } else {

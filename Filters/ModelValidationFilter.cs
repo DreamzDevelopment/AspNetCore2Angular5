@@ -1,8 +1,6 @@
+using JsonManager;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
-using AspNetCore2Angular5.Helpers;
 
 namespace AspNetCore2Angular5.Filters
 {

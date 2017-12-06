@@ -1,8 +1,8 @@
 using System;
 using AspNetCore2Angular5.Abstract;
-using AspNetCore2Angular5.Abstract.Localization;
 using AspNetCore2Angular5.Concrete;
-using AspNetCore2Angular5.Concrete.Localization;
+using JsonManager;
+using Localization.SqlLocalizer;
 
 namespace Autofac.Extensions.DependencyInjection
 {
@@ -12,18 +12,15 @@ namespace Autofac.Extensions.DependencyInjection
         public static ContainerBuilder ConfigureContainer(this ContainerBuilder builder)
         {
             // Add things to the Autofac ContainerBuilder.
-            
             builder.RegisterType<NavigationRepository>().As<INavigationRepository>().OwnedByLifetimeScope();
-
-            /// <summary>
-            /// Add Repository Abstraction for Localization repositories.
-            /// </summary>
-            builder.RegisterType<LocalizationRepository>().As<ILocalizationRepository>().OwnedByLifetimeScope();
             /// <summary>
             /// Add Repository Abstraction for Json File and data management
             /// </summary>
             builder.RegisterType<JsonManagerRepository>().As<IJsonManagerRepository>().OwnedByLifetimeScope();
-
+            /// <summary>
+            /// Add Repository Abstraction for Localization repositories.
+            /// </summary>
+            builder.RegisterType<LocalizationRepository>().As<ILocalizationRepository>().OwnedByLifetimeScope();
             /// <summary>
             /// Add Repository Abstraction for Store Type Management
             /// </summary>

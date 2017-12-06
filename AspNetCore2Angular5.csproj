@@ -46,7 +46,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.NodeServices" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DreamzDev.JsonManager" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="DreamzDev.Localization.Sql" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
@@ -114,7 +117,7 @@
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
         <DistFiles Include="wwwroot\dist\**; wwwroot\i18n\**; wwwroot\images\**; Store\dist\**; LocalizationRecords.sqlite;" />
-        <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
           <RelativePath>%(DistFiles.Identity)</RelativePath>
           <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         </ResolvedFileToPublish>

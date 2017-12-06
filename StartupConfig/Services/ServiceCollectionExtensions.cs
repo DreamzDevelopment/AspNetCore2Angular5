@@ -164,6 +164,7 @@ namespace Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
         public static IServiceCollection AddConfiguredOption(this IServiceCollection services)
         {
             services.Configure<DBContextOption>(Startup.Configuration.GetSection("ConnectionStrings"));
+            services.Configure<SqlContextOptions>(Startup.Configuration.GetSection("SqlContextOptions"));
 
             return services;
         }

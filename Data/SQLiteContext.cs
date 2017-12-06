@@ -39,6 +39,10 @@ namespace AspNetCore2Angular5.Data
         // {
         //     return this.Set<T>();
         // }
+        /// <summary>
+        /// Apply dynamic query on a DbSet of context with the name of the Entity or Table during RunTime
+        /// </summary>
+        /// <param name="fullname">Full Qualified Name $"[Namespace such as MyApp.Entities.Identity.[Class or EntityName such as ApplicationUser],ApplicationName" </param>
         public dynamic DbSet_ByName(string fullname)
         {
             Type targetType = Type.GetType(fullname);
@@ -53,7 +57,10 @@ namespace AspNetCore2Angular5.Data
                 return model.GetValue(this);
             return null;
         }
-
+        /// <summary>
+        /// Apply dynamic query on a DbSet of context with the name of the Entity or Table during RunTime
+        /// </summary>
+        /// <param name="fullname">Full Qualified Name $"[Namespace such as MyApp.Entities.Identity.[Class or EntityName such as ApplicationUser],ApplicationName" </param>
         public async Task<dynamic> DbSet_ByNameAsync(string fullname)
         {
             Type targetType = Type.GetType(fullname);

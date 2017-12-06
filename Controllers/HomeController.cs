@@ -11,9 +11,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
-using AspNetCore2Angular5.Abstract.Localization;
 using AspNetCore2Angular5.Models;
 using AspNetCore2Angular5.OptionModels;
+using Localization.SqlLocalizer.DbStringLocalizer;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using AspNetCore2Angular5.Data;
 
 namespace AspNetCore2Angular5.Controllers
 {
@@ -22,13 +25,13 @@ namespace AspNetCore2Angular5.Controllers
         private readonly IHtmlLocalizer<HomeController> _localizer;
         private readonly IStringLocalizer<SharedResource> _stringLocalizer;
         private readonly ILocalizationRepository _LocalizationRepository;
-        public HomeController(IHtmlLocalizer<HomeController> localizer, IStringLocalizer<SharedResource> stringLocalizer, ILocalizationRepository localizationRepository)
+        public HomeController( IHtmlLocalizer<HomeController> localizer, IStringLocalizer<SharedResource> stringLocalizer, ILocalizationRepository localizationRepository)
         {
             _localizer = localizer;
             _stringLocalizer = stringLocalizer;
             _LocalizationRepository = localizationRepository;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }

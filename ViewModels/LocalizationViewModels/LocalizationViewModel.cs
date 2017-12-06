@@ -1,6 +1,6 @@
 using System.Collections.Generic;
+using Localization.SqlLocalizer;
 using Microsoft.EntityFrameworkCore.Metadata;
-using AspNetCore2Angular5.ViewModels.DataDefinitionModels;
 
 namespace AspNetCore2Angular5.ViewModels.LocalizationViewModels
 {

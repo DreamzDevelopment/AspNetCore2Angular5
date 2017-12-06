@@ -41,7 +41,7 @@ namespace AspNetCore2Angular5
                 /// <summary>
                 /// Uncomment following line to debug in development mode
                 /// </summary>
-                // .UseEnvironment("Development")
+                .UseEnvironment("Development")
                 
                 .CaptureStartupErrors(true)  // use this to allow command line parameters in the config
                 .UseKestrel(options => {
