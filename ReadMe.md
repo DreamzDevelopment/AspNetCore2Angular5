@@ -1,7 +1,7 @@
 # AspNet Core 2+ Angular Core 5+
 
 Asp.Net Core 2+ &amp; Angular (5+) multi apps supported, Webpack full featured application,
-integrate Angular Core 5.0+ app with AspNet Core Server Prerendering.
+integrate Angular Core 5.0+ app with AspNet Core Server Pre-rendering.
 
 ## Aspnet Core Server Pre-rendering
 
@@ -18,8 +18,7 @@ integrate Angular Core 5.0+ app with AspNet Core Server Prerendering.
 
 ## Migration settings
 
-    In app.settings.json, there are 3 settings in 'MigrateAndSample' section,
-    configure as you need
+    In app.settings.json, there are 3 settings in 'MigrateAndSample' section, configure as you need
 
 ### Database Migration
 
@@ -60,7 +59,7 @@ integrate Angular Core 5.0+ app with AspNet Core Server Prerendering.
 
     The local version is with few major customization-
     Learn more at
-    - [DreamzDev.Localization.Sql](https://www.nuget.org/packages/DreamzDev.Localization.Sql/) 
+    - [DreamzDev.Localization.Sql](https://www.nuget.org/packages/DreamzDev.Localization.Sql/)
     - [this repo](https://github.com/DreamzDevelopment/Localization)
 
     [Must execute following commands ]
@@ -89,3 +88,9 @@ integrate Angular Core 5.0+ app with AspNet Core Server Prerendering.
     - dotnet AspNetCore2Angular5.dll
 
     To publish to hosting server, you choose your preferred method and host and follow their instructions
+
+## Thanks
+
+    Damien Bod, Asadsahi, MarkPieszak and many more open source community superstars
+
+    [ ]

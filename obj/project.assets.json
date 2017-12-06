@@ -14496,7 +14496,6 @@
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/thinkosx/Documents/NugetPackageTest/AspNetCore2Angular5/NuGet.Config",
         "/Users/thinkosx/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
